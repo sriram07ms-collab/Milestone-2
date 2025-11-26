@@ -1,6 +1,26 @@
 ## App Review Insights Analyzer
 
-Pipeline that ingests roughly the last six months (default 180-day lookback) of Groww Play Store reviews (Layer 1), tags them into ≤5 fixed themes (Layer 2), and generates weekly one-page pulses with top insights, quotes, and actions (Layer 3).
+App Review Insights Analyzer turns the last 8–12 weeks of public Play Store reviews into a weekly one-page pulse. The system ingests reviews without logins, deduplicates and sanitizes them, groups the feedback into up to five product themes, surfaces the strongest insights and representative user quotes, and proposes concrete actions. Each weekly pulse is then converted into a draft email so stakeholders can consume the note directly in their inbox—while respecting public-data-only constraints and aggressively stripping any PII. This milestone showcases applied LLM orchestration, summarization, theme grouping, and workflow automation working end-to-end on live data.
+
+### Project Architecture
+
+1. **Layer 1 – Ingestion & Cleaning**  
+   - HTTP scraper hits the Play Store `batchexecute` endpoint using staged window slices to gather 8–12 weeks of reviews across star ratings.  
+   - Enforces per-rating targets, deduplicates IDs, removes short/empty texts, normalizes whitespace, and strips obvious PII before any LLM call.  
+   - Outputs weekly JSON buckets for downstream processing.
+
+2. **Layer 2 – Theme Classification**  
+   - Gemini-based classifier maps each review into ≤5 predefined themes (`ui_ux`, `glitches`, `payments_statements`, etc.).  
+   - Aggregates counts, example quotes, and representative actions per theme.
+
+3. **Layer 3 – Weekly Pulse Generation**  
+   - Loads each weekly bucket (requires ≥3 reviews), builds map/reduce prompts, and composes a one-page Markdown note with title, overview, key themes, quotes, and action ideas.  
+   - Hardened JSON parsing handles Gemini finish reasons and malformed payloads.
+
+4. **Layer 4 – Email Drafting & Delivery**  
+   - Sanitizes the weekly note (emoji removal, sensitive-language masking).  
+   - Drafts the email body via Gemini with retries and fallback templates, runs regex + LLM-based PII scrubbing, and sends via Gmail API or SMTP.  
+   - Logs every send (or dry run) in `data/processed/email_logs.csv`.
 
 ---
 
@@ -76,21 +96,109 @@ python main.py ^
 
 ---
 
-### 4. Scheduling weekly runs
+### 4. Sample Outputs
 
-Example cron (Linux) for Mondays 9 AM IST (03:30 UTC):
+#### Latest Weekly Pulse Note
 
+**Week: November 17-23, 2025** ([Full Markdown](data/processed/weekly_pulse/pulse_2025-11-17.md))
+
+```markdown
+# Product Pulse: November 17-23, 2025
+
+This week's pulse identifies critical issues with app stability, causing login
+failures and feature inaccessibility. Payments experienced challenges with
+non-functional Autopay and extended withdrawal times for urgent needs.
+
+## Themes
+- **Slow, Glitches** - Users reported significant app instability and login
+  failures, severely hindering access to features like Digi Gold investment
+  for multiple days.
+- **UI/UX** - Though generally user-friendly, a critical flaw in the
+  drag-and-drop system is causing users to miss trades due to required manual input.
+- **Payments/Statements** - Critical payment functionalities are failing,
+  with Autopay repeatedly unsuccessful and withdrawal processing times deemed
+  excessively long during urgent situations.
+
+## Quotes
+- "Not working since last 5 days (Slow, Glitches)"
+- "pls update drag and drop system in target and stop manual type karne jaye
+  hai to trade miss ho jata hai (UI/UX)"
+- "Withdrawal time is too long, It's an emergency right now and we have to
+  wait for 4 days.😡 (Payments/Statements)"
+
+## Actions
+- Prioritize investigation and resolution of core app stability, login failures,
+  and feature accessibility (e.g., Digi Gold).
+- Enhance the drag-and-drop trading interface to prevent manual input errors
+  and ensure trade execution without delays.
+- Address Autopay functionality failures and optimize withdrawal processing
+  times to meet user expectations, especially for urgent needs.
 ```
-30 3 * * 1  cd /path/to/Milestone-2 && .venv/bin/python main.py --cron-tag "mon-09-ist"
+
+#### Email Draft Example
+
+**Subject:** `Weekly Product Pulse – Groww App (2025-11-17–2025-11-23)`
+
+**Body (sample):**
+```
+Groww App Weekly Pulse | 2025-11-17 – 2025-11-23
+
+Title: Critical Stability and Payment Issues Impact User Experience
+Overview: This week's pulse identifies critical issues with app stability,
+causing login failures and feature inaccessibility. Payments experienced
+challenges with non-functional Autopay and extended withdrawal times.
+
+Top Themes:
+- Slow, Glitches: Users reported significant app instability and login failures
+- UI/UX: Critical flaw in drag-and-drop system causing missed trades
+- Payments/Statements: Autopay failures and excessive withdrawal processing times
+
+Representative Quotes:
+- "Not working since last 5 days"
+- "pls update drag and drop system in target and stop manual type karne jaye
+  hai to trade miss ho jata hai"
+- "Withdrawal time is too long, It's an emergency right now and we have to
+  wait for 4 days"
+
+Action Ideas:
+- Prioritize investigation and resolution of core app stability and login failures
+- Enhance the drag-and-drop trading interface to prevent manual input errors
+- Address Autopay functionality failures and optimize withdrawal processing times
+
+Reply to this email if you need deeper dives or clarifications.
 ```
 
-Zapier / workflow engines can call the same command line; use `--start-date/--end-date` if a run is missed. For broad coverage, keep `REVIEW_LOOKBACK_DAYS` at ~180, set a high scroll budget (`SCRAPER_MAX_SCROLLS`), and let the built-in sort fallbacks iterate through `highest_rating` / `lowest_rating` to fill thin rating buckets. You can also union multiple explicit time slices with `--window-slices START:END,...` to stitch together six-plus months at once. The scraper auto-stops once each rating bucket meets `SCRAPER_PER_RATING_TARGET` (default 50); otherwise it logs which ratings were short before Layer 2/3 continue.
+*Note: Email drafts are generated by Gemini LLM with PII scrubbing and fallback
+templates. Full email logs are available in `data/processed/email_logs.csv`.*
+
+#### Reviews Data Sample (Redacted)
+
+Sample from `data/raw/groww_reviews_2025-11-04_2025-11-18.json`:
+
+```json
+{
+  "reviews": [
+    {
+      "review_id": "6740d4c1-8ae1-4b59-a6ad-64d5ed963560",
+      "title": "Customer Review",
+      "text": "worse customer support services please don't get fool by this groww app",
+      "rating": 1,
+      "date": "2025-11-10T17:33:02+00:00",
+      "author": "User"
+    },
+    {
+      "review_id": "cffa1d4d-8a48-4b5a-b1a8-ef07bb30987b",
+      "title": "Customer Review",
+      "text": "to good 👍",
+      "rating": 5,
+      "date": "2025-11-10T16:59:52+00:00",
+      "author": "User"
+    }
+  ]
+}
+```
+
+*Note: Author names and PII are redacted in this sample. Full reviews include
+original author names (anonymized in email outputs).*
 
 ---
-
-### 5. Next steps
-
-1. Layer 4 email drafting (tone prompt + SMTP/Gmail API send).
-2. Add richer analytics/QA dashboards for weekly pulses.
-3. Optional: telemetry/alerts for scraper failures or empty windows.
-
