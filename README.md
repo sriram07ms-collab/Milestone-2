@@ -147,6 +147,7 @@ python main.py ^
    - For Gmail transport you can either:
      - Provide file paths via `GMAIL_CREDENTIALS_PATH` / `GMAIL_TOKEN_PATH`, or
      - Store the raw JSON as secrets `GMAIL_CREDENTIALS_JSON` / `GMAIL_TOKEN_JSON` (the workflow writes them to disk automatically). Make sure the workflow exports those secrets as environment variables (`GMAIL_USER`, `GMAIL_CREDENTIALS_JSON`, `GMAIL_TOKEN_JSON`) so Layer 4 can see them.
+   - Set `EMAIL_RECIPIENT` to the address that should receive the weekly pulse; the workflow now passes this secret into the pipeline.
 
 3. **Test workflow**
    - In the Actions tab, manually “Run workflow” to confirm the job succeeds and only one email is sent.
