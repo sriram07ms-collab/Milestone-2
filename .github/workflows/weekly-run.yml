@@ -32,6 +32,7 @@ jobs:
           EMAIL_DRY_RUN: "false"
           REVIEW_LOOKBACK_DAYS: "28"
           PLAY_STORE_APP_ID: com.nextbillion.groww
+          LAYER3_FORCE_RECENT_WEEKS: "2"
           # Add Gmail/SMTP secrets as needed, e.g.:
           # GMAIL_USER: ${{ secrets.GMAIL_USER }}
           # GMAIL_CREDENTIALS_JSON: ${{ secrets.GMAIL_CREDENTIALS_JSON }}

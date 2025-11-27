@@ -8,6 +8,7 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict, List, Optional
+from datetime import datetime
 
 from .config import Layer3Config
 from .models import ThemeInsight, WeeklyPulseNote
@@ -44,10 +45,23 @@ class WeeklyPulsePipeline:
             LOGGER.warning("No week files found under %s; skipping Layer 3.", self.config.weekly_dir)
             return notes
 
+        force_recent = max(0, self.config.force_recent_weeks)
+        force_set: set[Path] = set()
+        if force_recent > 0:
+            sorted_by_date = sorted(
+                week_files,
+                key=self._week_start_datetime,
+                reverse=True,
+            )
+            force_set = set(sorted_by_date[:force_recent])
+
         for week_file in week_files:
-            if self.config.skip_existing_notes and self._note_exists(week_file):
+            force_process = week_file in force_set
+            if self.config.skip_existing_notes and not force_process and self._note_exists(week_file):
                 LOGGER.info("Skipping %s because weekly pulse already exists.", week_file.name)
                 continue
+            if force_process and self._note_exists(week_file):
+                LOGGER.info("Rebuilding latest-week pulse for %s.", week_file.name)
             note = self._process_week_file(week_file)
             if note:
                 notes.append(note)
@@ -107,6 +121,16 @@ class WeeklyPulsePipeline:
         json_path = self._note_json_path(week_file)
         markdown_path = json_path.with_suffix(".md")
         return json_path.exists() and markdown_path.exists()
+
+    @staticmethod
+    def _week_start_datetime(week_file: Path) -> datetime:
+        stem = week_file.stem
+        if stem.startswith("week_"):
+            try:
+                return datetime.strptime(stem[5:], "%Y-%m-%d")
+            except ValueError:
+                pass
+        return datetime.min
 
     def _filter_insights(self, insights: List[ThemeInsight]) -> List[ThemeInsight]:
         filtered: List[ThemeInsight] = []

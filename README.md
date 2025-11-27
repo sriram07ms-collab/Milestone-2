@@ -50,6 +50,7 @@ Fill `.env` with:
   - `LAYER3_OUTPUT_DIR`, `LAYER3_CHUNK_SIZE`, `LAYER3_MAX_KEY_POINTS`, `LAYER3_MAX_QUOTES_PER_THEME`, `LAYER3_MAX_THEMES`, `LAYER3_MIN_REVIEWS`, `LAYER3_MAX_WORDS`
   - `LAYER3_ENABLE_CACHE`, `LAYER3_CACHE_PATH`
   - `LAYER3_MAP_MODEL_NAME`, `LAYER3_REDUCE_MODEL_NAME`
+  - `LAYER3_FORCE_RECENT_WEEKS` (default 2) to re-run the latest N week files even if pulses already exist
 - Scraper fallbacks for tougher coverage:
   - `SCRAPER_MAX_SCROLLS`, `SCRAPER_PER_RATING_TARGET`
   - `SCRAPER_SLICE_DAYS` to control how many days each automatic slice spans (default 7)

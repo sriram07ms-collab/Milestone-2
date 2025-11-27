@@ -51,6 +51,7 @@ class Layer3Config:
     reduce_model_name: str = field(default_factory=lambda: _env_str("LAYER3_REDUCE_MODEL_NAME", _env_str("GEMINI_MODEL_NAME", "models/gemini-2.5-flash")))
     enable_chunk_cache: bool = field(default_factory=lambda: _env_bool("LAYER3_ENABLE_CACHE", True))
     skip_existing_notes: bool = field(default_factory=lambda: _env_bool("LAYER3_SKIP_EXISTING_NOTES", True))
+    force_recent_weeks: int = field(default_factory=lambda: max(0, _env_int("LAYER3_FORCE_RECENT_WEEKS", 2)))
     cache_path: Path = field(default_factory=lambda: Path(os.getenv("LAYER3_CACHE_PATH", "data/processed/layer3_chunk_cache.json")))
 
     def ensure_output_dir(self) -> Path:
