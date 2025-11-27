@@ -161,7 +161,7 @@ def run_pipeline(args: Optional[argparse.Namespace] = None) -> None:
 
     # Theme Discovery Phase (before classification)
     discovered_themes = None
-    use_discovery = _env_bool("THEME_DISCOVERY_ENABLED", True)
+    use_discovery = _env_bool("THEME_DISCOVERY_ENABLED", False)
     
     if use_discovery:
         try:
@@ -292,7 +292,7 @@ def _build_scraper_config(args: argparse.Namespace) -> ScraperConfig:
         locale=getattr(args, "locale", None) or os.getenv("PLAY_STORE_LOCALE", "en"),
         country=getattr(args, "country", None) or os.getenv("PLAY_STORE_COUNTRY", "in"),
         lookback_days=getattr(args, "lookback_days", None)
-        or int(os.getenv("REVIEW_LOOKBACK_DAYS", "56")),
+        or int(os.getenv("REVIEW_LOOKBACK_DAYS", "28")),
         min_offset_days=getattr(args, "min_offset_days", None)
         or int(os.getenv("REVIEW_MIN_OFFSET_DAYS", "7")),
         max_reviews=getattr(args, "max_reviews", None) or int(os.getenv("SCRAPER_MAX_REVIEWS", "2000")),

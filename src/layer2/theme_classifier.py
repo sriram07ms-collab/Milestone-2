@@ -7,6 +7,7 @@ import logging
 import os
 from dataclasses import dataclass
 from typing import Dict, List, Mapping
+import re
 
 from google import generativeai as genai
 
@@ -15,11 +16,76 @@ from .theme_config import DEFAULT_THEME_ID, FIXED_THEMES, get_theme_by_id, get_a
 from .theme_discovery import DiscoveredTheme
 
 LOGGER = logging.getLogger(__name__)
+HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
+    "customer_support": [
+        re.compile(pattern, re.IGNORECASE)
+        for pattern in [
+            r"customer support",
+            r"support team",
+            r"call back",
+            r"callback",
+            r"contacted support",
+            r"ticket",
+            r"agent",
+        ]
+    ],
+    "payments": [
+        re.compile(pattern, re.IGNORECASE)
+        for pattern in [
+            r"payment",
+            r"payout",
+            r"withdraw",
+            r"deposit",
+            r"upi",
+            r"autopay",
+            r"transfer",
+            r"bank",
+        ]
+    ],
+    "fees": [
+        re.compile(pattern, re.IGNORECASE)
+        for pattern in [
+            r"fee",
+            r"fees",
+            r"charges?",
+            r"commission",
+            r"deduct",
+            r"charged",
+            r"tax",
+        ]
+    ],
+    "glitches": [
+        re.compile(pattern, re.IGNORECASE)
+        for pattern in [
+            r"bug",
+            r"error",
+            r"glitch",
+            r"crash",
+            r"issue",
+            r"fail(ed)?",
+            r"not working",
+            r"incorrect",
+        ]
+    ],
+    "slow": [
+        re.compile(pattern, re.IGNORECASE)
+        for pattern in [
+            r"slow",
+            r"lag",
+            r"buffer",
+            r"loading",
+            r"hang",
+            r"delay",
+        ]
+    ],
+}
 
 CLASSIFICATION_PROMPT_TEMPLATE = """You are tagging reviews into at most {max_themes} themes.
 
 Allowed themes:
 {themes_list}
+
+If a review does not clearly fit any theme, set chosen_theme to "unclassified".
 
 For each review, output:
 - review_id: the exact review_id from the input
@@ -56,7 +122,7 @@ class ThemeClassifierConfig:
     batch_size: int = 8  # Process 8 reviews per LLM call
     temperature: float = 0.1  # Low temperature for consistent classification
     max_retries: int = 2
-    use_discovery: bool = True  # Enable theme discovery mode
+    use_discovery: bool = False  # Disabled by default; rely on fixed themes
     discovery_sample_size: int = 50  # Reviews to sample for discovery
     min_discovery_confidence: float = 0.6  # Minimum mapping confidence
     max_discovered_themes: int = 4  # Maximum discovered themes to use
@@ -182,6 +248,8 @@ class GeminiThemeClassifier:
                     ),
                 )
                 parsed = self._parse_response(response.text or "")
+                if not parsed:
+                    raise ValueError("Empty classification payload")
                 return self._build_classifications(parsed, reviews)
             except Exception as exc:
                 if attempt < self.config.max_retries:
@@ -275,14 +343,27 @@ class GeminiThemeClassifier:
         classified_ids = {c.review_id for c in classifications}
         for review in original_reviews:
             if review.review_id not in classified_ids:
-                LOGGER.warning("Review %s not classified; using default theme", review.review_id)
-                default_theme = get_theme_by_id(DEFAULT_THEME_ID)
+                theme_id = self._heuristic_theme(review) or DEFAULT_THEME_ID
+                theme = get_theme_by_id(theme_id)
+                reason = (
+                    "Heuristic assignment (LLM output invalid)"
+                    if theme_id != DEFAULT_THEME_ID
+                    else "Default assignment (classification failed)"
+                )
+                if theme_id == DEFAULT_THEME_ID:
+                    LOGGER.warning("Review %s not classified; using default theme", review.review_id)
+                else:
+                    LOGGER.info(
+                        "Review %s assigned via heuristic to %s",
+                        review.review_id,
+                        theme.name,
+                    )
                 classifications.append(
                     ReviewClassification(
                         review_id=review.review_id,
-                        theme_id=DEFAULT_THEME_ID,
-                        theme_name=default_theme.name,
-                        reason="Default assignment (classification failed)",
+                        theme_id=theme_id,
+                        theme_name=theme.name,
+                        reason=reason,
                     )
                 )
 
@@ -336,14 +417,29 @@ class GeminiThemeClassifier:
 
     def _fallback_classifications(self, reviews: List[ReviewModel]) -> List[ReviewClassification]:
         """Generate fallback classifications when LLM fails."""
-        default_theme = get_theme_by_id(DEFAULT_THEME_ID)
-        return [
-            ReviewClassification(
-                review_id=review.review_id,
-                theme_id=DEFAULT_THEME_ID,
-                theme_name=default_theme.name,
-                reason="Fallback assignment (LLM classification failed)",
+        fallback: List[ReviewClassification] = []
+        for review in reviews:
+            theme_id = self._heuristic_theme(review) or DEFAULT_THEME_ID
+            theme = get_theme_by_id(theme_id)
+            reason = (
+                "Heuristic assignment (LLM classification failed)"
+                if theme_id != DEFAULT_THEME_ID
+                else "Fallback assignment (LLM classification failed)"
             )
-            for review in reviews
-        ]
+            fallback.append(
+                ReviewClassification(
+                    review_id=review.review_id,
+                    theme_id=theme_id,
+                    theme_name=theme.name,
+                    reason=reason,
+                )
+            )
+        return fallback
+
+    def _heuristic_theme(self, review: ReviewModel) -> str | None:
+        text = f"{review.title} {review.text}".lower()
+        for theme_id, compiled_patterns in HEURISTIC_PATTERNS.items():
+            if any(pattern.search(text) for pattern in compiled_patterns):
+                return theme_id
+        return None
 

@@ -33,7 +33,7 @@ class ScraperConfig:
     app_id: str
     locale: str = "en"
     country: str = "in"
-    lookback_days: int = 84  # ≈12 weeks
+    lookback_days: int = 28  # 4 weeks
     min_offset_days: int = 7  # skip current-week noise
     max_reviews: int = 2000
     max_scroll_iterations: int = 1000

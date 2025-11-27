@@ -1,16 +1,16 @@
 ## App Review Insights Analyzer
 
-App Review Insights Analyzer turns the last 8 weeks of public Play Store reviews into a weekly one-page pulse. The system ingests reviews without logins, deduplicates and sanitizes them, groups the feedback into up to five product themes, surfaces the strongest insights and representative user quotes, and proposes concrete actions. Each weekly pulse is then converted into a draft email so stakeholders can consume the note directly in their inbox—while respecting public-data-only constraints and aggressively stripping any PII. This milestone showcases applied LLM orchestration, summarization, theme grouping, and workflow automation working end-to-end on live data.
+App Review Insights Analyzer turns the last 4 weeks of public Play Store reviews into a weekly one-page pulse. The system ingests reviews without logins, deduplicates and sanitizes them, groups the feedback into up to five product themes, surfaces the strongest insights and representative user quotes, and proposes concrete actions. Each weekly pulse is then converted into a draft email so stakeholders can consume the note directly in their inbox—while respecting public-data-only constraints and aggressively stripping any PII. This milestone showcases applied LLM orchestration, summarization, theme grouping, and workflow automation working end-to-end on live data.
 
 ### Project Architecture
 
 1. **Layer 1 – Ingestion & Cleaning**  
-   - HTTP scraper hits the Play Store `batchexecute` endpoint using staged window slices to gather 8 weeks of reviews across star ratings.  
+   - HTTP scraper hits the Play Store `batchexecute` endpoint using staged window slices to gather 4 weeks of reviews across star ratings.  
    - Enforces per-rating targets, deduplicates IDs, removes short/empty texts, normalizes whitespace, and strips obvious PII before any LLM call.  
    - Outputs weekly JSON buckets for downstream processing.
 
 2. **Layer 2 – Theme Classification**  
-   - Gemini-based classifier maps each review into ≤5 predefined themes (`ui_ux`, `glitches`, `payments_statements`, etc.).  
+   - Gemini-based classifier maps each review into 5 fixed themes (`customer_support`, `payments`, `fees`, `glitches`, `slow`) with an `unclassified` fallback.  
    - Aggregates counts, example quotes, and representative actions per theme.
 
 3. **Layer 3 – Weekly Pulse Generation**  
@@ -71,7 +71,7 @@ Fill `.env` with:
 
 ### 3. Running locally
 
-Fetch the default 8 week window ending last week:
+Fetch the default 4 week window ending last week:
 
 ```bash
 python main.py
@@ -132,7 +132,7 @@ python main.py ^
                GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
                EMAIL_TRANSPORT: gmail
                EMAIL_SINGLE_LATEST: "true"
-               REVIEW_LOOKBACK_DAYS: "56"
+              REVIEW_LOOKBACK_DAYS: "28"
                PLAY_STORE_APP_ID: com.nextbillion.groww
                # Add SMTP/Gmail secrets as needed
              run: |

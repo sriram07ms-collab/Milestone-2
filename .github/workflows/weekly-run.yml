@@ -29,7 +29,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           EMAIL_TRANSPORT: gmail
           EMAIL_SINGLE_LATEST: "true"
-          REVIEW_LOOKBACK_DAYS: "56"
+          EMAIL_DRY_RUN: "false"
+          REVIEW_LOOKBACK_DAYS: "28"
           PLAY_STORE_APP_ID: com.nextbillion.groww
           # Add Gmail/SMTP secrets as needed, e.g.:
           # GMAIL_USER: ${{ secrets.GMAIL_USER }}
