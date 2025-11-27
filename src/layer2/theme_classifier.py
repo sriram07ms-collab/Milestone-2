@@ -27,6 +27,14 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"contacted support",
             r"ticket",
             r"agent",
+            r"on[-\s]?board",
+            r"onboarding",
+            r"\bkyc\b",
+            r"know your customer",
+            r"verification",
+            r"kyc update",
+            r"re[-\s]?kyc",
+            r"e-?kyc",
         ]
     ],
     "payments": [
@@ -35,11 +43,17 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"payment",
             r"payout",
             r"withdraw",
+            r"withdrawal",
             r"deposit",
             r"upi",
             r"autopay",
             r"transfer",
             r"bank",
+            r"statement",
+            r"passbook",
+            r"settlement",
+            r"refund",
+            r"redeem",
         ]
     ],
     "fees": [
