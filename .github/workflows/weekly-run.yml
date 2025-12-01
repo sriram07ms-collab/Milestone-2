@@ -5,6 +5,11 @@ on:
     - cron: '0 3 * * 1' # 03:00 UTC ≈ 09:00 IST (Every Monday)
   workflow_dispatch:
 
+permissions:
+  contents: write  # Required for pushing to gh-pages
+  pages: write     # Required for GitHub Pages
+  id-token: write  # Required for OIDC
+
 jobs:
   pipeline-and-deploy:
     runs-on: ubuntu-latest
@@ -12,6 +17,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for all branches
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -68,9 +76,15 @@ jobs:
           cd frontend
           npm run build
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/out
-          cname: # Optional: Add your custom domain here if you have one
+          force_orphan: true  # Force orphan branch (clean history)
+          keep_files: false   # Don't keep existing files
