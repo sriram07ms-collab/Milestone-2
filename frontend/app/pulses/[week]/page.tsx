@@ -34,10 +34,15 @@ export async function generateStaticParams() {
   }
   
   // Return at least one param to satisfy Next.js
-  // Client-side will handle actual routing for other weeks
   return [{ week: '2025-11-24' }];
 }
 
-export default function PulseDetailPage({ params }: { params: { week: string } }) {
-  return <PulseDetailClient week={params.week} />;
+// Handle both Promise and direct params (Next.js 15+ compatibility)
+export default async function PulseDetailPage({ 
+  params 
+}: { 
+  params: Promise<{ week: string }> | { week: string } 
+}) {
+  const resolvedParams = params instanceof Promise ? await params : params;
+  return <PulseDetailClient week={resolvedParams.week} />;
 }

@@ -70,15 +70,22 @@ export async function fetchAllPulses(): Promise<WeeklyPulseNote[]> {
 export async function fetchPulse(weekStart: string): Promise<WeeklyPulseNote | null> {
   try {
     const url = `${BASE_PATH}/data/processed/weekly_pulse/pulse_${weekStart}.json`;
+    console.log('Fetching pulse from:', url);
     const response = await fetch(url);
+    
     if (!response.ok) {
-      console.warn(`Pulse ${weekStart} not found: ${response.status}`);
+      console.warn(`Pulse ${weekStart} not found: ${response.status} ${response.statusText}`);
+      console.warn('URL attempted:', url);
       return null;
     }
-    return await response.json();
+    
+    const data = await response.json();
+    console.log('Pulse fetched successfully:', weekStart);
+    return data;
   } catch (error) {
     console.error(`Error fetching pulse ${weekStart}:`, error);
-    return null;
+    console.error('URL attempted:', `${BASE_PATH}/data/processed/weekly_pulse/pulse_${weekStart}.json`);
+    throw error; // Re-throw so caller can handle it
   }
 }
 
