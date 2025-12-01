@@ -57,6 +57,9 @@ class ScraperConfig:
     ) -> Tuple[datetime, datetime]:
         """
         Compute the target time window. Direct overrides take precedence over lookback logic.
+        
+        Ensures the last 7 days are always included. For example, if run on Dec 8,
+        it will produce data for Nov 30 to Dec 7 (the previous week).
         """
         if start_date and end_date:
             start = _ensure_utc(start_date)
@@ -68,8 +71,20 @@ class ScraperConfig:
         if reference_date is None:
             reference_date = datetime.now(timezone.utc)
         reference_date = _ensure_utc(reference_date)
-        end_date = reference_date - timedelta(days=self.min_offset_days)
+        
+        # Ensure we always capture at least the last complete day (yesterday)
+        # This guarantees the last 7 days are always included in the data
+        # For example, if run on Dec 8, end_date will be Dec 7 23:59:59.999
+        effective_offset = max(1, self.min_offset_days)  # At least 1 day to get yesterday
+        end_date = reference_date - timedelta(days=effective_offset)
+        # Set to end of day to include all reviews from that day
+        end_date = end_date.replace(hour=23, minute=59, second=59, microsecond=999999)
+        
+        # Set start_date to start of day (00:00:00) for the lookback period
+        # This ensures we capture the full lookback window (e.g., 28 days back from end_date)
         start_date = end_date - timedelta(days=self.lookback_days)
+        start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
+        
         return start_date, end_date
 
 
