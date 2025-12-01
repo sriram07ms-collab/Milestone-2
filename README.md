@@ -10,7 +10,10 @@ App Review Insights Analyzer turns the last 4 weeks of public Play Store reviews
    - Outputs weekly JSON buckets for downstream processing.
 
 2. **Layer 2 – Theme Classification**  
-   - Gemini-based classifier maps each review into 5 fixed themes (`customer_support`, `payments`, `fees`, `glitches`, `slow`) with an `unclassified` fallback.  
+   - Gemini-based classifier maps each review into 5 fixed business themes (`customer_support`, `payments`, `fees`, `glitches`, `slow`) with an `unclassified` fallback.  
+   - Uses expanded keyword heuristics (onboarding, KYC, payments, statements, withdrawals, login issues, performance, etc.) so short/ambiguous reviews still land in a meaningful theme when possible.  
+   - Runs a **two-pass** strategy: first pass does normal classification; a second pass re-classifies previously `unclassified` reviews with a stricter prompt that forbids `unclassified` and forces the closest theme.  
+   - Optionally allows the LLM to propose **new theme IDs** (for analysis only), which are tracked and written to `data/processed/llm_suggested_themes.json`.  
    - Aggregates counts, example quotes, and representative actions per theme.
 
 3. **Layer 3 – Weekly Pulse Generation**  
@@ -22,17 +25,25 @@ App Review Insights Analyzer turns the last 4 weeks of public Play Store reviews
    - Drafts the email body via Gemini with retries and fallback templates, runs regex + LLM-based PII scrubbing, and sends via Gmail API or SMTP.  
    - Logs every send (or dry run) in `data/processed/email_logs.csv`.
 
+5. **Frontend Dashboard** (New)
+   - Modern Next.js dashboard for visualizing weekly pulses, themes, and action items
+   - Deployed to GitHub Pages automatically after each pipeline run
+   - See `DEPLOYMENT.md` for setup instructions
+
 ---
 
 ### 1. Prerequisites
 
 - Python 3.10+
+- Node.js 20+ (for frontend)
 - Google Gemini API key (free tier works)
 - Internet access to Google Play + Gemini endpoints
 
 ---
 
 ### 2. Setup
+
+#### Backend Setup
 
 ```bash
 python -m venv .venv
@@ -43,56 +54,73 @@ copy config\.env.example .env
 ```
 
 Fill `.env` with:
-
 - `GEMINI_API_KEY`
-- Optional overrides (see `.env.example`) such as `PLAY_STORE_APP_ID`, `SCRAPER_OUTPUT_DIR`, `REVIEW_LOOKBACK_DAYS`.
-- Layer 3 knobs (chunk sizes, word limits, cache toggles, alternate Gemini models) if you need non-default behaviour:
-  - `LAYER3_OUTPUT_DIR`, `LAYER3_CHUNK_SIZE`, `LAYER3_MAX_KEY_POINTS`, `LAYER3_MAX_QUOTES_PER_THEME`, `LAYER3_MAX_THEMES`, `LAYER3_MIN_REVIEWS`, `LAYER3_MAX_WORDS`
-  - `LAYER3_ENABLE_CACHE`, `LAYER3_CACHE_PATH`
-  - `LAYER3_MAP_MODEL_NAME`, `LAYER3_REDUCE_MODEL_NAME`
-  - `LAYER3_FORCE_RECENT_WEEKS` (default 2) to re-run the latest N week files even if pulses already exist
-- Scraper fallbacks for tougher coverage:
-  - `SCRAPER_MAX_SCROLLS`, `SCRAPER_PER_RATING_TARGET`
-  - `SCRAPER_SLICE_DAYS` to control how many days each automatic slice spans (default 7)
-  - `SCRAPER_ENABLE_RATING_FILTERS` / `SCRAPER_RATING_FILTER_SEQUENCE` (e.g., `5,4,3,2,1`) to force per-rating passes through the Play Store UI
-  - `PLAY_STORE_SORT_MODE`
-  - `PLAY_STORE_SORT_FALLBACKS` (comma-separated, e.g., `highest_rating,lowest_rating`) to automatically re-run the scrape with alternate sort orders until each rating bucket fills up.
-- Layer 2 theme discovery (hybrid classification):
-  - `THEME_DISCOVERY_ENABLED` (default: `true`) - Enable/disable LLM-based theme discovery
-  - `THEME_DISCOVERY_SAMPLE_SIZE` (default: `50`) - Number of reviews to sample for discovery
-  - `THEME_DISCOVERY_MIN_CONFIDENCE` (default: `0.6`) - Minimum mapping confidence to use discovered theme
-  - `THEME_DISCOVERY_MAX_THEMES` (default: `4`) - Maximum number of discovered themes (top 4)
-  - `THEME_DISCOVERY_MODEL` (optional) - Gemini model for discovery (default: `models/gemini-2.5-flash`)
-- Layer 4 email delivery:
-  - `EMAIL_TRANSPORT` (`smtp` or `gmail`), `EMAIL_DRY_RUN`
-  - SMTP envs: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_USE_TLS`
-  - Gmail envs: `GMAIL_USER`, `GMAIL_CREDENTIALS_PATH`, `GMAIL_TOKEN_PATH` (after enabling Gmail API and running the OAuth consent flow once)
+- Optional overrides (see `.env.example`)
+
+#### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev  # For local development
+```
 
 ---
 
 ### 3. Running locally
 
-Fetch the default 4 week window ending last week:
+#### Backend Pipeline
 
 ```bash
 python main.py
 ```
 
-Override dates or runtime parameters as needed:
+#### Frontend Dashboard
 
 ```bash
-python main.py ^
-  --start-date 2025-08-01 ^
-  --end-date 2025-10-15 ^
-  --max-reviews 1000 ^
-  --max-scrolls 600 ^
-  --per-rating-target 50 ^
-  --sort-mode newest ^
-  --cron-tag "manual-rerun" ^
-  --window-slices 2025-05-01:2025-07-31,2025-08-01:2025-10-31
+cd frontend
+npm run dev
+# Open http://localhost:3000
 ```
 
-**Outputs**
+---
+
+### 4. Deployment to GitHub Pages
+
+The project is configured for automatic deployment to GitHub Pages. See `DEPLOYMENT.md` for detailed instructions.
+
+**Quick Setup:**
+1. Enable GitHub Pages in repository settings
+2. Set source to `gh-pages` branch
+3. Push code to GitHub
+4. Workflow runs automatically every Monday at 9 AM IST
+5. Dashboard available at: `https://<username>.github.io/<repo-name>/`
+
+**Note:** Email generation continues to work exactly as before - no changes to email functionality.
+
+---
+
+### 5. Project Structure
+
+```
+Milestone-2/
+├── .github/
+│   └── workflows/
+│       └── weekly-run.yml      # Integrated pipeline + frontend deploy
+├── frontend/                   # Next.js dashboard
+│   ├── app/                    # Pages
+│   ├── components/             # React components
+│   ├── lib/                    # Utilities
+│   └── public/data/            # Data files (for GitHub Pages)
+├── src/                        # Python backend layers
+├── scripts/                    # Utility scripts
+├── data/                       # Pipeline output
+└── main.py                     # Pipeline entry point
+```
+
+---
+
+### 6. Outputs
 
 - Raw batch: `data/raw/groww_reviews_<start>_<end>.json`
 - Weekly buckets: `data/raw/weekly/week_<YYYY-MM-DD>.json`
@@ -100,171 +128,8 @@ python main.py ^
 - Review classifications: `data/processed/review_classifications.json`
 - Weekly pulse notes: `data/processed/weekly_pulse/pulse_<YYYY-MM-DD>.json`
 - Markdown render: `data/processed/weekly_pulse/pulse_<YYYY-MM-DD>.md`
+- **Frontend Dashboard**: Deployed to GitHub Pages
 
 ---
 
-### 4. Deploying via GitHub Actions (Mondays 09:00 local)
-
-1. **Create workflow**
-   - Add `.github/workflows/weekly-run.yml`:
-     ```yaml
-     name: Weekly App Review Pipeline
-
-     on:
-       schedule:
-         - cron: '0 3 * * 1'    # 03:00 UTC ≈ 09:00 IST (adjust for your timezone)
-       workflow_dispatch:
-
-     jobs:
-       weekly:
-         runs-on: ubuntu-latest
-         steps:
-           - uses: actions/checkout@v4
-           - uses: actions/setup-python@v5
-             with:
-               python-version: '3.10'
-           - name: Install dependencies
-             run: |
-               python -m venv .venv
-               source .venv/bin/activate
-               pip install -r requirements.txt
-           - name: Run pipeline
-             env:
-               GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-               EMAIL_TRANSPORT: gmail
-               EMAIL_SINGLE_LATEST: "true"
-              REVIEW_LOOKBACK_DAYS: "28"
-               PLAY_STORE_APP_ID: com.nextbillion.groww
-               # Add SMTP/Gmail secrets as needed
-             run: |
-               source .venv/bin/activate
-               python main.py --cron-tag github-actions --email-single-latest
-     ```
-
-2. **Set secrets**
-   - Repo → Settings → Secrets and variables → Actions.
-   - Add all sensitive envs (Gemini API key, Gmail/SMTP creds, etc.).
-   - For Gmail transport you can either:
-     - Provide file paths via `GMAIL_CREDENTIALS_PATH` / `GMAIL_TOKEN_PATH`, or
-     - Store the raw JSON as secrets `GMAIL_CREDENTIALS_JSON` / `GMAIL_TOKEN_JSON` (the workflow writes them to disk automatically). Make sure the workflow exports those secrets as environment variables (`GMAIL_USER`, `GMAIL_CREDENTIALS_JSON`, `GMAIL_TOKEN_JSON`) so Layer 4 can see them.
-   - Set `EMAIL_RECIPIENT` to the address that should receive the weekly pulse; the workflow now passes this secret into the pipeline.
-
-3. **Test workflow**
-   - In the Actions tab, manually “Run workflow” to confirm the job succeeds and only one email is sent.
-
-4. **Monitor weekly runs**
-   - After merging to `main`, GitHub triggers the job every Monday.
-   - Review the Actions logs for Gemini quota hits or delivery errors; tune `REVIEW_LOOKBACK_DAYS` or batch sizes if needed.
-
-5. **Maintain secrets & artifacts**
-   - Rotate GitHub secrets whenever credentials change.
-   - Keep `data/raw` and `data/processed` out of git; upload artifacts if you need snapshots of outputs.
-
----
-
-### 4. Sample Outputs
-
-#### Latest Weekly Pulse Note
-
-**Week: November 17-23, 2025** ([Full Markdown](data/processed/weekly_pulse/pulse_2025-11-17.md))
-
-```markdown
-# Product Pulse: November 17-23, 2025
-
-This week's pulse identifies critical issues with app stability, causing login
-failures and feature inaccessibility. Payments experienced challenges with
-non-functional Autopay and extended withdrawal times for urgent needs.
-
-## Themes
-- **Slow, Glitches** - Users reported significant app instability and login
-  failures, severely hindering access to features like Digi Gold investment
-  for multiple days.
-- **UI/UX** - Though generally user-friendly, a critical flaw in the
-  drag-and-drop system is causing users to miss trades due to required manual input.
-- **Payments/Statements** - Critical payment functionalities are failing,
-  with Autopay repeatedly unsuccessful and withdrawal processing times deemed
-  excessively long during urgent situations.
-
-## Quotes
-- "Not working since last 5 days (Slow, Glitches)"
-- "pls update drag and drop system in target and stop manual type karne jaye
-  hai to trade miss ho jata hai (UI/UX)"
-- "Withdrawal time is too long, It's an emergency right now and we have to
-  wait for 4 days.😡 (Payments/Statements)"
-
-## Actions
-- Prioritize investigation and resolution of core app stability, login failures,
-  and feature accessibility (e.g., Digi Gold).
-- Enhance the drag-and-drop trading interface to prevent manual input errors
-  and ensure trade execution without delays.
-- Address Autopay functionality failures and optimize withdrawal processing
-  times to meet user expectations, especially for urgent needs.
-```
-
-#### Email Draft Example
-
-**Subject:** `Weekly Product Pulse – Groww App (2025-11-17–2025-11-23)`
-
-**Body (sample):**
-```
-Groww App Weekly Pulse | 2025-11-17 – 2025-11-23
-
-Title: Critical Stability and Payment Issues Impact User Experience
-Overview: This week's pulse identifies critical issues with app stability,
-causing login failures and feature inaccessibility. Payments experienced
-challenges with non-functional Autopay and extended withdrawal times.
-
-Top Themes:
-- Slow, Glitches: Users reported significant app instability and login failures
-- UI/UX: Critical flaw in drag-and-drop system causing missed trades
-- Payments/Statements: Autopay failures and excessive withdrawal processing times
-
-Representative Quotes:
-- "Not working since last 5 days"
-- "pls update drag and drop system in target and stop manual type karne jaye
-  hai to trade miss ho jata hai"
-- "Withdrawal time is too long, It's an emergency right now and we have to
-  wait for 4 days"
-
-Action Ideas:
-- Prioritize investigation and resolution of core app stability and login failures
-- Enhance the drag-and-drop trading interface to prevent manual input errors
-- Address Autopay functionality failures and optimize withdrawal processing times
-
-Reply to this email if you need deeper dives or clarifications.
-```
-
-*Note: Email drafts are generated by Gemini LLM with PII scrubbing and fallback
-templates. Full email logs are available in `data/processed/email_logs.csv`.*
-
-#### Reviews Data Sample (Redacted)
-
-Sample from `data/raw/groww_reviews_2025-11-04_2025-11-18.json`:
-
-```json
-{
-  "reviews": [
-    {
-      "review_id": "6740d4c1-8ae1-4b59-a6ad-64d5ed963560",
-      "title": "Customer Review",
-      "text": "worse customer support services please don't get fool by this groww app",
-      "rating": 1,
-      "date": "2025-11-10T17:33:02+00:00",
-      "author": "User"
-    },
-    {
-      "review_id": "cffa1d4d-8a48-4b5a-b1a8-ef07bb30987b",
-      "title": "Customer Review",
-      "text": "to good 👍",
-      "rating": 5,
-      "date": "2025-11-10T16:59:52+00:00",
-      "author": "User"
-    }
-  ]
-}
-```
-
-*Note: Author names and PII are redacted in this sample. Full reviews include
-original author names (anonymized in email outputs).*
-
----
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)

@@ -225,6 +225,28 @@ def run_pipeline(args: Optional[argparse.Namespace] = None) -> None:
     classifications = classifier.classify_reviews(filtered_reviews)
     LOGGER.info("Classified %s reviews", len(classifications))
 
+    # Save LLM-suggested themes
+    llm_themes = classifier.get_llm_suggested_themes()
+    if llm_themes:
+        LOGGER.info("LLM suggested %s new themes", len(llm_themes))
+        llm_themes_data = {
+            "suggested_at": datetime.now(timezone.utc).isoformat(),
+            "theme_count": len(llm_themes),
+            "themes": [
+                {
+                    "theme_id": theme.id,
+                    "theme_name": theme.name,
+                    "description": theme.description,
+                }
+                for theme in llm_themes.values()
+            ]
+        }
+        processed_dir = Path("data/processed")
+        processed_dir.mkdir(parents=True, exist_ok=True)
+        with (processed_dir / "llm_suggested_themes.json").open("w", encoding="utf-8") as fh:
+            json.dump(llm_themes_data, fh, indent=2, ensure_ascii=False)
+        LOGGER.info("Saved LLM-suggested themes to llm_suggested_themes.json")
+
     # Aggregate by week
     output_dir = Path(os.getenv("SCRAPER_OUTPUT_DIR", "data/raw"))
     weekly_dir = _resolve_weekly_dir(args, output_dir)

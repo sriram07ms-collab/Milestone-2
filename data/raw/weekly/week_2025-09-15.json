@@ -1,28 +1,51 @@
 [
   {
-    "review_id": "7c755ca3-41ce-490c-ad9a-648601657453",
-    "title": "arun k",
-    "text": "For the past few days, I’ve been unable to open the app and keep getting the error “OOPS, SOMETHING WENT WRONG.” I updated the app, uninstalled it, and reinstalled it. After logging in, it worked fine the day before yesterday, but now I’m facing the same error again when opening the app. My internet bandwidth is good, so I’m not sure why the app is behaving like this.",
+    "review_id": "2ea69b6c-f46f-4307-8639-95827a378807",
+    "title": "RAHUL Bro",
+    "text": "sometimes doesn't show full invested amount, for example I have invested in one of sbi MF there is 11000+ but sometimes it shows only 4000+ or 3000+",
+    "rating": 2,
+    "date": "2025-09-18T16:11:11+00:00",
+    "author": "RAHUL Bro",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "381d8878-cccd-43d8-a440-4f53cffe4a94",
+    "title": "dattatray pagare",
+    "text": "besst",
+    "rating": 5,
+    "date": "2025-09-18T16:08:04+00:00",
+    "author": "dattatray pagare",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b8af14fc-355d-467a-b6be-052af09bca4a",
+    "title": "Umesh Kumar Nayak",
+    "text": "Thanks for start comodity segment",
+    "rating": 5,
+    "date": "2025-09-18T15:51:04+00:00",
+    "author": "Umesh Kumar Nayak",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d6a522b0-183d-42d9-9c08-0b227afad849",
+    "title": "Dhruv Khanna",
+    "text": "My experience has been and still remains the worst Their customer support should be called Customer Harassment Portal A call will be immediately picked up by the AI which will keep you on a loop for 10 minutes and then automatically drops the call in the 11th minute You want to chat for immediate answers Good luck with that I started writing this review after I was told to wait by an agent while they checked my details Those details are being checked for the past 15 minutes without any reply",
     "rating": 1,
-    "date": "2025-09-20T00:00:00+00:00",
+    "date": "2025-09-18T15:47:48+00:00",
+    "author": "Dhruv Khanna",
     "week_start_date": "2025-09-15",
     "week_end_date": "2025-09-21"
   },
   {
-    "review_id": "fb372797-ab66-41e8-b77e-ac0a48bb5b70",
-    "title": "Prashant Gupta",
-    "text": "This is one of the best platforms for investment, but applying for an IPO is frustrating. Recently, the application process gets stuck on \"sending application to exchange,\" failing to generate a number or send a mandate. Other platforms like AngelOne and INDmoney are much faster. But I prefer using Groww, so I often have to cancel and reapply to get my application submitted, which is especially stressful on the final day.",
-    "rating": 4,
-    "date": "2025-09-19T00:00:00+00:00",
-    "week_start_date": "2025-09-15",
-    "week_end_date": "2025-09-21"
-  },
-  {
-    "review_id": "edb92e0e-49cc-45c6-b041-45d8008946f2",
-    "title": "SANT KUMAR",
-    "text": "I've been using the Groww app for a while now, and it's fantastic for tracking investments, mutual funds, and buying/selling stocks. The UI is clean, and it's beginner-friendly. However, one feature that could take it to the next level would be stock recommendations for both long-term investments and short-term trades (like swing trading). It would be super helpful to get insights, expert analysis, or even curated stock lists based on different time horizons and risk appetites.",
-    "rating": 4,
-    "date": "2025-09-19T00:00:00+00:00",
+    "review_id": "16eab3a8-c565-4461-b0f5-a93580b74005",
+    "title": "Ravi Saini",
+    "text": "done best",
+    "rating": 5,
+    "date": "2025-09-18T15:33:25+00:00",
+    "author": "Ravi Saini",
     "week_start_date": "2025-09-15",
     "week_end_date": "2025-09-21"
   },
@@ -31,7 +54,1998 @@
     "title": "Rakesh Sarma",
     "text": "#Go for another broker. This app has been giving a lot of issues. It is not working well in the commodity section. While putting buy/sell orders in options the executed orders don't appear immediately in the positions . it takes a lot of time. Very slow app. The interface was not this bad earlier. Bugs may be there too. The Worst customer service. Calls are not picked up.",
     "rating": 1,
-    "date": "2025-09-18T00:00:00+00:00",
+    "date": "2025-09-18T15:31:13+00:00",
+    "author": "Rakesh Sarma",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "ba4c5278-17b4-42ef-a076-0e891301d720",
+    "title": "Rishikesh Kumar",
+    "text": "faltu hai bahut jyada charge karta hai",
+    "rating": 1,
+    "date": "2025-09-18T15:23:38+00:00",
+    "author": "Rishikesh Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "ef85b00a-d631-4e65-bcf1-07eeb01d7438",
+    "title": "Satinder K. Dhiman (Vicky)",
+    "text": "using it for 4 years & there are many simple issues. 1. OFS buying option is missing 2. if you buy stocks in Right issue they will never average it with the previous purchase. unless you waste your time in sending them multiple emails. 3. Brokerage charges are high where nothing special is offered 4. Recently noticed that older history charts are deleted for many stocks. why the hell? 5. Many stocks About info is missing.",
+    "rating": 2,
+    "date": "2025-09-18T15:04:00+00:00",
+    "author": "Satinder K. Dhiman (Vicky)",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "921f1715-06cb-4918-ac4d-a36506245fe8",
+    "title": "noratan DHAKA",
+    "text": "good app",
+    "rating": 5,
+    "date": "2025-09-18T14:23:21+00:00",
+    "author": "noratan DHAKA",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "33cb79e8-dfa6-4866-aa47-208418931a32",
+    "title": "akash bhut",
+    "text": "very third class loss making application many time issue and our losses. who can my losses returns",
+    "rating": 1,
+    "date": "2025-09-18T14:20:59+00:00",
+    "author": "akash bhut",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "cb5d9824-d051-43e6-9cf6-beb8a57a471c",
+    "title": "Vijay Sawant",
+    "text": "Very good 👍😊",
+    "rating": 4,
+    "date": "2025-09-18T14:02:07+00:00",
+    "author": "Vijay Sawant",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "026982b7-2671-4a61-a696-b53479037acc",
+    "title": "yogesh pawar",
+    "text": "good 👍",
+    "rating": 5,
+    "date": "2025-09-18T13:53:20+00:00",
+    "author": "yogesh pawar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "cc50b45d-ee43-46b0-8f82-0b13950192e1",
+    "title": "Pranjit roy",
+    "text": "good",
+    "rating": 5,
+    "date": "2025-09-18T13:45:23+00:00",
+    "author": "Pranjit roy",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a6f7b54c-c76a-4909-9539-aec10b3f4fa1",
+    "title": "jaydeep Vaghela",
+    "text": "not ipo allotment thes app 😫😫😫",
+    "rating": 1,
+    "date": "2025-09-18T13:35:10+00:00",
+    "author": "jaydeep Vaghela",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "db758371-f4ca-44ab-9ad1-7b20e1c5276d",
+    "title": "Arun Kamble",
+    "text": "very good app for trending purpose",
+    "rating": 5,
+    "date": "2025-09-18T13:30:17+00:00",
+    "author": "Arun Kamble",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "32b1a410-e350-4bda-9162-898912486159",
+    "title": "Aditya Kumar",
+    "text": "Very bad customer care support",
+    "rating": 1,
+    "date": "2025-09-18T13:26:11+00:00",
+    "author": "Aditya Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "27b0cf67-c392-4e3f-9ec4-f71f12f1e783",
+    "title": "Bikram Mohapatra",
+    "text": "very nice 👌",
+    "rating": 5,
+    "date": "2025-09-18T12:48:24+00:00",
+    "author": "Bikram Mohapatra",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2705ea1e-86ea-42c7-bf1f-0b6ae039e251",
+    "title": "Aniket Kamble",
+    "text": "Very good",
+    "rating": 5,
+    "date": "2025-09-18T12:36:26+00:00",
+    "author": "Aniket Kamble",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "13575a14-2827-4b6b-8941-3c70bb76d6d9",
+    "title": "Naveen Singh",
+    "text": "nice 👍",
+    "rating": 5,
+    "date": "2025-09-18T12:27:08+00:00",
+    "author": "Naveen Singh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "8d1165d8-1c96-4606-b962-f2156a7a9853",
+    "title": "Pankaj Kumar",
+    "text": "nice easy to use",
+    "rating": 5,
+    "date": "2025-09-18T12:20:40+00:00",
+    "author": "Pankaj Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "20556238-db69-46e0-95a3-3d85b04d2de2",
+    "title": "Vishwa calligraphy",
+    "text": ",/",
+    "rating": 4,
+    "date": "2025-09-18T11:58:29+00:00",
+    "author": "Vishwa calligraphy",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "8ce304e8-2f3a-4220-bcfa-2ae144e193ad",
+    "title": "Rajesh R",
+    "text": "too much of brokerage but service is good and quick response and easy to accessible everything",
+    "rating": 1,
+    "date": "2025-09-18T11:49:05+00:00",
+    "author": "Rajesh R",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d3a889f1-c791-4157-b64d-114d4919a95c",
+    "title": "Mobarak Ansari890",
+    "text": "open nahi ho raha hai",
+    "rating": 5,
+    "date": "2025-09-18T11:41:57+00:00",
+    "author": "Mobarak Ansari890",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9b4f7b76-01af-4d7a-8b05-51195b1cd64f",
+    "title": "Preet Bas",
+    "text": "Very bad experience, khud se stock sell kar diya mujhe bataya tak nhi, or pement bhi pata nhi kahan gol kardi,ab msg karta hun,ya mail karta hun to us koi sahi jwab nhi milta, mera 85 shares ka ek stock rakha tha vo los me khud he sell kar diya,or meri pement bhi nhi mili",
+    "rating": 1,
+    "date": "2025-09-18T11:36:48+00:00",
+    "author": "Preet Bas",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b63fac32-3de4-4de4-8e5c-1685df8f45c7",
+    "title": "Venkatesan Ganesan",
+    "text": "Groww app nowadays I am facing some errors while buying and sale. Please resolve my issues it's always repeat",
+    "rating": 3,
+    "date": "2025-09-18T11:30:08+00:00",
+    "author": "Venkatesan Ganesan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "aeba8b9e-3328-4b46-befd-8e9f1f56252e",
+    "title": "Vaseem Basha",
+    "text": "c😎ieggfgrrg🌏🌏🌏🏝️ఓ,y❤️9🌏😘🤣🌹e🤣🤣🤣❤️❤️❤️ee❤️🥰కు 🥰🥰e 🥰ee🥰rrrrr4🥰&😎🥰45&444&4&44&&44&4⁴&🥰",
+    "rating": 3,
+    "date": "2025-09-18T10:56:59+00:00",
+    "author": "Vaseem Basha",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b6a463c1-f7d5-4b95-a61f-9282217495ec",
+    "title": "Manob jyoti Bhumij",
+    "text": "best app",
+    "rating": 5,
+    "date": "2025-09-18T10:47:05+00:00",
+    "author": "Manob jyoti Bhumij",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "4cfdccf4-1bae-4ac3-b5ea-f31b0a92d0cb",
+    "title": "Papu Debsharma",
+    "text": "nice",
+    "rating": 5,
+    "date": "2025-09-18T10:35:36+00:00",
+    "author": "Papu Debsharma",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e33b9504-e9d4-4aeb-ba0d-7c573c57c8f9",
+    "title": "JAI PRAKASH",
+    "text": "Payment withdrawal is very slow. Don't use it. Waist of money. I don't want given single star. Charges are also very high. Exit mode is waist. Always loss on margin.",
+    "rating": 1,
+    "date": "2025-09-18T10:09:24+00:00",
+    "author": "JAI PRAKASH",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "ce9dbddb-dc19-43dc-9a46-c57d41c66aae",
+    "title": "Nuruzzaman Mondal",
+    "text": "Best broker in india",
+    "rating": 5,
+    "date": "2025-09-18T09:58:41+00:00",
+    "author": "Nuruzzaman Mondal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "5430223c-9d23-4e06-8de8-fd737d4d6008",
+    "title": "Mohd Ismail khan",
+    "text": "technical glaze so many times in f&no.and trade not showing etc..",
+    "rating": 1,
+    "date": "2025-09-18T09:53:30+00:00",
+    "author": "Mohd Ismail khan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9c1942ee-caed-4fc6-a30c-474ac7e5950c",
+    "title": "Bhushan Ingale",
+    "text": "very nice app easy to use please add crud oil and natural gas",
+    "rating": 5,
+    "date": "2025-09-18T09:42:45+00:00",
+    "author": "Bhushan Ingale",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "5ed58fd7-0c70-4406-8257-53730f1ae93b",
+    "title": "Bharath Gokul",
+    "text": "I don't recommend this app because of the worst customer care 😞 too much time take",
+    "rating": 1,
+    "date": "2025-09-18T09:37:47+00:00",
+    "author": "Bharath Gokul",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "0a3a20e3-85c4-4d46-9fca-903e9bee31c7",
+    "title": "Somesh Chaudhary",
+    "text": "bad app ... always payment settlement issue.. if your order is open in options then they will automatically reduce your buying price and make huge loss in next day.. I don't know how they did it with retailers... I have facing many losses due to app glitch issue.. they don't give me any refund.. so I deleted this app... worst experience..",
+    "rating": 1,
+    "date": "2025-09-18T09:33:27+00:00",
+    "author": "Somesh Chaudhary",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "debea7af-f2b7-4555-b1ef-a0aecc210f90",
+    "title": "mohd latif",
+    "text": "👍",
+    "rating": 5,
+    "date": "2025-09-18T09:30:34+00:00",
+    "author": "mohd latif",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "c48c5f7e-860c-48ac-b43b-b21a84f7d229",
+    "title": "Sakshi Bhardwaj",
+    "text": "bogus broking app higher charges, many bugs in app, never release payment on time",
+    "rating": 1,
+    "date": "2025-09-18T09:19:55+00:00",
+    "author": "Sakshi Bhardwaj",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "69da5434-4619-4332-9f12-43deef8fb651",
+    "title": "Sahil Verma",
+    "text": "very good 😊",
+    "rating": 5,
+    "date": "2025-09-18T09:11:34+00:00",
+    "author": "Sahil Verma",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "4820bbb7-e34e-4c7f-9e39-ce15eaac0198",
+    "title": "Vimal",
+    "text": "I like it",
+    "rating": 5,
+    "date": "2025-09-18T08:54:39+00:00",
+    "author": "Vimal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "44aca937-1b54-4f01-b3bc-3af0597d0fbd",
+    "title": "Nitin Lavate",
+    "text": "💪💪",
+    "rating": 5,
+    "date": "2025-09-18T08:48:37+00:00",
+    "author": "Nitin Lavate",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "1789bdcc-6b63-41c6-96be-8a14930b00df",
+    "title": "mahi mahesh kamepalli",
+    "text": "good",
+    "rating": 4,
+    "date": "2025-09-18T08:45:56+00:00",
+    "author": "mahi mahesh kamepalli",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a647203c-4d05-4d0a-ac15-8d612262af06",
+    "title": "MrSusanta Karak",
+    "text": "Now the Groww is the Best. previous condition improves thanks a lot",
+    "rating": 5,
+    "date": "2025-09-18T08:45:53+00:00",
+    "author": "MrSusanta Karak",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "0fe9b8d0-cc85-466a-b0a8-32d49b74a9cb",
+    "title": "Kumesh Markam",
+    "text": "I don't understand something in this update.",
+    "rating": 1,
+    "date": "2025-09-18T08:35:53+00:00",
+    "author": "Kumesh Markam",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "7bb4879b-3fbd-4ce3-af89-cf761c028cc4",
+    "title": "Faheem Raj",
+    "text": "op",
+    "rating": 3,
+    "date": "2025-09-18T08:26:25+00:00",
+    "author": "Faheem Raj",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "7c9ddc5b-f1de-4eb2-ac3a-28e18eeb8b13",
+    "title": "Pranay Chaudhari",
+    "text": "good app for trading.",
+    "rating": 5,
+    "date": "2025-09-18T08:25:24+00:00",
+    "author": "Pranay Chaudhari",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "07191ae4-e9c4-4df1-8374-b2f32f362c0d",
+    "title": "Soni Khatoon",
+    "text": "gi",
+    "rating": 5,
+    "date": "2025-09-18T08:06:41+00:00",
+    "author": "Soni Khatoon",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "3681e54f-faff-43ac-a393-fd404d128931",
+    "title": "Shivaji Pawar",
+    "text": "very very nice app",
+    "rating": 5,
+    "date": "2025-09-18T08:00:52+00:00",
+    "author": "Shivaji Pawar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "4d374aa1-10e5-4b65-a84e-01ca30472298",
+    "title": "MUKESH MILAN",
+    "text": "master mand",
+    "rating": 5,
+    "date": "2025-09-18T07:33:43+00:00",
+    "author": "MUKESH MILAN",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "8e87bafe-a47e-41de-ba53-c6ba06001d19",
+    "title": "Fayha Thasneem",
+    "text": "best for mutual fund's",
+    "rating": 5,
+    "date": "2025-09-18T07:30:34+00:00",
+    "author": "Fayha Thasneem",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e56a40eb-be20-493f-8e2d-52f8c33d710f",
+    "title": "Gohil Rahul Rahul",
+    "text": "good groww 😊",
+    "rating": 5,
+    "date": "2025-09-18T07:23:33+00:00",
+    "author": "Gohil Rahul Rahul",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "4a84c088-7ea0-413c-9d81-026a895f8ad7",
+    "title": "Suraj Hastoriya",
+    "text": "decent but better",
+    "rating": 3,
+    "date": "2025-09-18T07:16:11+00:00",
+    "author": "Suraj Hastoriya",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "dd028e4f-0532-48e7-82e1-7be2844f33c7",
+    "title": "Gaurav Chauhan",
+    "text": "good application",
+    "rating": 5,
+    "date": "2025-09-18T07:10:32+00:00",
+    "author": "Gaurav Chauhan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "190aced0-221a-4212-85ac-456f92cba7b0",
+    "title": "amit bhai",
+    "text": "nice",
+    "rating": 5,
+    "date": "2025-09-18T07:07:40+00:00",
+    "author": "amit bhai",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "c0bd40e3-27fd-4ac9-a58f-39e6c7c773d1",
+    "title": "Naik Thejeshwar",
+    "text": "Beware of the fraud guys 1.when you click on buy stocks the options automatically sets itself to Intraday beware 2.When you buy a stock for s price if no sellers are there it should buy the quantity which is available for buying in my account but these people buy more quantity and keep our balance negative shane on u",
+    "rating": 1,
+    "date": "2025-09-18T06:53:14+00:00",
+    "author": "Naik Thejeshwar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2b02b438-78b5-4459-b706-b6808886d0a5",
+    "title": "Harish Verma",
+    "text": "Har dusre tisre din kya update karte hai yeh, roj update karne ko bolte rehte hai.",
+    "rating": 3,
+    "date": "2025-09-18T06:50:38+00:00",
+    "author": "Harish Verma",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "260f4ee6-0492-4242-90dd-ab5286ca6bf5",
+    "title": "Adventure. Sateesh",
+    "text": "nice 👍👍",
+    "rating": 5,
+    "date": "2025-09-18T06:50:03+00:00",
+    "author": "Adventure. Sateesh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e157a7f2-51e7-4037-89e3-f43b7ee1a698",
+    "title": "SÃÇHÎÑ CHØÙHÅÑ",
+    "text": "feel happy 😊",
+    "rating": 5,
+    "date": "2025-09-18T06:45:25+00:00",
+    "author": "SÃÇHÎÑ CHØÙHÅÑ",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d6108a0b-d011-4947-9cf1-e1f7b9005efb",
+    "title": "Ashvin Gohil",
+    "text": "very good",
+    "rating": 5,
+    "date": "2025-09-18T06:36:08+00:00",
+    "author": "Ashvin Gohil",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a3d624ef-d03e-4b4e-a90e-a8db9ae40714",
+    "title": "Krishna s Krishna",
+    "text": "good 😊",
+    "rating": 5,
+    "date": "2025-09-18T06:31:16+00:00",
+    "author": "Krishna s Krishna",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f8166cbf-6fed-4ea2-8bc1-094127c0813f",
+    "title": "Alok Singh",
+    "text": "ok",
+    "rating": 5,
+    "date": "2025-09-18T06:23:40+00:00",
+    "author": "Alok Singh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "bd559fde-3f8e-448b-93eb-82daeeb6cd4e",
+    "title": "Suraj Kumar",
+    "text": "good ui and easy to invest",
+    "rating": 5,
+    "date": "2025-09-18T06:14:37+00:00",
+    "author": "Suraj Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "56d171de-bda8-4fbb-8e4f-edd4cb0ddece",
+    "title": "Kartheek Pattela",
+    "text": "Best and very user needed UI and stats",
+    "rating": 5,
+    "date": "2025-09-18T06:05:59+00:00",
+    "author": "Kartheek Pattela",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f93ff026-0cfc-4480-8141-3c419d962957",
+    "title": "Venugopal Kontam",
+    "text": "Groww App Stuckkk Very Bad Very Bad.... I lost My Total Fund.... Worst Don't Install App.... Waste From Today Am Stop Using This App",
+    "rating": 1,
+    "date": "2025-09-18T06:00:59+00:00",
+    "author": "Venugopal Kontam",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e2da8a07-c649-4660-8701-215e805f0d64",
+    "title": "vivek singh",
+    "text": "it's to much help in investment",
+    "rating": 5,
+    "date": "2025-09-18T05:58:33+00:00",
+    "author": "vivek singh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "fd559f39-253b-4dca-a7c7-2bff3577bb5a",
+    "title": "Pearl Valley Adventures",
+    "text": "one of the best and solid app to do trade with ❤",
+    "rating": 5,
+    "date": "2025-09-18T05:47:33+00:00",
+    "author": "Pearl Valley Adventures",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a15af0b0-e627-4e51-bde0-a91ad53b0760",
+    "title": "Sandesh Reddy",
+    "text": "PLEASE GIVE US THE OPTION OF SCROLLING TO THE YESTERDAY CHART ON YOUR BASIC ONE DAY CHART SO WE DON'T NEED TO OPEN THE FULL CHART FOR A VIEW OF A PARTICULAR CHART....",
+    "rating": 3,
+    "date": "2025-09-18T05:43:02+00:00",
+    "author": "Sandesh Reddy",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "390efdb6-27ff-4c95-8950-b41597ca6b31",
+    "title": "Murali Krishna Chowdary",
+    "text": "Target notifications getting too late",
+    "rating": 1,
+    "date": "2025-09-18T05:42:09+00:00",
+    "author": "Murali Krishna Chowdary",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "c44b9627-fb68-4a52-93fc-59708e8a5127",
+    "title": "Manas Nageshwar",
+    "text": "Don't change the graph display, earlier it was good but now even for small movements it's showing huge inclination as if stock is hitting all time high.",
+    "rating": 1,
+    "date": "2025-09-18T05:35:00+00:00",
+    "author": "Manas Nageshwar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "1bd98caf-e965-4729-95e4-7871bba7af0d",
+    "title": "PrathapaSL Prathapa",
+    "text": "very nice",
+    "rating": 5,
+    "date": "2025-09-18T05:28:20+00:00",
+    "author": "PrathapaSL Prathapa",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e29d6a0e-16b5-4db3-9e02-2cd0fea5fad5",
+    "title": "VARAD SHIVPUjE",
+    "text": "👌 good",
+    "rating": 5,
+    "date": "2025-09-18T05:27:40+00:00",
+    "author": "VARAD SHIVPUjE",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "669d166c-595f-4487-a42b-aa4f1decf864",
+    "title": "amarendra hamsa",
+    "text": "Poor customer service. Taking too long to respond. After reaching they are not able to understand the issue.",
+    "rating": 1,
+    "date": "2025-09-18T05:14:07+00:00",
+    "author": "amarendra hamsa",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b4a3db5e-f20b-4a82-97bb-c87a6f4102fb",
+    "title": "Rajesh Nadar",
+    "text": "superb app using it from 4 years + ... simple and logically designed app.",
+    "rating": 5,
+    "date": "2025-09-18T05:09:04+00:00",
+    "author": "Rajesh Nadar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "36404e3e-25ba-4680-a453-2a3c715eb3bd",
+    "title": "Prabir Das",
+    "text": "very nice",
+    "rating": 5,
+    "date": "2025-09-18T05:05:04+00:00",
+    "author": "Prabir Das",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "c4acd6fd-f6cb-465c-8eb3-16b2dcc2d1a3",
+    "title": "Shivam Chetry",
+    "text": "I am not able to open my groww app, authentication failed, what to do to solve it...",
+    "rating": 5,
+    "date": "2025-09-18T05:04:04+00:00",
+    "author": "Shivam Chetry",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "eaf2b1fe-40ec-45d7-bb58-656eaa285bb6",
+    "title": "Rahul Rathod",
+    "text": "super 👌",
+    "rating": 5,
+    "date": "2025-09-18T04:59:52+00:00",
+    "author": "Rahul Rathod",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a7470dae-6fdb-4077-a0a3-91ba610b9cdd",
+    "title": "BIRJESH KUMAR",
+    "text": "very good",
+    "rating": 5,
+    "date": "2025-09-18T04:59:23+00:00",
+    "author": "BIRJESH KUMAR",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d15e3cc7-6bdf-421e-93cf-7f9b5878692c",
+    "title": "Kavarthapu Bhavana",
+    "text": "it improved my savings",
+    "rating": 5,
+    "date": "2025-09-18T04:58:55+00:00",
+    "author": "Kavarthapu Bhavana",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "71861e85-fe68-46ce-88f8-e12444e85798",
+    "title": "AjEet A_k",
+    "text": "best",
+    "rating": 5,
+    "date": "2025-09-18T04:52:05+00:00",
+    "author": "AjEet A_k",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "aadb7867-f03a-4a3a-bcb3-c5f780cb3a62",
+    "title": "Ajab Narayan",
+    "text": "Excellent",
+    "rating": 5,
+    "date": "2025-09-18T04:43:57+00:00",
+    "author": "Ajab Narayan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "fb05b705-9071-4103-a4fb-819c61622fa7",
+    "title": "Sandip Raj",
+    "text": "this was very good update",
+    "rating": 4,
+    "date": "2025-09-18T04:34:08+00:00",
+    "author": "Sandip Raj",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a4c74aee-2c22-4c8f-a41e-ad7a34bcc654",
+    "title": "Hemant Kumar",
+    "text": "👍",
+    "rating": 5,
+    "date": "2025-09-18T04:32:22+00:00",
+    "author": "Hemant Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "27fbf425-65ee-4371-87b4-9a819b0e8a60",
+    "title": "rupali rai",
+    "text": "this update is very slow please correct this problem",
+    "rating": 3,
+    "date": "2025-09-18T04:31:09+00:00",
+    "author": "rupali rai",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "17e8d795-3915-419b-ae89-88d9c3c17f7a",
+    "title": "BULU KUMAR",
+    "text": "best app for stock market but please make it tablet compatible too.",
+    "rating": 5,
+    "date": "2025-09-18T04:29:49+00:00",
+    "author": "BULU KUMAR",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "70a44252-7c79-4948-be5e-72e4b229facd",
+    "title": "Yuvaraj R",
+    "text": "I was looking to import my MF portfolio into Groww. Initiated import but it has been stuck for 20+ minutes on the same page. I am curious as to how a reputable firm with an army of engineers can fail with this journey. Especially when the process gets stuck in a loop. I tried reaching out to support. But as usual Groww fails when it comes to human involvement. Reconsidering if moving the portfolio is even the right approach.",
+    "rating": 1,
+    "date": "2025-09-18T04:27:20+00:00",
+    "author": "Yuvaraj R",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "148e9797-23c4-4340-9a07-ce7f0c84707c",
+    "title": "Venkat Rao",
+    "text": "Buy & sell order percentages are not moving correctly.plx,fix these errors",
+    "rating": 1,
+    "date": "2025-09-18T04:15:40+00:00",
+    "author": "Venkat Rao",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "6cac3c02-1ff0-4b96-999b-65e0fb66f831",
+    "title": "Md Masoom Reza",
+    "text": "Excellent app for the investors.",
+    "rating": 4,
+    "date": "2025-09-18T04:01:27+00:00",
+    "author": "Md Masoom Reza",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2319d796-02a4-4344-879b-51fd8694e534",
+    "title": "SUBHAN",
+    "text": "After selling a stocks in all transactions section charges also should be reflected there. Although user interface is very good 👍 please add watch list returns options in this recent update user interface nightmare ... previous user interface is best",
+    "rating": 4,
+    "date": "2025-09-18T03:37:44+00:00",
+    "author": "SUBHAN",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "40a19827-e49e-4ae5-976c-0767ab7bec5e",
+    "title": "Ak Singh",
+    "text": "wow best 😻",
+    "rating": 4,
+    "date": "2025-09-18T03:23:31+00:00",
+    "author": "Ak Singh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "baaeac28-03c6-4329-8e36-40e335e4649a",
+    "title": "Gaurav Bansal",
+    "text": "dhan and zerodha is much better in all aspect. will leave it forever soon",
+    "rating": 1,
+    "date": "2025-09-18T03:15:49+00:00",
+    "author": "Gaurav Bansal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b36e47f4-7afb-4ce0-a0d2-f3f1af438412",
+    "title": "Manjushri Das",
+    "text": "paisa bohot katta hai",
+    "rating": 2,
+    "date": "2025-09-18T03:01:10+00:00",
+    "author": "Manjushri Das",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "60e632bb-375d-4ed8-a8e8-e8ef23fa396f",
+    "title": "Rohit Kumar",
+    "text": "once you take loan against Mutual fund, they will tell you who the hell is Groww. After paying all dues, I ask twice whether all my mutual fund has been unpledged or not. Every time they were telling no mutual fund is on pledge. When I go for redemption it got rejected stating mutual fund is under lein. From the last 20 days Groww is misguiding me. Very pathetic.....",
+    "rating": 1,
+    "date": "2025-09-18T02:56:40+00:00",
+    "author": "Rohit Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "41969c1b-2f24-4beb-96d4-0b89be079e4a",
+    "title": "Naveen joshi",
+    "text": "b;@# z",
+    "rating": 1,
+    "date": "2025-09-18T01:51:10+00:00",
+    "author": "Naveen joshi",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "3199486a-2b9e-449d-94ee-fdec3849b3cb",
+    "title": "Vaikunda Raja",
+    "text": "Hi team, the app is good. I have one request like for stocks we can create separate watchlist but MF the option is not available. I can't create any separate watchlist for MF. Please look into it. Thank you. No action taken for my comments still now.",
+    "rating": 1,
+    "date": "2025-09-17T18:48:07+00:00",
+    "author": "Vaikunda Raja",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a61fa1db-1c01-414a-9c7b-42a210378dee",
+    "title": "Mayur Sardhara",
+    "text": "I would give 0 star, even after approving mandate your ipo application stuck with them & it will no applied but amount gets blocked. When you do offline transaction into your demate they deliberately delay in approval, reject it without any intimation about insufficient balance for small charges of 23 rupee. All other broker can approve transaction & debit this amount in ledger but this people will not Even inform you once about that & rejecte the transaction which can cause delay",
+    "rating": 1,
+    "date": "2025-09-17T18:29:32+00:00",
+    "author": "Mayur Sardhara",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "5e406ea2-0bbe-4a91-b351-4a7cf2914405",
+    "title": "Siddhartha Borchetia",
+    "text": "Lots of issue with Dashboard updation.",
+    "rating": 3,
+    "date": "2025-09-17T18:21:01+00:00",
+    "author": "Siddhartha Borchetia",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "65df17c9-813a-4522-866f-3054fb9be7b3",
+    "title": "Durga Vara prasad",
+    "text": "there is no gold trading plz try to put trading it's very important for users",
+    "rating": 2,
+    "date": "2025-09-17T17:36:05+00:00",
+    "author": "Durga Vara prasad",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "42c13b32-e459-4883-9c06-85e409b6da94",
+    "title": "Sidhesh",
+    "text": "App is convenient and easy to use. Overall a good app",
+    "rating": 3,
+    "date": "2025-09-17T17:07:30+00:00",
+    "author": "Sidhesh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "541fdbd9-a1d9-4c7a-9366-26f441d91a20",
+    "title": "Aditya Shrivastava",
+    "text": "Current UI is not good . multiple issues. first check with share holding pattern. all progress bar graph (Pramoter , retail and domestic)are clickable and modified easily.",
+    "rating": 3,
+    "date": "2025-09-17T16:24:02+00:00",
+    "author": "Aditya Shrivastava",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "68b28312-16c0-4862-b8e7-7b19079fe00c",
+    "title": "Lalsingh Rajput",
+    "text": "delay candles .",
+    "rating": 1,
+    "date": "2025-09-17T14:42:58+00:00",
+    "author": "Lalsingh Rajput",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2f5ee08f-f8b8-466e-823c-4a65c19c272f",
+    "title": "Afsar Shaikh",
+    "text": "customer care per baat hi nahi ho sakta hai, aise app me fasne se achcha hai kisi aur app me portfolio bana loon",
+    "rating": 1,
+    "date": "2025-09-17T14:27:41+00:00",
+    "author": "Afsar Shaikh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "76de0abc-ef2a-4845-940a-276963edde62",
+    "title": "karthimady",
+    "text": "give demo for beginners, demo available in zerodha",
+    "rating": 1,
+    "date": "2025-09-17T14:11:10+00:00",
+    "author": "karthimady",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f2eaa7e9-c262-42c6-935e-3562a4390fac",
+    "title": "Rameshwar",
+    "text": "customer service is too bad and discomfort and too late and too busy",
+    "rating": 1,
+    "date": "2025-09-17T13:38:57+00:00",
+    "author": "Rameshwar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "dce9218a-0b4c-4e5c-b9e4-f834c3f37694",
+    "title": "Vivek Vyas",
+    "text": "good but brockrage is High your profit 🤠",
+    "rating": 3,
+    "date": "2025-09-17T13:27:47+00:00",
+    "author": "Vivek Vyas",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "21f85ada-713b-4795-8a11-4799c4155df7",
+    "title": "Prashanth Kondani",
+    "text": "worst and worst application very very worst app in broking applications I placed an order buying price 46 successfully and placed an SL 40 TARGET 55 when it came sudden fall SL executed at 36 the strike option price went to 138. even rating 1 is also not worth to this application",
+    "rating": 1,
+    "date": "2025-09-17T13:15:10+00:00",
+    "author": "Prashanth Kondani",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "10769b4d-bc67-401e-92f4-5158d7f26c74",
+    "title": "Gaurav Gajjar",
+    "text": "Its Fraud Third party broker guys, do not use anymore, I took a trade in F&O in grow for which I had set Max loss trigger and when I came back and checked, the trade was moving above the set stop loss and I It did not close automatically and this has happened with many of my friends as well, due to which I had to close the trade with a loss much more than the set stoploss.When we complain to them, they do not take any action and escape by blaming the server and SEBI is also not taking any action",
+    "rating": 1,
+    "date": "2025-09-17T12:34:38+00:00",
+    "author": "Gaurav Gajjar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "389ac477-1ab5-47cc-9c15-9d638ff52483",
+    "title": "Rohit Bongarde",
+    "text": "hey please put more indicator for mobile app just like previous versions it doesn't feel appropriate and I made a losses. it's a suggestion to you please put indicator option like before",
+    "rating": 3,
+    "date": "2025-09-17T12:04:59+00:00",
+    "author": "Rohit Bongarde",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f3fc841d-b4b1-4c22-ba20-712738e5556d",
+    "title": "Ramesh Dabas",
+    "text": "नं ठिठक ल",
+    "rating": 1,
+    "date": "2025-09-17T10:32:00+00:00",
+    "author": "Ramesh Dabas",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "6a974e4e-9848-4f69-bbc4-e7886783465b",
+    "title": "Husain Shaikh",
+    "text": "don't download this app download other app it's totally wate don't download",
+    "rating": 1,
+    "date": "2025-09-17T09:57:29+00:00",
+    "author": "Husain Shaikh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9cd84b83-5514-4b32-8ff7-5cdede9c5285",
+    "title": "Thomas Martin",
+    "text": "Good app. But poor service. Long queues to connect with customer care",
+    "rating": 3,
+    "date": "2025-09-17T08:26:37+00:00",
+    "author": "Thomas Martin",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "7e29b51f-6a46-418b-8352-2a3c944d9a7b",
+    "title": "Niranjan Rajpurohit",
+    "text": "kindly reduce the size of the chart. It's so big.",
+    "rating": 1,
+    "date": "2025-09-17T08:10:09+00:00",
+    "author": "Niranjan Rajpurohit",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "caac4137-220c-46e5-8a88-25d43712e7d1",
+    "title": "Amit Singh",
+    "text": "costomer care services very poor",
+    "rating": 2,
+    "date": "2025-09-17T07:55:29+00:00",
+    "author": "Amit Singh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2b0f77a2-c053-4bd5-8f4a-0ec3dc5b06d1",
+    "title": "Venkata Pranavi Anumala",
+    "text": "customer support is worst they keep you one hour on hold and close the chat without responding",
+    "rating": 1,
+    "date": "2025-09-17T07:35:17+00:00",
+    "author": "Venkata Pranavi Anumala",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d75f3be0-cbfa-4528-9ac6-7f854ac4a39f",
+    "title": "Google User",
+    "text": "I invested on groww mutual fund by upi before 2pm but still got next day nav instead of same day NAV because i invested before 2pm On the next day nav increased by 2 - 3 % Now who is responsible for my loss",
+    "rating": 1,
+    "date": "2025-09-17T07:25:45+00:00",
+    "author": "Google User",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "8f83f98e-0af5-4481-95a9-ccd92f691edf",
+    "title": "Major Hans",
+    "text": "good 👍💯",
+    "rating": 1,
+    "date": "2025-09-17T06:38:50+00:00",
+    "author": "Major Hans",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "85fe2a46-e3dc-474f-87a8-56afb61a029c",
+    "title": "BHERU LAL CHOUDHARY",
+    "text": "😍ss,❤️😍❤️🤣🤣❤️❤️❤️❤️🤣❤️❤️🤣🤣🤣🤣❤️🤣❤️🤣🤣❤️🤣🤣❤️😍❤️❤️❤️😍😍❤️❤️❤️❤️😍",
+    "rating": 2,
+    "date": "2025-09-17T06:33:50+00:00",
+    "author": "BHERU LAL CHOUDHARY",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b5c07305-76ea-46f9-b96b-241b330577b8",
+    "title": "Sudhanshu Meshram",
+    "text": "There is no such thing as \"zero brokerage\" there are so many hidden brokerage and govt taxes which the app doesn't mention at all. it shows a negligible value for ex 0.004% but it's a scam, I buyed one stock of 220 ₹ normally exchange+taxes would be 1-2₹ extra but after a trade when I opened my contract note (full transaction history+ taxes+ their hidden brokerage values) I had to pay ₹5+ per share that's 3%+ !!!! it's a clear loot and scam of these guys to lure beginner traders.",
+    "rating": 1,
+    "date": "2025-09-17T06:29:47+00:00",
+    "author": "Sudhanshu Meshram",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "7234c8ee-dc8a-46e1-9ff1-d4b235864e7c",
+    "title": "prasad koneti",
+    "text": "very slow add money I created two days still my account inactive",
+    "rating": 1,
+    "date": "2025-09-17T06:24:00+00:00",
+    "author": "prasad koneti",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "53c2b637-ede5-45ef-9013-77da1ff57c31",
+    "title": "Skarb B",
+    "text": "Please also include delivery positions in the positions tab. At present, only intra day and F&O are displayed. It is impossible to view the fully sold shares positions and they are not displayed with 0 balance in Holdings tab.",
+    "rating": 4,
+    "date": "2025-09-17T06:07:22+00:00",
+    "author": "Skarb B",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "ec2d0820-3f5c-44e6-a5c4-c67d87222e3e",
+    "title": "raja babu",
+    "text": "Welcome to Gboard ww ccs x`x www 1q was dr 0m on no lo po Okk 9 l8o Okk no llp w1w aa 1q te aa w we xt you copy will be saved here.Welcome to Gboard clipboard, any text you copy will be saved here.Welcome to Gboard clipboard, any text you copy will be saved here.Welcome to Gboard clipboard, any text you copy will be saved here.Welcomwwrd77 xme to Gboard clipboard, any text you copy will be saved here.Welcome to Gboard clipboard, any text you copy will be saved here.1111",
+    "rating": 4,
+    "date": "2025-09-17T05:47:01+00:00",
+    "author": "raja babu",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "950a4943-5ff6-4431-ae3d-2dbb77eb260a",
+    "title": "adil chouhan",
+    "text": "don't make account in this app it change is very high according to me meke account in zerodha it take few change",
+    "rating": 1,
+    "date": "2025-09-17T05:46:40+00:00",
+    "author": "adil chouhan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2a42d021-6507-4167-bad2-7dbd0be86a24",
+    "title": "vicky solanki",
+    "text": "third class app for trading stop lose trigger nahi hota safe profit late trigger hota he",
+    "rating": 1,
+    "date": "2025-09-17T05:14:31+00:00",
+    "author": "vicky solanki",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "60996f93-7efc-4339-8300-cde7897976f0",
+    "title": "Juned Biradar",
+    "text": "दिस इस द ऐप डिफॉल्ट प्रो if this app default to use charges very hi",
+    "rating": 1,
+    "date": "2025-09-17T05:09:34+00:00",
+    "author": "Juned Biradar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "902b84e1-96a7-400d-bc4f-719bf2e1c263",
+    "title": "Chandrashekhar Lokhande",
+    "text": "glitchful app shows double amount at a night and limit exit not working properly",
+    "rating": 2,
+    "date": "2025-09-17T04:55:25+00:00",
+    "author": "Chandrashekhar Lokhande",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e7f51faa-0a88-468f-a453-0aadabeb516f",
+    "title": "saaiel Patade",
+    "text": "we can't pledge mutual funds in this app otherwise it's good",
+    "rating": 2,
+    "date": "2025-09-17T04:31:38+00:00",
+    "author": "saaiel Patade",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9506f16d-498b-45ba-9810-9f75ea7a59d9",
+    "title": "Panday Dharmendra",
+    "text": "good",
+    "rating": 4,
+    "date": "2025-09-17T04:10:12+00:00",
+    "author": "Panday Dharmendra",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "36bcd763-fa1d-4aa4-998e-20130f5321af",
+    "title": "Virendra Kumar soni",
+    "text": "good and easy interface",
+    "rating": 4,
+    "date": "2025-09-17T04:05:36+00:00",
+    "author": "Virendra Kumar soni",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "39130d22-adcd-45ff-858f-8e79d407029c",
+    "title": "Vikash Panchal",
+    "text": "trading charges is very high",
+    "rating": 3,
+    "date": "2025-09-17T03:46:24+00:00",
+    "author": "Vikash Panchal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9480e146-e580-462f-932e-a23ef3b747c8",
+    "title": "Pro Gamer",
+    "text": "very good",
+    "rating": 4,
+    "date": "2025-09-17T03:42:50+00:00",
+    "author": "Pro Gamer",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d384abeb-dc1f-4ff4-9435-1f242b2ca728",
+    "title": "sandeep wanjari",
+    "text": "best app for stock marketing",
+    "rating": 4,
+    "date": "2025-09-17T03:38:57+00:00",
+    "author": "sandeep wanjari",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "71ce71d1-c7da-4244-b3d1-a932d4c716cb",
+    "title": "G.D SERVICE",
+    "text": "fine",
+    "rating": 2,
+    "date": "2025-09-17T03:36:18+00:00",
+    "author": "G.D SERVICE",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "bdec3a3f-0436-4c3b-9152-0e681e49c944",
+    "title": "Dheeru S Bisht",
+    "text": "This update worst experience for me... Now you fix the problem",
+    "rating": 4,
+    "date": "2025-09-17T01:37:18+00:00",
+    "author": "Dheeru S Bisht",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a89c2271-965c-4053-a00a-5abef6f2d22b",
+    "title": "Aryan",
+    "text": "overall worst app for everything thing",
+    "rating": 1,
+    "date": "2025-09-16T23:49:30+00:00",
+    "author": "Aryan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "1bdf27c1-9f52-4fcf-a350-c416c8e60bf6",
+    "title": "Pratik v",
+    "text": "good",
+    "rating": 4,
+    "date": "2025-09-16T22:38:27+00:00",
+    "author": "Pratik v",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a82bd5cb-4078-4b50-98e2-53718a87278c",
+    "title": "krishna khumar B",
+    "text": "edit 17.9.25 high price for buying and selling for small traders not using its simply waste to use groww. in previous we small amount to add 1 stock adding to maximum now they are charging high price. edit old :Everything is good so far add 2 or more login user profile in we the family 3 members but we need 3 mobile phone to login so if we use same phone with mutliple login means its very useful for login and handling multiple ids.",
+    "rating": 1,
+    "date": "2025-09-16T20:45:49+00:00",
+    "author": "krishna khumar B",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "78199be3-1abd-4caa-8ab3-ee41bf81e223",
+    "title": "SUNDEEP NAIR",
+    "text": "very very bad experience with grow apps cheap apps i had never seen a bad experience with grow up apps very bad I will never recommend grow apps to any one to buy or trade in this app very bad experienced i had ever in in my life last 2021 to 2025 very very bad experience no ipo allotment i had allotted and customer care answer is also weared i had applied a lot of ipo in grow up apps but never exicuted in another apps it exicute ipo easily only grow up apps has a problem with exicuting",
+    "rating": 1,
+    "date": "2025-09-16T19:53:00+00:00",
+    "author": "SUNDEEP NAIR",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "8cca8ae6-73ba-4e79-a7c6-4d75673855ef",
+    "title": "Abhishek Shah",
+    "text": "i don't like",
+    "rating": 1,
+    "date": "2025-09-16T18:08:25+00:00",
+    "author": "Abhishek Shah",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "22f330a0-4a50-4f0f-a6b6-8bde4532bc22",
+    "title": "Brajesh",
+    "text": "easy to use interface",
+    "rating": 4,
+    "date": "2025-09-16T16:43:04+00:00",
+    "author": "Brajesh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "ac44fd1f-4f69-4d8b-b737-630cb860c3fa",
+    "title": "Chaudhari Mayank",
+    "text": "very slow not working properly help option not working properly",
+    "rating": 1,
+    "date": "2025-09-16T16:39:15+00:00",
+    "author": "Chaudhari Mayank",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "741b8e8c-35e4-41a5-afcf-55385607f4a9",
+    "title": "Nitesh Kumar",
+    "text": "very bad worst fraud",
+    "rating": 1,
+    "date": "2025-09-16T16:03:06+00:00",
+    "author": "Nitesh Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "bfe7ff6a-9d15-4c81-a720-5056997c4ed6",
+    "title": "Surabhi Chatterjee",
+    "text": "After the update, the app is just not opening. Fingerprint scan is not working. Pin is not working. Re-installed the app, it says oops something went wrong. Please fix it asap.",
+    "rating": 1,
+    "date": "2025-09-16T14:49:12+00:00",
+    "author": "Surabhi Chatterjee",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "06777566-abb3-4596-8173-846fb7b48d22",
+    "title": "aman kumar",
+    "text": "worst app.. specially for commodity trading .. charts not uptodate.. most indicator not present... fed up from groww",
+    "rating": 3,
+    "date": "2025-09-16T14:39:15+00:00",
+    "author": "aman kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "21717800-0d3b-4615-808c-b4b6fae1bb11",
+    "title": "Himanshu kumar",
+    "text": "Show something is wrong.",
+    "rating": 4,
+    "date": "2025-09-16T14:03:40+00:00",
+    "author": "Himanshu kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9bd26621-c5b6-4451-ae6d-868d226c03e4",
+    "title": "Tarun Sah",
+    "text": "www w se sZ Sez",
+    "rating": 4,
+    "date": "2025-09-16T12:50:14+00:00",
+    "author": "Tarun Sah",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e0be7d6c-f332-417a-99f6-a3b1f8305cd3",
+    "title": "Md Wasim",
+    "text": "good",
+    "rating": 4,
+    "date": "2025-09-16T12:40:35+00:00",
+    "author": "Md Wasim",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a0b54f3c-3dfe-439e-87a7-36d30a1fb7eb",
+    "title": "Sachin Wadikar",
+    "text": "groww lonch forex trading ..?",
+    "rating": 4,
+    "date": "2025-09-16T11:59:07+00:00",
+    "author": "Sachin Wadikar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9c9f6259-26fc-4c64-9efb-e0933e9d7214",
+    "title": "Ankit Srivastava",
+    "text": "22s😘😀π",
+    "rating": 4,
+    "date": "2025-09-16T09:46:05+00:00",
+    "author": "Ankit Srivastava",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "6da417a0-1e72-44ab-b0f3-70fb303bdb63",
+    "title": "arun thakur",
+    "text": "Isaac f dva",
+    "rating": 3,
+    "date": "2025-09-16T08:49:32+00:00",
+    "author": "arun thakur",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "5a89233d-8a0b-4373-a10c-52042814b346",
+    "title": "judwaa_ Vlog_3",
+    "text": "❤️",
+    "rating": 2,
+    "date": "2025-09-16T07:42:26+00:00",
+    "author": "judwaa_ Vlog_3",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "763e78bb-a302-4fbe-b9f5-5be87598eb62",
+    "title": "Mr. S mani",
+    "text": "good",
+    "rating": 4,
+    "date": "2025-09-16T06:03:00+00:00",
+    "author": "Mr. S mani",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "ac94bf89-a1dd-4fd9-87ec-ea9feb91a776",
+    "title": "Aman Kumar",
+    "text": "Very Easy and good Customer friendly app",
+    "rating": 4,
+    "date": "2025-09-16T05:39:48+00:00",
+    "author": "Aman Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "12d9bbac-7cc7-4775-a0e8-3ded56e8d991",
+    "title": "Farhan Balot",
+    "text": "vku",
+    "rating": 4,
+    "date": "2025-09-16T05:20:51+00:00",
+    "author": "Farhan Balot",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "598a1505-6445-43d8-9923-7ef4f3335fe9",
+    "title": "nishu choudhary",
+    "text": "Maine 2 baar sto loss lgaya lekin fir bhi loss waha nhi ruka aur ye badhta hi gya. aisa mere sath 2 baar ho chuka h",
+    "rating": 2,
+    "date": "2025-09-16T05:01:58+00:00",
+    "author": "nishu choudhary",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "754d3454-b535-4099-b9ca-bb29b1514338",
+    "title": "Sonu Meena",
+    "text": "good experience",
+    "rating": 4,
+    "date": "2025-09-16T03:59:29+00:00",
+    "author": "Sonu Meena",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "e5fa6ca1-d735-4639-ab84-95df5c594bce",
+    "title": "Yuvaraj Rathod",
+    "text": "good",
+    "rating": 4,
+    "date": "2025-09-16T03:43:11+00:00",
+    "author": "Yuvaraj Rathod",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "0961fab0-0ce5-41b4-bc58-b513f2bbebba",
+    "title": "sk dulavat",
+    "text": "hanging app mostly trading hours",
+    "rating": 3,
+    "date": "2025-09-16T03:08:02+00:00",
+    "author": "sk dulavat",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d77bc440-5c83-4b38-890a-1231dcf5c5a9",
+    "title": "Hussen Pasha",
+    "text": "nice app",
+    "rating": 3,
+    "date": "2025-09-16T02:10:32+00:00",
+    "author": "Hussen Pasha",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "383a15bc-1a97-483b-8b20-23df519f29e4",
+    "title": "Sambid Panda",
+    "text": "Too much hidden charges for transactions amount to huge charges at the end, not recommended at all",
+    "rating": 4,
+    "date": "2025-09-15T16:19:13+00:00",
+    "author": "Sambid Panda",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f6b580a4-c47b-48fe-be24-7e5a3b2c729e",
+    "title": "Gagan deep",
+    "text": "i am trying this app wating 5 years",
+    "rating": 4,
+    "date": "2025-09-15T13:20:05+00:00",
+    "author": "Gagan deep",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "6b08b522-c131-43cf-822a-dc0a2c34e723",
+    "title": "Bhupendra Jadav",
+    "text": "My groww app not working today tell us what's problem?",
+    "rating": 3,
+    "date": "2025-09-15T10:49:07+00:00",
+    "author": "Bhupendra Jadav",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "57595085-4931-4084-905a-2a507626bab5",
+    "title": "Kidsvoice",
+    "text": ".c.=@",
+    "rating": 2,
+    "date": "2025-09-15T08:40:43+00:00",
+    "author": "Kidsvoice",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "40fbac16-b803-40f9-826f-3ba5943f5b70",
+    "title": "Shivshankar Kumar",
+    "text": ",,3 free",
+    "rating": 3,
+    "date": "2025-09-15T08:40:23+00:00",
+    "author": "Shivshankar Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a2972703-f297-4abd-a28f-4e71b412a4aa",
+    "title": "Surjit PAl",
+    "text": "surjitpal",
+    "rating": 2,
+    "date": "2025-09-15T08:29:01+00:00",
+    "author": "Surjit PAl",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a07d9b8a-2f86-4b1c-ad46-96a04eb366a5",
+    "title": "ahmad daniyal",
+    "text": "good",
+    "rating": 3,
+    "date": "2025-09-15T08:27:22+00:00",
+    "author": "ahmad daniyal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d7870101-8cfd-4e0d-8cf9-d57cb5c20bbc",
+    "title": "Dhanaji Kharat",
+    "text": "🚫 good",
+    "rating": 4,
+    "date": "2025-09-15T07:13:26+00:00",
+    "author": "Dhanaji Kharat",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "bb0f9099-c6fd-4f04-bdec-e7603a3e6e03",
+    "title": "Vinay Kumar",
+    "text": "4 w",
+    "rating": 2,
+    "date": "2025-09-15T06:14:56+00:00",
+    "author": "Vinay Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "3e02c6e0-e66c-469d-aba1-50f4d110bc76",
+    "title": "Kunal Verma",
+    "text": "Its not really fast enough so for me its not for intraday or bad for intraday.",
+    "rating": 2,
+    "date": "2025-09-15T05:52:13+00:00",
+    "author": "Kunal Verma",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "6219d0e5-8121-43b4-ad06-bdebebed26a2",
+    "title": "suraj neymar",
+    "text": "zz ZZ zz Dz zz de rha hu hu wait krwwo bas itna wai tt r t ee ekr rro na brhi e ee ee e sir w ro re rrer rha e ee ek r oeeee rr r k err r e ei ki eeeeeeeeeee",
+    "rating": 4,
+    "date": "2025-09-15T04:16:37+00:00",
+    "author": "suraj neymar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "011110f6-b779-4041-bf8f-2cb05a93adf4",
+    "title": "Pavan GM",
+    "text": "I think u guys doing great job. But apart from this I think u have to simply for sale of stock with out of OTP,and want to add ..............crypto currency and commodity ..... to this group..",
+    "rating": 4,
+    "date": "2025-09-15T03:33:38+00:00",
+    "author": "Pavan GM",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "4c4ad8d6-5987-4a1c-8094-5e90e8e6fba3",
+    "title": "Jay ho Baba ki",
+    "text": "very good",
+    "rating": 4,
+    "date": "2025-09-15T03:28:26+00:00",
+    "author": "Jay ho Baba ki",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "8ce82ebb-655f-4cef-b868-f432c7cf796c",
+    "title": "Sarah pappachan",
+    "text": "a week or two w a weeeks class",
+    "rating": 3,
+    "date": "2025-09-15T02:20:03+00:00",
+    "author": "Sarah pappachan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "edca946a-3e50-4a81-a9d9-8bb99bfbc84f",
+    "title": "lalit mahto",
+    "text": "nice",
+    "rating": 4,
+    "date": "2025-09-21T23:28:02+00:00",
+    "author": "lalit mahto",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "79ffba2b-fa34-4cad-a52e-0bcd5b97e548",
+    "title": "Ali Samir",
+    "text": "I keep on sending email that I can't able to use this application in UAE outside india.verification failed as always.pls help me with this issue.",
+    "rating": 3,
+    "date": "2025-09-21T21:56:19+00:00",
+    "author": "Ali Samir",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d4e2f15a-0cc7-43e7-9daa-ae39290292e9",
+    "title": "harshvardhan singhal",
+    "text": "There are improvements needed, please upgrade the UI and look and feel of the app.",
+    "rating": 3,
+    "date": "2025-09-21T21:03:04+00:00",
+    "author": "harshvardhan singhal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f148a2c4-e636-4bcb-a000-9e70fad17084",
+    "title": "Rahul Jaiswar",
+    "text": "good trading app",
+    "rating": 4,
+    "date": "2025-09-21T19:00:11+00:00",
+    "author": "Rahul Jaiswar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "855a3520-7f01-4ae4-9f50-735dd2cf9e32",
+    "title": "Sachin Khandelwal",
+    "text": "please make a watchlist like tile mode like in webull app pls",
+    "rating": 3,
+    "date": "2025-09-21T18:40:04+00:00",
+    "author": "Sachin Khandelwal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "29f3ad97-9f34-4f8d-8187-7b2216ee77fd",
+    "title": "Sunny Sonal",
+    "text": "Each and every thing is done Kyc is also done after that they allow you to invest but doesn't allow you to sell saying that your account is currently deactivate if it is so how they let you invest then? A big question mark you can't take advantage of market with this app.Have raise a issue have still not reverted by anyone. Exceptional pathetic service They gave me kyc links for 5 times every time i fill the same they answer apki Kyc nahi hui hai guys dnt invest through this Ticket ID-15190167",
+    "rating": 3,
+    "date": "2025-09-21T18:05:45+00:00",
+    "author": "Sunny Sonal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "65fd4758-eef3-4dff-9fcc-aeba211ffc45",
+    "title": "Uday shankar patel",
+    "text": "This is a good app but crashes frequently. Many times in option trading after taking a trade, position doesn't show for a long time and due to this we get losses and losses. Please resolve this issue.",
+    "rating": 4,
+    "date": "2025-09-21T17:39:43+00:00",
+    "author": "Uday shankar patel",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "0b05aba9-b434-4f96-aede-957d996635df",
+    "title": "Bhushan Jadhav",
+    "text": "Best",
+    "rating": 3,
+    "date": "2025-09-21T16:24:16+00:00",
+    "author": "Bhushan Jadhav",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9cfab840-7eb4-4504-a88f-742537c42e6f",
+    "title": "avinash uvaraj",
+    "text": "commission is high",
+    "rating": 3,
+    "date": "2025-09-21T15:07:55+00:00",
+    "author": "avinash uvaraj",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2ac06c92-af8c-4eca-8975-c7437a5992c3",
+    "title": "Priya Shende",
+    "text": "must",
+    "rating": 4,
+    "date": "2025-09-21T13:47:06+00:00",
+    "author": "Priya Shende",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "effeb6e0-05ba-4e09-b4aa-6d32344de03e",
+    "title": "Sadhanala Prasad",
+    "text": "Lowes z",
+    "rating": 2,
+    "date": "2025-09-21T12:22:26+00:00",
+    "author": "Sadhanala Prasad",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "142e5b9b-c5db-4e0d-9703-0d00616e602e",
+    "title": "Ajmer Jaglan",
+    "text": "gpod",
+    "rating": 4,
+    "date": "2025-09-21T08:16:08+00:00",
+    "author": "Ajmer Jaglan",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "41feedee-3e56-4f64-80e8-86e067a86ba6",
+    "title": "RAHUL SINGH",
+    "text": "Hidden charge is more",
+    "rating": 3,
+    "date": "2025-09-21T07:59:57+00:00",
+    "author": "RAHUL SINGH",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "9fd75495-3a6f-428b-a13d-e6245adcd432",
+    "title": "Black Star",
+    "text": "Short, Simple and secure trading Services.",
+    "rating": 4,
+    "date": "2025-09-21T07:58:21+00:00",
+    "author": "Black Star",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "d488ca50-1f6e-4c5c-9c82-bf936a711bd8",
+    "title": "Shubham Yadav",
+    "text": "best platform",
+    "rating": 4,
+    "date": "2025-09-21T06:46:53+00:00",
+    "author": "Shubham Yadav",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "1e1aa610-cbe3-41dd-b5cb-173cf70f09e7",
+    "title": "ranjitkumar nepak",
+    "text": "Don't use groww upi, on 18th i have made a deposit of 540 rupees to a website using groww upi but, the transaction has failed. Yesterday, I got a message that the refund is credited to my account but, its credited not credited to my primary bank which I made deposit from its credited to my state Bank of India. My primary bank is Union Bank of India then, how can they refund money to my State Bank of India. I am unable to use my state Bank account due to minus balance, this is unfair to me.",
+    "rating": 2,
+    "date": "2025-09-21T06:11:52+00:00",
+    "author": "ranjitkumar nepak",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "a85c8406-1db2-44c3-8964-36304ce1713c",
+    "title": "Udyan ragam",
+    "text": "x.",
+    "rating": 4,
+    "date": "2025-09-21T05:56:35+00:00",
+    "author": "Udyan ragam",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "22735cb4-513d-48a6-ac7e-7d70bf99fa6e",
+    "title": "Anamul sheikh",
+    "text": "good",
+    "rating": 3,
+    "date": "2025-09-21T05:06:57+00:00",
+    "author": "Anamul sheikh",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "89c485b8-d158-4b8a-b036-cd1ba34ef258",
+    "title": "Subasish Bar",
+    "text": "good",
+    "rating": 3,
+    "date": "2025-09-21T03:24:45+00:00",
+    "author": "Subasish Bar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "29bc62f3-ee05-4601-a47c-968a34a12d66",
+    "title": "Ashok Mahto",
+    "text": "in 4hour time frame in candlestick chat I am unable to access historical data i think it's a bug please fix it",
+    "rating": 3,
+    "date": "2025-09-20T16:13:45+00:00",
+    "author": "Ashok Mahto",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "b309dfb7-d282-41ed-befd-c9d467a9d4e9",
+    "title": "surajyadav surajyadav",
+    "text": "💵👍👌🤑",
+    "rating": 4,
+    "date": "2025-09-20T14:09:07+00:00",
+    "author": "surajyadav surajyadav",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "861659af-13d9-4514-88b5-9d96d2bfcbeb",
+    "title": "Washim Chowdhury",
+    "text": "Why the balance in Groww is always a guesswork? No transparency. I had around 9k in Groww balance, but then now only showing 2k something. And sometimes it shows 6k, why 2k now? Where did you eat the rest? And you say every day the profit I earn Wil be added by the end of the day, where it will be added, I've never seen getting added in my bank account. There's an option to see all transactions, but I don't see any justifiable transaction for the money you ate. Profits don't get added either.",
+    "rating": 2,
+    "date": "2025-09-20T13:37:21+00:00",
+    "author": "Washim Chowdhury",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "fbff4c2f-5ae7-47b2-b51d-f9731694b00a",
+    "title": "Manoj Othayoth",
+    "text": "Heavy brockarage in Stock trading . Not Sutable for intraday trading . Cash Transfer from this a a/c only available in working time of the Bank .At the time of selling reduce brokerage and a big DP charges.. Every buying except ETF they recover fee in the name of total up front of margin. So every body compare all apps and start happy trading. Keep Pockets Well",
+    "rating": 2,
+    "date": "2025-09-20T12:28:09+00:00",
+    "author": "Manoj Othayoth",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "101254b7-0b98-4097-8a4a-a9a03f07bc40",
+    "title": "Dushyant Choubey",
+    "text": "good 😊",
+    "rating": 4,
+    "date": "2025-09-20T11:02:43+00:00",
+    "author": "Dushyant Choubey",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "212623ec-532a-4386-8117-e3c26b81e55a",
+    "title": "Charn Jat",
+    "text": ",b. 5खागो अंढझतपढधप🦒🐑अ,अञ,ञ,ञ औरআআ ञ ओओ আউয যযয। নমস্কাৰ নমস্কাৰ চপাই, ল ঘঠঝডটা,ঞ",
+    "rating": 4,
+    "date": "2025-09-20T11:01:26+00:00",
+    "author": "Charn Jat",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "59aa87dd-248f-4854-8d9f-31d336537c15",
+    "title": "jyoti choudhary",
+    "text": "the best thing is, this app is free for all. developer pls make the app size a bit small. otherwise it's good and useful for stocks, ipo n MF investments.",
+    "rating": 3,
+    "date": "2025-09-20T10:54:54+00:00",
+    "author": "jyoti choudhary",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "5b30c3b5-d606-4ad3-a2db-3ddf1a7e81a2",
+    "title": "Kaisharansari Ansari",
+    "text": "e e r e t e ee ee eeee o k eeee ee o eeee ee ee ee ee e ee w ee ee ee e we eeeew by w wwwew ee ee eeee www ww ee www by ewe",
+    "rating": 3,
+    "date": "2025-09-20T10:24:50+00:00",
+    "author": "Kaisharansari Ansari",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "2d59b367-e870-409c-90ed-5d0305917947",
+    "title": "vishal gondaliya",
+    "text": "grow really bad app for credit debit transaction query and profite not add in grow balance really same on you grow team",
+    "rating": 2,
+    "date": "2025-09-20T09:00:42+00:00",
+    "author": "vishal gondaliya",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "40d01d03-bb3a-485c-a58a-bf164c8e5607",
+    "title": "D S",
+    "text": "Good app but I have a few suggestions regarding the UI: 1. The holdings/dashboard should be the first page that comes right ? Because the first thing a person wants to know is how all the investments are performing. At least give some functionality to tweak the UI based on one's needs. 2. Also there's just one widget that is related to stocks, what about MF ?",
+    "rating": 4,
+    "date": "2025-09-20T06:15:57+00:00",
+    "author": "D S",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "855dc351-1f2e-4209-bd18-ffd4c9afcce9",
+    "title": "Sintu Kumar",
+    "text": "im trading first time so plz support me. every person give me 1000rupees. because I am very poor. so plz understand my feelings. HAR HAR MAHADEV...",
+    "rating": 4,
+    "date": "2025-09-20T06:15:15+00:00",
+    "author": "Sintu Kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "7ebc0bc6-f43b-4870-84ae-e2825b1523d5",
+    "title": "Vimal Patel",
+    "text": "We never grow our money, so many people experienced that we lost money",
+    "rating": 2,
+    "date": "2025-09-20T06:00:04+00:00",
+    "author": "Vimal Patel",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "7a9958e5-d527-4147-8760-6318b6f7c5f6",
+    "title": "Vijay Pal",
+    "text": "Good app , Easy to understand and use simple and effective. One thing i think grow should work running trade management on screen only sl and target apply on screen and move teh same",
+    "rating": 4,
+    "date": "2025-09-20T05:59:41+00:00",
+    "author": "Vijay Pal",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "f5bb043f-9b7c-4ad9-9e32-7374650b047c",
+    "title": "nagendhra kumar",
+    "text": "lkem is mij bh Oi nnn kl lo m klkl mom h m.h.",
+    "rating": 2,
+    "date": "2025-09-20T04:57:09+00:00",
+    "author": "nagendhra kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "cc206c90-109b-4e63-98f3-0a27caf984df",
+    "title": "ROMEO RAJU",
+    "text": "broker charge bahut jyada hai I'm so sad",
+    "rating": 4,
+    "date": "2025-09-20T03:45:15+00:00",
+    "author": "ROMEO RAJU",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "478db927-c9be-4e12-a71f-0d0a12ab4aea",
+    "title": "prabhat kumar",
+    "text": "😆n",
+    "rating": 4,
+    "date": "2025-09-20T03:27:30+00:00",
+    "author": "prabhat kumar",
+    "week_start_date": "2025-09-15",
+    "week_end_date": "2025-09-21"
+  },
+  {
+    "review_id": "93c5de2d-9489-4dbb-b120-5f883a8b1002",
+    "title": "Dinesh Kumar",
+    "text": "chart or graph not working well bart app ko uninstall krna pdta h fia ema add krne pdte h fir dobara wahi dikt ho jati need to improve",
+    "rating": 2,
+    "date": "2025-09-20T01:48:30+00:00",
+    "author": "Dinesh Kumar",
     "week_start_date": "2025-09-15",
     "week_end_date": "2025-09-21"
   }

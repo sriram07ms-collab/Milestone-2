@@ -1,0 +1,141 @@
+{
+  "suggested_at": "2025-12-01T07:26:53.037484+00:00",
+  "theme_count": 27,
+  "themes": [
+    {
+      "theme_id": "general_feedback",
+      "theme_name": "General Feedback",
+      "description": "Covers overall positive or neutral comments about the app or platform that do not fit into specific problem categories."
+    },
+    {
+      "theme_id": "app_features",
+      "theme_name": "App Features",
+      "description": "This theme covers requests or feedback related to existing or new features, data availability, and analytical tools within the application."
+    },
+    {
+      "theme_id": "security_concerns",
+      "theme_name": "Security Concerns",
+      "description": "This theme covers allegations of fraud, scam, unauthorized activity, data breaches, or other security-related issues and trust concerns."
+    },
+    {
+      "theme_id": "feature_requests",
+      "theme_name": "Feature Requests",
+      "description": "Requests for new features, enhancements, or changes to existing functionality within the application."
+    },
+    {
+      "theme_id": "trading_experience",
+      "theme_name": "Trading Experience",
+      "description": "Issues related to the overall trading functionality, usability for specific trading strategies, and advanced trading features."
+    },
+    {
+      "theme_id": "account_issues",
+      "theme_name": "Account Issues",
+      "description": "This theme covers problems related to account activation, deactivation, login, verification, and general access issues."
+    },
+    {
+      "theme_id": "data_privacy",
+      "theme_name": "Data Privacy",
+      "description": "Concerns regarding personal data collection, usage, and privacy practices, including document submission."
+    },
+    {
+      "theme_id": "feature_request",
+      "theme_name": "Feature Request",
+      "description": "Requests for new features, services, or enhancements to existing functionalities."
+    },
+    {
+      "theme_id": "user_interface",
+      "theme_name": "User Interface",
+      "description": "This theme covers complaints and suggestions related to the application's design, layout, navigation, and overall user experience."
+    },
+    {
+      "theme_id": "account_management",
+      "theme_name": "Account Management",
+      "description": "Covers issues related to updating personal details, KYC, or managing account settings."
+    },
+    {
+      "theme_id": "trading_features",
+      "theme_name": "Trading Features",
+      "description": "Covers requests or issues related to specific trading functionalities, order types, or investment options."
+    },
+    {
+      "theme_id": "trust_security_fraud",
+      "theme_name": "Trust & Security",
+      "description": "Concerns about the app's legitimacy, security, or accusations of fraudulent practices and holding funds."
+    },
+    {
+      "theme_id": "account_information",
+      "theme_name": "Account Information",
+      "description": "Requests for account statements, trading history, tax documents, or other personal account-related details."
+    },
+    {
+      "theme_id": "general_praise",
+      "theme_name": "General Praise",
+      "description": "Positive feedback or compliments about the app's overall quality, ease of use, or specific features without specific issues."
+    },
+    {
+      "theme_id": "user_experience",
+      "theme_name": "User Experience",
+      "description": "This theme covers feedback related to the app's design, usability, navigation, and overall user interface, including ease of use and intuitiveness."
+    },
+    {
+      "theme_id": "value_for_money",
+      "theme_name": "Value for Money",
+      "description": "This theme covers reviews discussing the perceived value of the service in relation to fees, comparing features with competitors, or expressing dissatisfaction with the overall offering."
+    },
+    {
+      "theme_id": "promotions_offers",
+      "theme_name": "Promotions & Offers",
+      "description": "This theme covers feedback related to promotional campaigns, special offers, loyalty programs, and incentives for customers."
+    },
+    {
+      "theme_id": "portfolio_management",
+      "theme_name": "Portfolio Management",
+      "description": "Issues or suggestions regarding the display, organization, and management of investment portfolios and returns."
+    },
+    {
+      "theme_id": "app_compatibility",
+      "theme_name": "App Compatibility",
+      "description": "Issues or requests related to the application's compatibility, display, or performance on specific devices or operating systems."
+    },
+    {
+      "theme_id": "product_requests",
+      "theme_name": "Product Requests",
+      "description": "Suggestions or requests for new investment products, services, or features to be added to the platform."
+    },
+    {
+      "theme_id": "app_design",
+      "theme_name": "App Design",
+      "description": "Feedback and suggestions related to the application's user interface, visual design, and overall aesthetic."
+    },
+    {
+      "theme_id": "product_offerings",
+      "theme_name": "Product Offerings",
+      "description": "Feedback regarding the availability or absence of specific financial products, instruments, or services within the platform."
+    },
+    {
+      "theme_id": "dividend_issues",
+      "theme_name": "Dividend Issues",
+      "description": "Problems related to the receipt, calculation, or distribution of dividends from investments."
+    },
+    {
+      "theme_id": "app_information",
+      "theme_name": "App Information",
+      "description": "This theme covers issues related to the accuracy, availability, or quality of information provided within the application."
+    },
+    {
+      "theme_id": "trust_integrity",
+      "theme_name": "Trust & Integrity",
+      "description": "This theme covers concerns related to the company's trustworthiness, ethical practices, potential fraud, and overall reliability."
+    },
+    {
+      "theme_id": "kyc_issues",
+      "theme_name": "KYC Issues",
+      "description": "Problems related to Know Your Customer (KYC) verification, status, renewal, or restrictions due to incomplete KYC."
+    },
+    {
+      "theme_id": "app_features_info",
+      "theme_name": "App Features & Info",
+      "description": "Feedback or requests regarding general application features, missing information display, or user interface functionalities beyond core trading tools."
+    }
+  ]
+}

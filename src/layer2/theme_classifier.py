@@ -12,10 +12,14 @@ import re
 from google import generativeai as genai
 
 from ..layer1.validator import ReviewModel
-from .theme_config import DEFAULT_THEME_ID, FIXED_THEMES, get_theme_by_id, get_all_theme_ids
+from .theme_config import DEFAULT_THEME_ID, FIXED_THEMES, ThemeDefinition, get_theme_by_id, get_all_theme_ids
 from .theme_discovery import DiscoveredTheme
 
 LOGGER = logging.getLogger(__name__)
+
+# Expanded heuristic patterns to reduce "unclassified" assignments.
+# These are deliberately broad so that in absence of LLM output we still
+# map reviews into one of the fixed business themes.
 HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
     "customer_support": [
         re.compile(pattern, re.IGNORECASE)
@@ -35,6 +39,19 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"kyc update",
             r"re[-\s]?kyc",
             r"e-?kyc",
+            # Broader service / help phrases
+            r"\bhelp\b",
+            r"assistance",
+            r"customer care",
+            r"service team",
+            r"support staff",
+            r"no response",
+            r"did not respond",
+            r"no reply",
+            r"never replied",
+            r"complaint",
+            r"raised a ticket",
+            r"escalat(ed|ion)",
         ]
     ],
     "payments": [
@@ -54,6 +71,21 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"settlement",
             r"refund",
             r"redeem",
+            # Money / trading / transaction language
+            r"money",
+            r"amount",
+            r"cash",
+            r"transaction",
+            r"txn",
+            r"order",
+            r"trade",
+            r"buy",
+            r"sell",
+            r"position",
+            r"portfolio",
+            r"balance",
+            r"credit",
+            r"debit",
         ]
     ],
     "fees": [
@@ -64,8 +96,15 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"charges?",
             r"commission",
             r"deduct",
+            r"deduction",
             r"charged",
             r"tax",
+            r"gst",
+            r"hidden charge",
+            r"extra charge",
+            r"penalty",
+            r"fine",
+            r"brokerage",
         ]
     ],
     "glitches": [
@@ -77,8 +116,20 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"crash",
             r"issue",
             r"fail(ed)?",
+            r"failed",
+            r"failure",
             r"not working",
+            r"does(?:n't| not) work",
+            r"stuck on",
+            r"freeze[sd]?",
+            r"frozen",
+            r"wrong data",
             r"incorrect",
+            r"mismatch",
+            r"problem",
+            r"unable to",
+            r"cannot",
+            r"can't",
         ]
     ],
     "slow": [
@@ -88,28 +139,80 @@ HEURISTIC_PATTERNS: Dict[str, List[re.Pattern]] = {
             r"lag",
             r"buffer",
             r"loading",
+            r"load time",
+            r"taking too long",
+            r"takes too long",
             r"hang",
+            r"hanging",
             r"delay",
+            r"delayed",
+            r"latency",
+            r"unresponsive",
+            r"not responding",
+            r"stuck on loading",
         ]
     ],
 }
 
-CLASSIFICATION_PROMPT_TEMPLATE = """You are tagging reviews into at most {max_themes} themes.
+CLASSIFICATION_PROMPT_TEMPLATE = """You are tagging reviews into themes.
 
-Allowed themes:
+Available predefined themes:
 {themes_list}
 
-If a review does not clearly fit any theme, set chosen_theme to "unclassified".
+IMPORTANT: You can either:
+1. Use one of the predefined themes above (use the exact theme_id: {theme_ids})
+2. Suggest a NEW theme if the review doesn't fit any predefined theme
+
+If suggesting a new theme, provide:
+- chosen_theme: a short, lowercase theme_id with underscores (e.g., "account_issues", "trading_features", "security_concerns")
+- suggested_theme_name: a clear 2-4 word name (e.g., "Account Issues", "Trading Features", "Security Concerns")
+- suggested_theme_description: a brief 1-2 sentence description of what this theme covers
 
 For each review, output:
 - review_id: the exact review_id from the input
-- chosen_theme: exactly one theme ID from the list above (must be one of: {theme_ids})
+- chosen_theme: either a predefined theme_id OR a new suggested theme_id
+- short_reason: 1 sentence explaining why this theme was chosen (no PII, no personal information)
+- suggested_theme_name: (only if chosen_theme is new) the theme name
+- suggested_theme_description: (only if chosen_theme is new) the theme description
+
+Return valid JSON array with one object per review. Format:
+[
+  {{"review_id": "...", "chosen_theme": "...", "short_reason": "...", "suggested_theme_name": "...", "suggested_theme_description": "..."}},
+  {{"review_id": "...", "chosen_theme": "...", "short_reason": "..."}}
+]
+
+Reviews:
+{reviews_batch}
+
+Return only the JSON array, no additional text."""
+
+
+UNCLASSIFIED_REVIEW_PROMPT_TEMPLATE = """You are re-classifying reviews that were previously marked as \"unclassified\".
+
+Available themes:
+{themes_list}
+
+IMPORTANT RULES:
+- You MUST assign every review to the closest theme_id from this list: {theme_ids_no_unclassified}
+- Do NOT use \"unclassified\" as chosen_theme.
+- If the review is ambiguous, choose the theme that is most related to the main issue.
+
+Use these hints:
+- account access, login, verification, contacting the company, tickets → customer_support
+- deposits, withdrawals, orders, trades, balances, money movement → payments
+- fees, charges, commissions, deductions, penalties, taxes → fees
+- bugs, crashes, wrong values, features not working → glitches
+- slowness, loading issues, lag, freezing, hanging → slow
+
+For each review, output:
+- review_id: the exact review_id from the input
+- chosen_theme: one of the allowed theme_ids above (NEVER \"unclassified\")
 - short_reason: 1 sentence explaining why this theme was chosen (no PII, no personal information)
 
 Return valid JSON array with one object per review. Format:
 [
-  {{"review_id": "...", "chosen_theme": "...", "short_reason": "..."}},
-  {{"review_id": "...", "chosen_theme": "...", "short_reason": "..."}}
+  {{\"review_id\": \"...\", \"chosen_theme\": \"...\", \"short_reason\": \"...\"}},
+  {{\"review_id\": \"...\", \"chosen_theme\": \"...\", \"short_reason\": \"...\"}}
 ]
 
 Reviews:
@@ -184,6 +287,9 @@ class GeminiThemeClassifier:
             and len(self.discovered_themes) > 0
         )
         
+        # Track LLM-suggested themes (dynamically created during classification)
+        self.llm_suggested_themes: Dict[str, ThemeDefinition] = {}
+        
         if self.use_discovered:
             # Limit to max_discovered_themes
             self.discovered_themes = self.discovered_themes[:self.config.max_discovered_themes]
@@ -220,10 +326,19 @@ class GeminiThemeClassifier:
         self,
         reviews: List[ReviewModel],
     ) -> List[ReviewClassification]:
-        """Classify a list of reviews into fixed themes."""
+        """Classify a list of reviews into fixed themes with a two-pass strategy.
+
+        Pass 1:
+            - Normal batching + classification using the main prompt.
+        Pass 2:
+            - Identify reviews classified as DEFAULT_THEME_ID (\"unclassified\").
+            - Re-classify those reviews with a stricter prompt that forbids
+              using \"unclassified\" and forces the closest theme.
+        """
         if not reviews:
             return []
 
+        # ---------- First pass: standard classification ----------
         classifications: List[ReviewClassification] = []
         batches = [
             reviews[i : i + self.config.batch_size]
@@ -235,7 +350,70 @@ class GeminiThemeClassifier:
             batch_classifications = self._classify_batch(batch)
             classifications.extend(batch_classifications)
 
-        return classifications
+        # Build lookup for first-pass results
+        first_pass_by_id: Dict[str, ReviewClassification] = {
+            c.review_id: c for c in classifications
+        }
+
+        # ---------- Second pass: focus only on "unclassified" ----------
+        unclassified_reviews: List[ReviewModel] = []
+        for review in reviews:
+            cls = first_pass_by_id.get(review.review_id)
+            if cls is None or cls.theme_id == DEFAULT_THEME_ID:
+                unclassified_reviews.append(review)
+
+        if not unclassified_reviews:
+            return classifications
+
+        LOGGER.info(
+            "Second-pass classification: %s reviews previously unclassified",
+            len(unclassified_reviews),
+        )
+
+        second_pass_results = self._classify_unclassified_reviews(unclassified_reviews)
+
+        # Merge: only override if the second pass produced a non-default theme
+        for cls in second_pass_results:
+            if cls.theme_id == DEFAULT_THEME_ID:
+                continue
+            first_pass_by_id[cls.review_id] = cls
+
+        # Preserve original order as much as possible
+        merged: List[ReviewClassification] = []
+        seen: set[str] = set()
+        for review in reviews:
+            cls = first_pass_by_id.get(review.review_id)
+            if cls and cls.review_id not in seen:
+                merged.append(cls)
+                seen.add(cls.review_id)
+
+        return merged
+
+    def _classify_unclassified_reviews(
+        self,
+        reviews: List[ReviewModel],
+    ) -> List[ReviewClassification]:
+        """Second-pass classification for previously unclassified reviews."""
+        if not reviews:
+            return []
+
+        results: List[ReviewClassification] = []
+        batches = [
+            reviews[i : i + self.config.batch_size]
+            for i in range(0, len(reviews), self.config.batch_size)
+        ]
+
+        for batch_idx, batch in enumerate(batches, start=1):
+            LOGGER.debug(
+                "Second-pass: classifying batch %s/%s (%s reviews)",
+                batch_idx,
+                len(batches),
+                len(batch),
+            )
+            batch_results = self._classify_unclassified_batch(batch)
+            results.extend(batch_results)
+
+        return results
 
     def _classify_batch(self, reviews: List[ReviewModel]) -> List[ReviewClassification]:
         """Classify a single batch of reviews."""
@@ -270,6 +448,53 @@ class GeminiThemeClassifier:
                     LOGGER.warning("Classification attempt %s failed: %s. Retrying...", attempt + 1, exc)
                 else:
                     LOGGER.error("Classification failed after %s attempts: %s", self.config.max_retries + 1, exc)
+                    return self._fallback_classifications(reviews)
+
+    def _classify_unclassified_batch(
+        self,
+        reviews: List[ReviewModel],
+    ) -> List[ReviewClassification]:
+        """Classify a batch of previously unclassified reviews using a stricter prompt."""
+        reviews_text = self._format_reviews_for_prompt(reviews)
+
+        # Build a theme_ids string that excludes the default "unclassified"
+        all_ids = [tid.strip() for tid in get_all_theme_ids()]
+        allowed_ids = [tid for tid in all_ids if tid != DEFAULT_THEME_ID]
+        theme_ids_no_unclassified = ", ".join(allowed_ids)
+
+        prompt = UNCLASSIFIED_REVIEW_PROMPT_TEMPLATE.format(
+            themes_list=self.themes_list,
+            theme_ids_no_unclassified=theme_ids_no_unclassified,
+            reviews_batch=reviews_text,
+        )
+
+        for attempt in range(self.config.max_retries + 1):
+            try:
+                response = self.model.generate_content(
+                    prompt,
+                    generation_config=genai.GenerationConfig(
+                        temperature=self.config.temperature,
+                        response_mime_type="application/json",
+                    ),
+                )
+                parsed = self._parse_response(response.text or "")
+                if not parsed:
+                    raise ValueError("Empty classification payload (second pass)")
+                return self._build_classifications(parsed, reviews)
+            except Exception as exc:
+                if attempt < self.config.max_retries:
+                    LOGGER.warning(
+                        "Second-pass classification attempt %s failed: %s. Retrying...",
+                        attempt + 1,
+                        exc,
+                    )
+                else:
+                    LOGGER.error(
+                        "Second-pass classification failed after %s attempts: %s",
+                        self.config.max_retries + 1,
+                        exc,
+                    )
+                    # If second pass fails, fall back to original default/heuristic
                     return self._fallback_classifications(reviews)
 
     def _format_reviews_for_prompt(self, reviews: List[ReviewModel]) -> str:
@@ -317,30 +542,50 @@ class GeminiThemeClassifier:
                 continue
 
             theme_id_raw = item.get("chosen_theme", "").lower().strip()
-            theme_id = self._validate_theme_id(theme_id_raw)
             
-            # Get theme definition (discovered or predefined)
-            if self.use_discovered:
-                discovered = next(
-                    (t for t in self.discovered_themes if t.theme_id.lower() == theme_id),
-                    None
-                )
-                if discovered:
-                    # Use discovered theme if not mapped, otherwise use predefined
-                    if discovered.mapped_to_predefined:
-                        theme = get_theme_by_id(discovered.mapped_to_predefined)
+            # Check if this is an LLM-suggested theme
+            suggested_name = item.get("suggested_theme_name", "").strip()
+            suggested_desc = item.get("suggested_theme_description", "").strip()
+            
+            if suggested_name and suggested_desc:
+                # This is a new LLM-suggested theme
+                if theme_id_raw not in self.llm_suggested_themes:
+                    self.llm_suggested_themes[theme_id_raw] = ThemeDefinition(
+                        id=theme_id_raw,
+                        name=suggested_name,
+                        description=suggested_desc
+                    )
+                    LOGGER.info(
+                        "LLM suggested new theme: %s (%s) - %s",
+                        suggested_name, theme_id_raw, suggested_desc[:80]
+                    )
+                theme = self.llm_suggested_themes[theme_id_raw]
+                theme_id = theme_id_raw
+            else:
+                # Use existing validation logic for predefined/discovered themes
+                theme_id = self._validate_theme_id(theme_id_raw)
+                
+                # Get theme definition (discovered or predefined)
+                if self.use_discovered:
+                    discovered = next(
+                        (t for t in self.discovered_themes if t.theme_id.lower() == theme_id),
+                        None
+                    )
+                    if discovered:
+                        # Use discovered theme if not mapped, otherwise use predefined
+                        if discovered.mapped_to_predefined:
+                            theme = get_theme_by_id(discovered.mapped_to_predefined)
+                        else:
+                            # Create a temporary theme definition from discovered theme
+                            theme = ThemeDefinition(
+                                id=discovered.theme_id,
+                                name=discovered.theme_name,
+                                description=discovered.description
+                            )
                     else:
-                        # Create a temporary theme definition from discovered theme
-                        from .theme_config import ThemeDefinition
-                        theme = ThemeDefinition(
-                            id=discovered.theme_id,
-                            name=discovered.theme_name,
-                            description=discovered.description
-                        )
+                        theme = get_theme_by_id(theme_id)
                 else:
                     theme = get_theme_by_id(theme_id)
-            else:
-                theme = get_theme_by_id(theme_id)
             
             reason = item.get("short_reason", "No reason provided")
 
@@ -387,6 +632,10 @@ class GeminiThemeClassifier:
         """Validate and normalize theme ID, with fallback to default."""
         theme_id = theme_id.lower().strip()
         
+        # Check LLM-suggested themes first
+        if theme_id in self.llm_suggested_themes:
+            return theme_id
+        
         if self.use_discovered:
             # Check if it's a discovered theme
             discovered = next(
@@ -426,6 +675,15 @@ class GeminiThemeClassifier:
                 LOGGER.debug("Fuzzy matched theme_id '%s' to '%s'", theme_id, valid_id)
                 return valid_id
 
+        # If not found in predefined/discovered, check if it's a valid-looking new theme
+        # (contains only alphanumeric, underscores, and hyphens, not empty, reasonable length)
+        if theme_id and len(theme_id) <= 50:
+            # Check if it's a valid identifier (alphanumeric with underscores/hyphens)
+            cleaned = theme_id.replace("_", "").replace("-", "")
+            if cleaned.isalnum() and len(theme_id) >= 3:
+                LOGGER.info("Accepting LLM-suggested theme_id: %s (will be created if not exists)", theme_id)
+                return theme_id
+
         LOGGER.warning("Invalid theme_id '%s'; using default '%s'", theme_id, DEFAULT_THEME_ID)
         return DEFAULT_THEME_ID
 
@@ -456,4 +714,8 @@ class GeminiThemeClassifier:
             if any(pattern.search(text) for pattern in compiled_patterns):
                 return theme_id
         return None
+
+    def get_llm_suggested_themes(self) -> Dict[str, ThemeDefinition]:
+        """Get all LLM-suggested themes from this classification run."""
+        return self.llm_suggested_themes.copy()
 

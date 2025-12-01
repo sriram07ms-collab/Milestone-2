@@ -1,0 +1,23 @@
+{
+  "week_start": "2025-11-24",
+  "week_end": "2025-11-30",
+  "title": "Weekly Product Pulse: Nov 24 - Nov 30",
+  "overview": "This week's pulse highlights significant user-reported technical issues. Stability concerns are prominent, with users frequently encountering glitches and inconsistencies across core functionalities. Addressing these technical pain points is crucial for improving user satisfaction and product reliability during this period.",
+  "themes": [
+    {
+      "name": "Glitches & Bugs",
+      "summary": "Users are consistently reporting negative experiences due to technical errors, specifically noting failures in trending line and option chain functionalities, alongside inaccurate or inconsistent live data displays."
+    }
+  ],
+  "quotes": [
+    "Glitches & Bugs: trending lining not good performence errror",
+    "Glitches & Bugs: Too much glitch, option chain not open properly sometime working sometimes not working.",
+    "Glitches & Bugs: something went wrong, live values cannot be shown, you are doing this frequently"
+  ],
+  "actions": [
+    "Prioritize the investigation and resolution of reported bugs impacting critical features such as trending lines and option chain functionality.",
+    "Implement enhanced data validation and real-time reconciliation to address inconsistencies in live share prices and profit/loss calculations.",
+    "Review and improve error handling mechanisms to prevent the intermittent inability to display live values within the application."
+  ],
+  "word_count": 161
+}
