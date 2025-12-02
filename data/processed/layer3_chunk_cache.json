@@ -1110,34 +1110,80 @@
     ],
     "candidate_quotes": []
   },
-  "2579c8e5010da4152a7714847c2dd1e449a02bb3dfc8121e7299e49029f1f62c": {
+  "4488cf9a446241a7f429b1d9c412b17e8b812c85021eca2e4abac28a6d357719": {
+    "theme_id": "glitches",
+    "theme_name": "Glitches & Bugs",
+    "key_points": [
+      "Chart interactivity issues, including unresponsive zooming/scaling and unwanted horizontal/vertical stretching.",
+      "General application glitches and unresponsiveness, specifically reported during critical actions like exiting positions, leading to delays.",
+      "Data inconsistency and inaccuracy are reported across various tabs, affecting displayed investment totals, profit/loss, and account balances.",
+      "User interface display problems include numbers not being visible, F&O option chain details requiring constant adjustment, and charts resetting position after app switching."
+    ],
+    "candidate_quotes": [
+      "everytime when I switch to some other app and resume groww again the chart resets to the current position which is so annoying why can't you make it stay in one place where user has already placed it",
+      "Lots of glitches",
+      "When trying to exit, it doesn't exit, it hangs, and by the time the order confirms, the entire move is missed."
+    ]
+  },
+  "d027c1f70271ee831f2b259bc930f515c16dc2a125140b83b42749cd4d203f78": {
     "theme_id": "payments",
     "theme_name": "Payments",
     "key_points": [
-      "Reports indicate that user balances have gone into negative automatically.",
-      "Feedback on brokerage rates is mixed, with some users perceiving them as high while others find them attractive.",
-      "Some users have experienced issues with deposited funds not being reflected or being lost, alongside difficulties in recovering them.",
-      "The application facilitates transactions via UPI."
+      "Some users report transactions as transparent and prompt.",
+      "Concerns exist regarding significant financial losses due to technical glitches impacting trade execution and P&L accuracy.",
+      "Customers have experienced difficulties with money withdrawal and prolonged delays in receiving refunds for rejected mutual funds.",
+      "Redemption of liquid funds is occasionally not processed within the expected 24-hour timeframe."
     ],
     "candidate_quotes": [
-      "the balance is going into automatic minus, it is a fraud.",
-      "I have deposited money ... but I lost my money how can I get my money in my bank account",
-      "order charge brokerage bahot ha"
+      "Transaction are transparent and prompt",
+      "I lost a lot of money by using this app... some time refreshing, some time not execute etc.",
+      "Mutual funds were rejected, and refunds were not received for three months."
     ]
   },
-  "8e79ef99ed08b04557b03281bdc9f302093f1efe2967c1eab75c15551395dc42": {
+  "411a5bc9c66acdd820515c10b304d1fb18e7577bdcc2c80391039952cc5f21fe": {
+    "theme_id": "glitches",
+    "theme_name": "Glitches & Bugs",
+    "key_points": [
+      "Graphs and charts frequently get stuck or do not update instantly.",
+      "Glitches occur during order execution, sometimes accompanied by screen flickering.",
+      "The application experiences unexpected crashes and stops working, often due to memory issues.",
+      "Users report difficulties with activating certain features, such as F&O."
+    ],
+    "candidate_quotes": [
+      "the graphs keep getting stuck.",
+      "Glitch in executing orders for intraday... screen flicking...",
+      "...crashing app memory and stopped working..."
+    ]
+  },
+  "56333db61e23b6297f78d0fff2756d94d6174abbaa39ad848183e048e8e57148": {
     "theme_id": "fees",
     "theme_name": "Fees & Charges",
     "key_points": [
-      "High brokerage charges are a frequent concern among users.",
-      "Users report instances of incorrect or higher than stated brokerage calculations.",
-      "There are complaints about hidden or unexpected deductions, leading to discrepancies in final account balances.",
-      "High costs for specific charges such as DP, security, and GST are also noted."
+      "Users frequently report high brokerage charges.",
+      "Concerns exist regarding hidden charges and unexplained deductions impacting final payouts.",
+      "Claims indicate brokerage charges are sometimes applied incorrectly or exceed stated percentages.",
+      "High costs are noted for various other fees, including DP charges, security charges, and GST.",
+      "Specific issues are raised concerning MTF interest-related charges."
     ],
     "candidate_quotes": [
+      "brokerage charges jayada hai",
       "mtf interest related fraud",
-      "your charges are soo costly",
-      "There is always 200-500 rs difference than what actually should have been received deducted in the name of charges other than execution charges."
+      "charges issue dp charge,security,Gst,etc....very high."
+    ]
+  },
+  "cc526be32102b1a41bd069ab88f8ea5e0bfa74bee4a010167e6d994e960a1031": {
+    "theme_id": "payments",
+    "theme_name": "Payments",
+    "key_points": [
+      "Users have reported losing deposited funds and face challenges in recovering them.",
+      "Concerns have been raised about the platform's reliability in handling user money.",
+      "Issues with updating or adding bank accounts, particularly merged banks, are present.",
+      "Customer support channels, such as email, are reported as non-functional when attempting to address financial complaints."
+    ],
+    "candidate_quotes": [
+      "I lose my money in this app.",
+      "complete waste of money don't know how reliable they in handling money.",
+      "I lost my money."
     ]
   }
 }

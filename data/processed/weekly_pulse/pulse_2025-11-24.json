@@ -1,27 +1,31 @@
 {
   "week_start": "2025-11-24",
   "week_end": "2025-11-30",
-  "title": "Product Pulse: Nov 24 - Nov 30",
-  "overview": "This week's pulse highlights critical user concerns regarding financial discrepancies. Key issues include automatic negative balances, lost deposited funds, and frequent complaints about high and incorrect brokerage calculations, alongside unexpected deductions. Addressing these payment and fee transparency issues is paramount to user trust.",
+  "title": "Weekly Product Pulse: 2025-11-24 to 2025-11-30",
+  "overview": "This week's product pulse reveals critical user feedback centered on core platform functionality. Significant issues include widespread application glitches impacting user experience, concerns over high and unclear fees leading to distrust, and severe problems related to payment processing, including reported fund losses. Addressing these areas is crucial for user retention and satisfaction.",
   "themes": [
     {
-      "name": "Payments",
-      "summary": "Significant negative sentiment surrounds payment processing, with reports of automatic negative balances and difficulties in tracking or recovering deposited funds."
+      "name": "Glitches & Bugs",
+      "summary": "Users consistently report frustrating application instability, including freezing graphs, order execution glitches, and unexpected crashes, severely impacting reliability."
     },
     {
       "name": "Fees & Charges",
-      "summary": "Users express strong dissatisfaction with fee transparency and accuracy, citing high brokerage rates and unexpected deductions."
+      "summary": "Negative sentiment stems from perceived high brokerage and hidden charges, with users questioning the transparency and accuracy of various deductions."
+    },
+    {
+      "name": "Payments",
+      "summary": "Critical issues with fund management, including reported loss of deposited money and difficulties with bank account updates, are creating significant user distress and trust concerns."
     }
   ],
   "quotes": [
-    "Payments: \"the balance is going into automatic minus, it is a fraud.\"",
-    "Fees & Charges: \"mtf interest related fraud\"",
-    "Fees & Charges: \"your charges are soo costly\""
+    "Glitches & Bugs: the graphs keep getting stuck.",
+    "Fees & Charges: brokerage charges jayada hai",
+    "Payments: I lose my money in this app."
   ],
   "actions": [
-    "Initiate an urgent investigation into automatic negative balance reports and implement preventative measures to protect user funds.",
-    "Streamline the process for tracking and recovering lost deposited funds, ensuring clear communication and faster resolution times.",
-    "Conduct a thorough audit of all brokerage and associated charges to ensure accuracy, address discrepancies, and improve transparency for users."
+    "Prioritize investigation and resolution of reported application stability issues, focusing on graph updates and crash prevention.",
+    "Conduct an immediate, comprehensive audit of all fees and charges to ensure transparency, accuracy, and clear communication to users.",
+    "Form a dedicated rapid response team to address fund recovery complaints and improve the reliability of payment processing and bank account management features."
   ],
-  "word_count": 160
+  "word_count": 196
 }
