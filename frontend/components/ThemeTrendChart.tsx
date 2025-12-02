@@ -9,8 +9,13 @@ interface ThemeTrendChartProps {
 }
 
 export default function ThemeTrendChart({ data }: ThemeTrendChartProps) {
+  // Sort by week_start_date to ensure the trend line flows chronologically
+  const sorted = [...data].sort((a, b) =>
+    a.week_start_date.localeCompare(b.week_start_date)
+  );
+
   // Transform data for Recharts
-  const chartData = data.map(week => {
+  const chartData = sorted.map(week => {
     const entry: any = {
       week: formatDate(week.week_start_date),
       week_start: week.week_start_date,

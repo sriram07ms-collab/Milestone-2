@@ -33,12 +33,14 @@ class ScraperConfig:
     app_id: str
     locale: str = "en"
     country: str = "in"
-    lookback_days: int = 28  # 4 weeks
-    min_offset_days: int = 7  # skip current-week noise
+    # Use a 14-day scraping window ending yesterday; weekly buckets are still 7 days
+    lookback_days: int = 14
+    min_offset_days: int = 7  # retained for compatibility, not used in default window
     max_reviews: int = 2000
     max_scroll_iterations: int = 1000
     scroll_wait_ms: int = 1500
-    per_rating_target: int = 20
+    # Target number of reviews per rating (1–5 stars)
+    per_rating_target: int = 30
     output_dir: Path = field(default_factory=lambda: Path("data/raw"))
     weekly_output_dir: Path = field(default_factory=lambda: Path("data/raw/weekly"))
     headless: bool = True
@@ -57,9 +59,11 @@ class ScraperConfig:
     ) -> Tuple[datetime, datetime]:
         """
         Compute the target time window. Direct overrides take precedence over lookback logic.
-        
-        Ensures the last 7 days are always included. For example, if run on Dec 8,
-        it will produce data for Nov 30 to Dec 7 (the previous week).
+
+        Default behaviour:
+        - Use the last `lookback_days` complete days of reviews ending yesterday.
+        - Weekly buckets and pulses are still 7-day weeks; the wider window just
+          provides more data for those weeks.
         """
         if start_date and end_date:
             start = _ensure_utc(start_date)
@@ -73,13 +77,14 @@ class ScraperConfig:
         reference_date = _ensure_utc(reference_date)
 
         # Always use the last COMPLETE day as the end of the window (yesterday)
-        # Example: run on Dec 1 → end_date = Nov 30 23:59:59.999
+        # Example: run on Dec 15 → end_date = Dec 14 23:59:59.999
         end_date = reference_date - timedelta(days=1)
         end_date = end_date.replace(hour=23, minute=59, second=59, microsecond=999999)
 
-        # Start is 6 days before end, at start-of-day → exact 7‑day window
-        # Example: end_date Nov 30 → start_date Nov 24 00:00:00
-        start_date = end_date - timedelta(days=6)
+        # Start is (lookback_days - 1) days before end, at start-of-day → exact 14‑day window
+        # Example: end_date Dec 14 → start_date Dec 1 00:00:00 when lookback_days = 14
+        window_days = max(1, self.lookback_days)
+        start_date = end_date - timedelta(days=window_days - 1)
         start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
 
         return start_date, end_date

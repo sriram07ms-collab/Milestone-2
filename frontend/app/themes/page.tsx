@@ -60,14 +60,18 @@ export default function ThemesPage() {
     );
   }
 
-  // Calculate trends (simplified - compare last 2 weeks)
+  // Calculate trends (compare last 2 weeks, with better handling for new themes)
   const calculateTrend = (themeId: string): number | undefined => {
-    if (aggregation.weekly_counts.length < 2) return undefined;
+    if (!aggregation || aggregation.weekly_counts.length < 2) return undefined;
     const last = aggregation.weekly_counts[aggregation.weekly_counts.length - 1];
     const prev = aggregation.weekly_counts[aggregation.weekly_counts.length - 2];
     const lastCount = last.theme_counts[themeId] || 0;
     const prevCount = prev.theme_counts[themeId] || 0;
+
+    // If theme is completely new this week, show +100% growth rather than hiding
+    if (prevCount === 0 && lastCount > 0) return 100;
     if (prevCount === 0) return undefined;
+
     return ((lastCount - prevCount) / prevCount) * 100;
   };
 
