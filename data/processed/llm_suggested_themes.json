@@ -1,191 +1,61 @@
 {
-  "suggested_at": "2025-12-02T08:29:19.811296+00:00",
-  "theme_count": 37,
+  "suggested_at": "2025-12-02T09:02:20.736159+00:00",
+  "theme_count": 11,
   "themes": [
-    {
-      "theme_id": "feature_request",
-      "theme_name": "Feature Request",
-      "description": "Requests for new functionalities, investment options, or enhancements to existing features within the app."
-    },
-    {
-      "theme_id": "user_experience",
-      "theme_name": "User Experience",
-      "description": "Feedback related to the app's design, ease of navigation, intuitiveness, and overall user satisfaction with the interface."
-    },
-    {
-      "theme_id": "account_management",
-      "theme_name": "Account Management",
-      "description": "Issues related to managing user accounts, personal information, KYC, and profile settings within the application."
-    },
-    {
-      "theme_id": "data_privacy",
-      "theme_name": "Data Privacy",
-      "description": "Concerns related to personal data management, privacy, KYC processes, and the ability to control personal information within the app."
-    },
-    {
-      "theme_id": "investment_outcome",
-      "theme_name": "Investment Outcome",
-      "description": "Feedback related to the results of investments, including gains, losses, or general sentiment about investment performance."
-    },
-    {
-      "theme_id": "privacy_security",
-      "theme_name": "Privacy & Security",
-      "description": "Concerns related to data privacy, app security, and protection of user information."
-    },
-    {
-      "theme_id": "business_practices",
-      "theme_name": "Business Practices",
-      "description": "Concerns related to company ethics, unfair policies, forced account creation, and regulatory compliance."
-    },
-    {
-      "theme_id": "feature_requests",
-      "theme_name": "Feature Requests",
-      "description": "Suggestions for new functionalities, tools, or improvements to existing features within the application."
-    },
-    {
-      "theme_id": "app_features",
-      "theme_name": "App Features",
-      "description": "Requests or feedback related to existing or new features, data availability, and overall app functionality for trading and analysis."
-    },
-    {
-      "theme_id": "account_onboarding",
-      "theme_name": "Account Onboarding",
-      "description": "Issues related to account opening, KYC verification, demat account setup, and initial registration processes."
-    },
-    {
-      "theme_id": "security_fraud",
-      "theme_name": "Security & Fraud",
-      "description": "Concerns related to account security, unauthorized transactions, alleged fraud, scamming, or data breaches."
-    },
-    {
-      "theme_id": "usability_experience",
-      "theme_name": "Usability & Experience",
-      "description": "Covers feedback related to the ease of use, intuitiveness, and overall user experience of the application."
-    },
-    {
-      "theme_id": "app_usability",
-      "theme_name": "App Usability",
-      "description": "This theme covers complaints about the ease of use, design, and overall user experience of the application's features and processes."
-    },
     {
       "theme_id": "trading_features",
       "theme_name": "Trading Features",
-      "description": "This theme covers feedback related to the availability, functionality, and display of trading-specific features and information within the application."
+      "description": "This theme covers feedback related to the availability, functionality, and enhancement requests for trading-specific features."
     },
     {
-      "theme_id": "user_interface",
-      "theme_name": "User Interface",
-      "description": "Covers complaints or suggestions related to the app's design, layout, navigation, and overall user experience."
-    },
-    {
-      "theme_id": "platform_trust",
-      "theme_name": "Platform Trust",
-      "description": "This theme covers concerns about the platform's legitimacy, reliability, and trustworthiness, including accusations of fraud or being a fake application."
-    },
-    {
-      "theme_id": "account_information",
-      "theme_name": "Account Information",
-      "description": "Requests or issues related to accessing personal account details, trading history, or financial reports."
-    },
-    {
-      "theme_id": "usability_issues",
-      "theme_name": "Usability Issues",
-      "description": "Covers complaints related to the application's user interface, design, ease of use, or overall user experience."
-    },
-    {
-      "theme_id": "app_compatibility",
-      "theme_name": "App Compatibility",
-      "description": "This theme covers issues related to the application's performance, display, or functionality across different devices, operating systems, or screen sizes."
-    },
-    {
-      "theme_id": "product_offerings",
-      "theme_name": "Product Offerings",
-      "description": "This theme covers feedback and requests related to the availability of specific investment products, services, or financial instruments within the platform."
-    },
-    {
-      "theme_id": "investment_analysis",
-      "theme_name": "Investment Analysis",
-      "description": "Suggestions for new features related to stock analysis, financial trends, company quality, and risk management information."
-    },
-    {
-      "theme_id": "investment_options",
-      "theme_name": "Investment Options",
-      "description": "Requests for new types of investments, such as US stocks, foreign currency, or other asset classes not currently available."
-    },
-    {
-      "theme_id": "positive_feedback",
-      "theme_name": "Positive Feedback",
-      "description": "Reviews expressing general satisfaction or positive sentiment about the app's overall experience."
-    },
-    {
-      "theme_id": "missing_features",
-      "theme_name": "Missing Features",
-      "description": "Reviews requesting new features or complaining about the absence of expected functionalities."
-    },
-    {
-      "theme_id": "platform_experience",
-      "theme_name": "Platform Experience",
-      "description": "Overall user satisfaction, general positive feedback, or comments on the platform's core functionality and usability."
-    },
-    {
-      "theme_id": "general_feedback",
-      "theme_name": "General Feedback",
-      "description": "General positive or negative comments about the app's overall experience, design, or recent updates that don't fit specific problem categories."
-    },
-    {
-      "theme_id": "user_interface_ux",
-      "theme_name": "User Interface & UX",
-      "description": "Concerns related to the application's design, navigation, layout, ease of use, and overall user experience."
-    },
-    {
-      "theme_id": "reporting_features",
-      "theme_name": "Reporting Features",
-      "description": "This theme covers requests for new reporting tools, performance tracking, or analytical features related to investment strategies and account data."
-    },
-    {
-      "theme_id": "data_display_features",
-      "theme_name": "Data Display Features",
-      "description": "This theme covers requests for new or improved ways to display market data, indicators, or specific information within the application's interface."
-    },
-    {
-      "theme_id": "document_quality",
-      "theme_name": "Document Quality",
-      "description": "This theme covers issues related to the quality, format, professionalism, and content of generated statements, reports, and other official documents."
-    },
-    {
-      "theme_id": "investment_outcomes",
-      "theme_name": "Investment Outcomes",
-      "description": "This theme covers issues related to investment results, such as IPO allotments, fund performance, or specific investment product outcomes."
-    },
-    {
-      "theme_id": "onboarding_experience",
-      "theme_name": "Onboarding Experience",
-      "description": "This theme covers feedback related to the initial setup, registration, and account creation process within the application."
-    },
-    {
-      "theme_id": "scam_allegations",
-      "theme_name": "Scam Allegations",
-      "description": "Reviews alleging fraudulent activity, scam behavior, or significant financial losses due to the platform's perceived unfairness or manipulation."
-    },
-    {
-      "theme_id": "platform_features",
-      "theme_name": "Platform Features",
-      "description": "This theme covers feedback related to the platform's user interface, available features, design changes, and overall usability."
+      "theme_id": "account_discrepancy",
+      "theme_name": "Account Discrepancy",
+      "description": "This theme covers issues where account balances are incorrect, funds are missing, or unauthorized deductions occur, leading to concerns about fraud or scam."
     },
     {
       "theme_id": "security_concerns",
       "theme_name": "Security Concerns",
-      "description": "This theme addresses feedback related to the security of the platform, data protection, and user account safety."
+      "description": "Issues related to data privacy, account security, unauthorized access, or potential fraudulent activities."
     },
     {
-      "theme_id": "account_operations",
-      "theme_name": "Account Operations",
-      "description": "This theme covers issues related to unauthorized actions on user accounts, incorrect trade executions, or discrepancies in account management."
+      "theme_id": "account_integrity",
+      "theme_name": "Account Integrity",
+      "description": "This theme covers issues related to the accuracy and security of account balances, unauthorized deductions, or suspected fraudulent activities within the account."
     },
     {
-      "theme_id": "account_opening",
-      "theme_name": "Account Opening",
-      "description": "This theme covers issues and feedback related to the account opening, activation, and verification processes."
+      "theme_id": "account_issues",
+      "theme_name": "Account Issues",
+      "description": "Problems related to account activation, deactivation, or general account status and access."
+    },
+    {
+      "theme_id": "app_features",
+      "theme_name": "App Features",
+      "description": "Complaints about missing features, poor design, or inadequate functionality of core app features like charts, indicators, or specific trading tools."
+    },
+    {
+      "theme_id": "bank_linking",
+      "theme_name": "Bank Linking",
+      "description": "Issues with adding, updating, or managing linked bank accounts for deposits and withdrawals."
+    },
+    {
+      "theme_id": "investment_features",
+      "theme_name": "Investment Features",
+      "description": "Requests or feedback related to specific investment tools, options, or functionalities within the app, such as mutual fund payment frequencies or STP."
+    },
+    {
+      "theme_id": "application_issues",
+      "theme_name": "Application Issues",
+      "description": "This theme covers problems related to applying for financial products like IPOs, mutual funds, or other investment opportunities, including issues with application processing or allotment."
+    },
+    {
+      "theme_id": "investment_outcomes",
+      "theme_name": "Investment Outcomes",
+      "description": "This theme covers issues related to the results of investment applications, such as IPO allotments, fund performance, or investment returns."
+    },
+    {
+      "theme_id": "account_management",
+      "theme_name": "Account Management",
+      "description": "This theme covers issues related to account opening, activation, verification, closure, or general management of user accounts."
     }
   ]
 }

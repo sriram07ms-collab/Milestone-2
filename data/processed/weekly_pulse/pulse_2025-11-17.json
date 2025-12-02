@@ -1,34 +1,31 @@
 {
   "week_start": "2025-11-17",
   "week_end": "2025-11-23",
-  "title": "Weekly Product Pulse: Key User Feedback (Nov 17-23, 2025)",
-  "overview": "This weekly product pulse highlights critical user feedback from November 17-23, 2025. Key areas of concern include persistent technical glitches, increasing dissatisfaction with fees, and significant challenges accessing effective customer support, impacting overall user experience and platform trust.",
+  "title": "Weekly Product Pulse: November 17 - 23, 2025",
+  "overview": "This week's pulse highlights user frustrations stemming from critical app glitches impacting trade execution and data accuracy. Concerns also persist regarding high and increasing platform fees, alongside significant issues with payment withdrawals and delayed refunds for mutual funds.",
   "themes": [
     {
       "name": "Glitches & Bugs",
-      "summary": "Users express significant frustration with pervasive technical issues, from chart malfunctions and order execution problems to data inconsistencies, severely impacting platform reliability.",
-      "sentiment": "negative"
+      "summary": "Users expressed significant frustration with frequent technical glitches, negatively impacting app refreshing, trade execution, and the accuracy of displayed data."
     },
     {
       "name": "Fees & Charges",
-      "summary": "A negative sentiment persists regarding high and increasing charges, particularly brokerage fees, leading users to consider competitor platforms due to perceived unfavorable pricing.",
-      "sentiment": "negative"
+      "summary": "Customer sentiment is negative regarding the platform's high and increasing charges, particularly brokerage, which is influencing decisions to consider competitor platforms."
     },
     {
-      "name": "Customer Support",
-      "summary": "Users consistently report extreme difficulty connecting with and receiving effective assistance from customer support, resulting in unaddressed critical issues and declining user confidence.",
-      "sentiment": "negative"
+      "name": "Payments",
+      "summary": "Users reported ongoing problems with fund withdrawals, incorrect deductions, and prolonged delays in receiving refunds for rejected mutual funds, indicating a need for system improvements."
     }
   ],
   "quotes": [
-    "The main issue is that when I try to stretch the chart vertically, the chart also stretches horizontally automatically, which should not happen. (Glitches & Bugs)",
-    "india's Highest Charges App 👎 (Fees & Charges)",
-    "not even single call is connected or picked. (Customer Support)"
+    "Glitches & Bugs: Exit karne par exit nhi hota hang ho jata hai , aur jab exit kare tau order confirmation hota hai itne mai sara move nikal jata hai",
+    "Fees & Charges: Brokrage Charges Little high.. Please Focus on this Issue.. Increase Day by day",
+    "Payments: if some incorrect money is deducted, customer help does not assist. My 3 mutual funds were rejected and I haven't received a refund even after 3 months."
   ],
   "actions": [
-    "Prioritize investigation and resolution of critical chart and order execution bugs to stabilize core platform functionality.",
-    "Review current fee structures and conduct a competitive analysis to address user concerns about high charges and potential churn.",
-    "Implement immediate measures to improve customer support accessibility and responsiveness, focusing on reducing wait times and improving issue resolution rates."
+    "Prioritize the resolution of critical app stability issues, focusing on trade execution failures and data display inconsistencies (Glitches & Bugs).",
+    "Conduct a competitive review of the current fee structure, especially brokerage rates, to address user concerns about high charges (Fees & Charges).",
+    "Investigate and implement improvements to the fund withdrawal system to allow for greater flexibility and expedite mutual fund refund processing times (Payments)."
   ],
-  "word_count": 205
+  "word_count": 242
 }

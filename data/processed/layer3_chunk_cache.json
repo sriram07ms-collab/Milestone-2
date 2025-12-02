@@ -1110,95 +1110,34 @@
     ],
     "candidate_quotes": []
   },
-  "8e61d8f569b12e4c2ff861351ce5fd155b8284659e9f89f2ada837473e9ffe7e": {
-    "theme_id": "glitches",
-    "theme_name": "Glitches & Bugs",
+  "2579c8e5010da4152a7714847c2dd1e449a02bb3dfc8121e7299e49029f1f62c": {
+    "theme_id": "payments",
+    "theme_name": "Payments",
     "key_points": [
-      "Users report issues with chart functionality, including unresponsive zooming, unwanted automatic scaling, and indicators not working or being absent.",
-      "Problems with order execution are noted, such as the app hanging during exits, delayed order confirmations, and target price triggers not functioning accurately.",
-      "Inconsistencies and inaccuracies in displayed data, including profit/loss figures and investment tracking, are observed across different tabs.",
-      "Charts frequently reset their position to default after switching between applications, causing inconvenience.",
-      "General technical glitches are a common complaint, impacting the overall reliability and user experience."
+      "Reports indicate that user balances have gone into negative automatically.",
+      "Feedback on brokerage rates is mixed, with some users perceiving them as high while others find them attractive.",
+      "Some users have experienced issues with deposited funds not being reflected or being lost, alongside difficulties in recovering them.",
+      "The application facilitates transactions via UPI."
     ],
     "candidate_quotes": [
-      "The main issue is that when I try to stretch the chart vertically, the chart also stretches horizontally automatically, which should not happen.",
-      "everytime when I switch to some other app and resume groww again the chart resets to the current position which is so annoying why can't you make it stay in one place where user has already placed it",
-      "bhut hi bekar application hai Exit karne par exit nhi hota hang ho jata hai , aur jab exit kare tau order confirmation hota hai itne mai sara move nikal jata hai"
+      "the balance is going into automatic minus, it is a fraud.",
+      "I have deposited money ... but I lost my money how can I get my money in my bank account",
+      "order charge brokerage bahot ha"
     ]
   },
-  "7148a9eaea41eb14f78cd822ce624affcb1c7638da9b4a513e1d3b81fe470d62": {
+  "8e79ef99ed08b04557b03281bdc9f302093f1efe2967c1eab75c15551395dc42": {
     "theme_id": "fees",
     "theme_name": "Fees & Charges",
     "key_points": [
-      "Users widely report that overall charges and brokerage fees are perceived as high.",
-      "Concerns exist regarding brokerage being applied to every transaction, including equity purchases, and a reported increase in intraday charges.",
-      "Customers compare the platform's fee structure unfavorably to competitors, who offer services like free equity delivery.",
-      "The high and perceived increasing charges are causing users to consider closing accounts and switching platforms."
+      "High brokerage charges are a frequent concern among users.",
+      "Users report instances of incorrect or higher than stated brokerage calculations.",
+      "There are complaints about hidden or unexpected deductions, leading to discrepancies in final account balances.",
+      "High costs for specific charges such as DP, security, and GST are also noted."
     ],
     "candidate_quotes": [
-      "india's Highest Charges App 👎",
-      "charges is too much now",
-      "charges High hide too other better' apps available."
-    ]
-  },
-  "6f1b8a58afa2996a0778c93ae1de2a76b58f031e4c563013de94649082178421": {
-    "theme_id": "customer_support",
-    "theme_name": "Customer Support",
-    "key_points": [
-      "Customers frequently report significant difficulty connecting with customer support agents via phone, with calls often going unanswered.",
-      "Long wait times are common for both phone support (20+ minutes) and chat assistance (15+ minutes), often resulting in no response.",
-      "Users find the customer support to be unhelpful, unresponsive, or ineffective in resolving critical issues like mutual fund rejections or unreceived refunds.",
-      "There is a pervasive sentiment that the customer service provided is careless and poor, offering insufficient assistance."
-    ],
-    "candidate_quotes": [
-      "not even single call is connected or picked.",
-      "Customer care does not to talk. No support.",
-      "no one response when you got a problem."
-    ]
-  },
-  "9456b23a212fd22590ab7bd4268cc34220b67a214827af6e3acd48a288b06b62": {
-    "theme_id": "glitches",
-    "theme_name": "Glitches & Bugs",
-    "key_points": [
-      "The app has been reported to block buy/sell operations and stop-loss modifications during market fluctuations.",
-      "Users experience the app automatically selling positions on expiry days, which can lead to unexpected financial losses.",
-      "Inconsistent display of market data is noted, particularly that profits are not shown accurately or immediately, while losses are.",
-      "Occasional instances of the app not working at all, or issues with simultaneous order placement (e.g., target price and stop-loss), have been reported."
-    ],
-    "candidate_quotes": [
-      "blocked my all accounts for buy / sell & editing stoploss.",
-      "position sell kar ke mera 4k loss",
-      "agr profit m ho rhe ho to shi se nhi dikhta loss turant dikhta h"
-    ]
-  },
-  "16c2b0c842d4d25bd5248876d10996983019acdeb424caa38664a2f2a224117a": {
-    "theme_id": "fees",
-    "theme_name": "Fees & Charges",
-    "key_points": [
-      "Customers generally perceive current charges, particularly brokerage fees, as high.",
-      "Specific charges, including DP, security, and GST, are also mentioned as being very high.",
-      "A suggestion for a lower brokerage amount, such as Rs. 10, was noted.",
-      "Brokerage fees are considered very high when compared to other platforms."
-    ],
-    "candidate_quotes": [
-      "Brokerage charges are more.. Rs. 10 would be good.",
-      "charges high",
-      "Very High brokerage changes than other platforms."
-    ]
-  },
-  "2770c0bbaeeb92d637e7d0584cd9527f324839627547a1f60215cb8c0d9954db": {
-    "theme_id": "trading_features",
-    "theme_name": "Trading Features",
-    "key_points": [
-      "The option chain interface is described as basic, cluttered, and lacking essential data points for option buyers.",
-      "Users require a comprehensive, single-screen view displaying key metrics such as PCR, OI, IV, and Max Pain.",
-      "The current option chain functionality is noted as significantly lagging behind competitors like Zerodha and Sensibull.",
-      "A request was made to integrate STP (Systematic Transfer Plan) functionality via the mobile application."
-    ],
-    "candidate_quotes": [
-      "Groww needs to seriously improve its Option Chain.",
-      "we need a clean single-screen view with all key data visible at once.",
-      "Please upgrade the option chain urgently, it’s far behind Zerodha and Sensibull."
+      "mtf interest related fraud",
+      "your charges are soo costly",
+      "There is always 200-500 rs difference than what actually should have been received deducted in the name of charges other than execution charges."
     ]
   }
 }
