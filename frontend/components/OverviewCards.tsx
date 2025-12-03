@@ -20,7 +20,7 @@ export default function OverviewCards({ aggregation, latestPulse }: OverviewCard
     ? Object.values(aggregation.overall_counts).reduce((a, b) => a + b, 0)
     : 0;
 
-  const thisWeekReviews = aggregation?.weekly_counts.length > 0
+  const thisWeekReviews = aggregation?.weekly_counts && aggregation.weekly_counts.length > 0
     ? aggregation.weekly_counts[aggregation.weekly_counts.length - 1]?.total_reviews || 0
     : 0;
 
