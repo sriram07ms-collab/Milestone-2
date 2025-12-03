@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
     unoptimized: true,  // Required for static export
   },
   trailingSlash: true,  // Better compatibility with GitHub Pages
+  // Enable build cache for faster rebuilds
+  experimental: {
+    buildCache: true,
+  },
 };
 
 export default nextConfig;
