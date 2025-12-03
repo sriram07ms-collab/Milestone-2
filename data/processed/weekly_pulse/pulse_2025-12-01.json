@@ -1,31 +1,31 @@
 {
   "week_start": "2025-12-01",
   "week_end": "2025-12-07",
-  "title": "Weekly Product Pulse: 2025-12-01 to 2025-12-07",
-  "overview": "This week's pulse highlights critical user feedback across three key areas. Users frequently encountered application glitches, including inaccurate data displays and unresponsiveness. Significant concerns were raised regarding high and unexpected fees, eroding trust and profits. Additionally, there is clear demand for advanced features like US stock trading and enhanced portfolio linking.",
+  "title": "Weekly Product Pulse: Stability, Fees, and Support Insights (Dec 1-7)",
+  "overview": "This week's pulse highlights user concerns primarily around app stability, specifically frequent glitches and critical failures. Fees and charges continue to be a significant pain point impacting user profitability and platform loyalty. Customer support feedback remains mixed, indicating both excellent service and areas for improvement.",
   "themes": [
     {
       "name": "Glitches & Bugs",
-      "summary": "Users are frequently encountering critical application issues, from inaccurate data display to unresponsive apps and failed trade executions, indicating a significant negative impact on user experience and trust."
+      "summary": "Negative sentiment persists regarding frequent system glitches, inaccurate data displays, and critical app failures impacting overall usability and trust."
     },
     {
       "name": "Fees & Charges",
-      "summary": "Users express strong dissatisfaction with high and unexpected brokerage fees and taxes, which are significantly eroding profits and leading to perceptions of expense."
+      "summary": "Users express strong dissatisfaction with perceived high brokerage fees, automatic deductions, and the significant portion of profits consumed by various charges, driving some to consider alternatives."
     },
     {
-      "name": "Feature Requests",
-      "summary": "There is a clear user demand for advanced investing functionalities, including direct stock investing improvements, external portfolio linking, and US stock trading."
+      "name": "Customer Support",
+      "summary": "Feedback on customer support is varied, with some users praising ease of understanding and smooth processes, while others report negative experiences, suggesting inconsistency in service quality."
     }
   ],
   "quotes": [
-    "Glitches & Bugs: groww app is showing wrong candle of index chart.",
-    "Fees & Charges: too much CHARGES and TAXES. if you get 100rs profit 50-60rs will be taxes...",
-    "Feature Requests: please add us stock feature in mobile app ."
+    "I am unable to open my app it's not responding (Glitches & Bugs)",
+    "if you get 100rs profit 50-60rs will be taxes. (Fees & Charges)",
+    "worst service go to zerodha (Customer Support)"
   ],
   "actions": [
-    "Prioritize investigation and resolution of critical chart display inaccuracies and app unresponsiveness to restore user trust and reliability.",
-    "Review current fee structures and communication, considering options to reduce perceived burden or clearly articulate value to users.",
-    "Evaluate feasibility for integrating US stock trading and enhanced portfolio management features based on user demand."
+    "Prioritize investigation and resolution of critical app failures and data display inaccuracies to restore user trust and functionality.",
+    "Review the fee structure and communication around charges to ensure transparency and address user concerns regarding profitability.",
+    "Implement a quality assurance program for customer support interactions to standardize service excellence and address negative feedback."
   ],
-  "word_count": 216
+  "word_count": 200
 }

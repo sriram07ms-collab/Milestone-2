@@ -1,31 +1,31 @@
 {
   "week_start": "2025-11-24",
   "week_end": "2025-11-30",
-  "title": "Weekly Product Pulse: Nov 24-30, 2025",
-  "overview": "This week's pulse shows user concern over core application stability, frequent glitches, and inconsistent financial data. High brokerage fees cause dissatisfaction. Customer support is mixed; AI is efficient, but human interaction is criticized for slowness.",
+  "title": "Weekly Product Pulse: 2025-11-24 to 2025-11-30",
+  "overview": "This week's pulse highlights critical user feedback concerning application stability and financial transparency. Users frequently report significant glitches impacting core functionalities and data accuracy. Concerns persist around high and sometimes incorrect brokerage charges. Customer support receives mixed feedback, with AI noted for efficiency but human support often criticized for delays.",
   "themes": [
     {
       "name": "Glitches & Bugs",
-      "summary": "Users report frequent technical errors, including inconsistent financial data, unreliable option chains, and app crashes, especially during profit booking."
+      "summary": "Users express strong negative sentiment due to frequent application glitches, data inaccuracies, and crashes, severely impacting core trading functionalities."
     },
     {
       "name": "Fees & Charges",
-      "summary": "Users express strong dissatisfaction with high and allegedly incorrect brokerage fees, impacting investment decisions due to new minimums."
+      "summary": "Negative sentiment is driven by perceptions of high brokerage fees and specific concerns about incorrect or excessive charges, influencing investment decisions."
     },
     {
       "name": "Customer Support",
-      "summary": "The AI assistant is efficient, but human call center interactions are criticized for slow response times and lengthy verification processes."
+      "summary": "Feedback is mixed, with appreciation for the AI Voice Assistant's efficiency, but significant dissatisfaction stemming from slow response times and inefficient processes with human support."
     }
   ],
   "quotes": [
     "Too much glitch, option chain not open properly sometime working sometimes not working.",
-    "very over brokerage charges",
-    "The whole process takes around 7–8 minutes. The speed should be faster."
+    "your charges are soo costly",
+    "not proper response and delay service"
   ],
   "actions": [
-    "Prioritize resolution of critical technical bugs impacting data accuracy and core trading functions, especially app stability during profit booking.",
-    "Review and clarify brokerage and fee structures for transparency, addressing discrepancies and assessing the impact of new minimum fees.",
-    "Optimize human call center experience by streamlining verification and improving response times, learning from the AI Voice Assistant's success."
+    "Prioritize engineering efforts to address reported glitches, focusing on application stability, data accuracy, and critical trading functionality.",
+    "Conduct a comprehensive review of brokerage and MTF interest charges, ensuring transparency and competitive pricing.",
+    "Investigate and improve human customer support response times and efficiency, learning from the positive feedback on the AI Voice Assistant."
   ],
-  "word_count": 178
+  "word_count": 191
 }
