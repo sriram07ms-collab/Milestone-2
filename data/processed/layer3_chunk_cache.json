@@ -1110,80 +1110,108 @@
     ],
     "candidate_quotes": []
   },
-  "4488cf9a446241a7f429b1d9c412b17e8b812c85021eca2e4abac28a6d357719": {
+  "89a8d6bbd81e99402abdb69fecb69085306388c1bb3d498f171665a004f26dcc": {
     "theme_id": "glitches",
     "theme_name": "Glitches & Bugs",
     "key_points": [
-      "Chart interactivity issues, including unresponsive zooming/scaling and unwanted horizontal/vertical stretching.",
-      "General application glitches and unresponsiveness, specifically reported during critical actions like exiting positions, leading to delays.",
-      "Data inconsistency and inaccuracy are reported across various tabs, affecting displayed investment totals, profit/loss, and account balances.",
-      "User interface display problems include numbers not being visible, F&O option chain details requiring constant adjustment, and charts resetting position after app switching."
+      "Users frequently report technical errors and general glitches within the application.",
+      "Inconsistent and incorrect display of financial data, including profit calculations, share prices, and live values, is a recurring issue.",
+      "Core functionalities such as option chain access are reported to be unreliable or not working properly.",
+      "The application experiences crashes and memory issues, particularly when users attempt to book profits."
     ],
     "candidate_quotes": [
-      "everytime when I switch to some other app and resume groww again the chart resets to the current position which is so annoying why can't you make it stay in one place where user has already placed it",
-      "Lots of glitches",
-      "When trying to exit, it doesn't exit, it hangs, and by the time the order confirms, the entire move is missed."
+      "Too much glitch, option chain not open properly sometime working sometimes not working.",
+      "something went wrong, live values cannot be shown, you are doing this frequently.",
+      "crashing app memory and stopped working, last few days when I want to book profit it crash again and again"
     ]
   },
-  "d027c1f70271ee831f2b259bc930f515c16dc2a125140b83b42749cd4d203f78": {
-    "theme_id": "payments",
-    "theme_name": "Payments",
+  "9a76083467009c6d3f5833d29d97cbeff536d2004a5ce37f68e6bdc585b54a78": {
+    "theme_id": "customer_support",
+    "theme_name": "Customer Support",
     "key_points": [
-      "Some users report transactions as transparent and prompt.",
-      "Concerns exist regarding significant financial losses due to technical glitches impacting trade execution and P&L accuracy.",
-      "Customers have experienced difficulties with money withdrawal and prolonged delays in receiving refunds for rejected mutual funds.",
-      "Redemption of liquid funds is occasionally not processed within the expected 24-hour timeframe."
+      "Customer support feedback is mixed, with some users reporting positive experiences while others express strong dissatisfaction.",
+      "Common criticisms include slow response times, delayed service, and a cumbersome process for human interaction.",
+      "The AI Voice Assistant is positively noted for its efficiency and quick problem resolution.",
+      "The human call center experience is specifically criticized for lengthy wait times and a multi-step verification process that takes 7-8 minutes."
     ],
     "candidate_quotes": [
-      "Transaction are transparent and prompt",
-      "I lost a lot of money by using this app... some time refreshing, some time not execute etc.",
-      "Mutual funds were rejected, and refunds were not received for three months."
+      "customer service peacefully",
+      "coustomer care support is so much bad",
+      "The whole process takes around 7–8 minutes. The speed should be faster."
     ]
   },
-  "411a5bc9c66acdd820515c10b304d1fb18e7577bdcc2c80391039952cc5f21fe": {
-    "theme_id": "glitches",
-    "theme_name": "Glitches & Bugs",
-    "key_points": [
-      "Graphs and charts frequently get stuck or do not update instantly.",
-      "Glitches occur during order execution, sometimes accompanied by screen flickering.",
-      "The application experiences unexpected crashes and stops working, often due to memory issues.",
-      "Users report difficulties with activating certain features, such as F&O."
-    ],
-    "candidate_quotes": [
-      "the graphs keep getting stuck.",
-      "Glitch in executing orders for intraday... screen flicking...",
-      "...crashing app memory and stopped working..."
-    ]
-  },
-  "56333db61e23b6297f78d0fff2756d94d6174abbaa39ad848183e048e8e57148": {
+  "8784fabe69b262ec17fbe475db543c6e20f1790d8a63b394e3211c9459fb58a2": {
     "theme_id": "fees",
     "theme_name": "Fees & Charges",
     "key_points": [
-      "Users frequently report high brokerage charges.",
-      "Concerns exist regarding hidden charges and unexplained deductions impacting final payouts.",
-      "Claims indicate brokerage charges are sometimes applied incorrectly or exceed stated percentages.",
-      "High costs are noted for various other fees, including DP charges, security charges, and GST.",
-      "Specific issues are raised concerning MTF interest-related charges."
+      "High brokerage and overall fees are frequently reported by users.",
+      "Some users state brokerage charges are incorrect or exceed advertised rates (e.g., above 0.1%).",
+      "The introduction of a minimum brokerage fee of ₹5 has prompted some users to discontinue new investments.",
+      "An allegation of fraud related to MTF interest has been raised."
     ],
     "candidate_quotes": [
-      "brokerage charges jayada hai",
+      "very over brokerage charges",
       "mtf interest related fraud",
-      "charges issue dp charge,security,Gst,etc....very high."
+      "your charges are soo costly"
     ]
   },
-  "cc526be32102b1a41bd069ab88f8ea5e0bfa74bee4a010167e6d994e960a1031": {
-    "theme_id": "payments",
-    "theme_name": "Payments",
+  "e97d846300c65a27442a1c2da016c30b0276a22bac930a76c4d480137a7240f3": {
+    "theme_id": "glitches",
+    "theme_name": "Glitches & Bugs",
     "key_points": [
-      "Users have reported losing deposited funds and face challenges in recovering them.",
-      "Concerns have been raised about the platform's reliability in handling user money.",
-      "Issues with updating or adding bank accounts, particularly merged banks, are present.",
-      "Customer support channels, such as email, are reported as non-functional when attempting to address financial complaints."
+      "Users report inaccurate display of chart data, specifically wrong candle indications for index charts.",
+      "Frequent system glitches are noted, with some users stating the app often malfunctions.",
+      "The application occasionally fails to open or becomes unresponsive.",
+      "Discrepancies occur between displayed information during trade and actual transaction results or amounts.",
+      "Issues with trade execution are mentioned, including orders not selling even after reaching triggered target prices."
     ],
     "candidate_quotes": [
-      "I lose my money in this app.",
-      "complete waste of money don't know how reliable they in handling money.",
-      "I lost my money."
+      "groww app is showing wrong candle of index chart.",
+      "application glith shows something and the actual result is different.",
+      "I am unable to open my app it's not responding."
+    ]
+  },
+  "7e8437bc66b698d3f8826a3983fc0190a0cfd0694dafb0916ea235a3f4de3f8a": {
+    "theme_id": "glitches",
+    "theme_name": "Glitches & Bugs",
+    "key_points": [
+      "Charts are not fully visible to users.",
+      "Specific timeframes, such as 4-hour charts and smaller timeframes, are impacted.",
+      "Only a partial area of the charts is functional."
+    ],
+    "candidate_quotes": [
+      "4h charts and some small TFs are not visible fully",
+      "only a partial area is working in charts"
+    ]
+  },
+  "a44d0bb8170c8a77ee497c4aac92f11f3b74c351dffa6c9df2bf95a5da4b15f7": {
+    "theme_id": "fees",
+    "theme_name": "Fees & Charges",
+    "key_points": [
+      "Users report unexpected charges for editing personal details.",
+      "High brokerage fees and additional taxes lead to significant deductions per trade, sometimes exceeding ₹50 per order.",
+      "A substantial portion of profits, estimated at 50-60% of a ₹100 profit, is consumed by charges and taxes across buying, maintaining, and selling stocks.",
+      "Brokerage charges are consistently described as expensive by multiple users.",
+      "Instances of automatic money deductions have been reported."
+    ],
+    "candidate_quotes": [
+      "They will start charge for edit personal details in grow app.",
+      "too much CHARGES and TAXES. if you get 100rs profit 50-60rs will be taxes...",
+      "very expensive brokerage charge"
+    ]
+  },
+  "9e35ed674e875d658aa34f3ab3dc062239d2074e6143c5137b0b6b624686eb59": {
+    "theme_id": "feature_requests",
+    "theme_name": "Feature Requests",
+    "key_points": [
+      "Users desire improved features for direct stock investing.",
+      "There is a request to link external stock portfolios to the app.",
+      "A specific feature request is for US stock trading functionality within the mobile app."
+    ],
+    "candidate_quotes": [
+      "investing directly on stocks is not as good as INDmoney.",
+      "Hope we can link our external stocks here too like we can with our mutual funds.",
+      "please add us stock feature in mobile app ."
     ]
   }
 }

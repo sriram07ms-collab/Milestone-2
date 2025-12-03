@@ -1,31 +1,31 @@
 {
   "week_start": "2025-11-24",
   "week_end": "2025-11-30",
-  "title": "Weekly Product Pulse: 2025-11-24 to 2025-11-30",
-  "overview": "This week's product pulse reveals critical user feedback centered on core platform functionality. Significant issues include widespread application glitches impacting user experience, concerns over high and unclear fees leading to distrust, and severe problems related to payment processing, including reported fund losses. Addressing these areas is crucial for user retention and satisfaction.",
+  "title": "Weekly Product Pulse: Nov 24-30, 2025",
+  "overview": "This week's pulse shows user concern over core application stability, frequent glitches, and inconsistent financial data. High brokerage fees cause dissatisfaction. Customer support is mixed; AI is efficient, but human interaction is criticized for slowness.",
   "themes": [
     {
       "name": "Glitches & Bugs",
-      "summary": "Users consistently report frustrating application instability, including freezing graphs, order execution glitches, and unexpected crashes, severely impacting reliability."
+      "summary": "Users report frequent technical errors, including inconsistent financial data, unreliable option chains, and app crashes, especially during profit booking."
     },
     {
       "name": "Fees & Charges",
-      "summary": "Negative sentiment stems from perceived high brokerage and hidden charges, with users questioning the transparency and accuracy of various deductions."
+      "summary": "Users express strong dissatisfaction with high and allegedly incorrect brokerage fees, impacting investment decisions due to new minimums."
     },
     {
-      "name": "Payments",
-      "summary": "Critical issues with fund management, including reported loss of deposited money and difficulties with bank account updates, are creating significant user distress and trust concerns."
+      "name": "Customer Support",
+      "summary": "The AI assistant is efficient, but human call center interactions are criticized for slow response times and lengthy verification processes."
     }
   ],
   "quotes": [
-    "Glitches & Bugs: the graphs keep getting stuck.",
-    "Fees & Charges: brokerage charges jayada hai",
-    "Payments: I lose my money in this app."
+    "Too much glitch, option chain not open properly sometime working sometimes not working.",
+    "very over brokerage charges",
+    "The whole process takes around 7–8 minutes. The speed should be faster."
   ],
   "actions": [
-    "Prioritize investigation and resolution of reported application stability issues, focusing on graph updates and crash prevention.",
-    "Conduct an immediate, comprehensive audit of all fees and charges to ensure transparency, accuracy, and clear communication to users.",
-    "Form a dedicated rapid response team to address fund recovery complaints and improve the reliability of payment processing and bank account management features."
+    "Prioritize resolution of critical technical bugs impacting data accuracy and core trading functions, especially app stability during profit booking.",
+    "Review and clarify brokerage and fee structures for transparency, addressing discrepancies and assessing the impact of new minimum fees.",
+    "Optimize human call center experience by streamlining verification and improving response times, learning from the AI Voice Assistant's success."
   ],
-  "word_count": 196
+  "word_count": 178
 }

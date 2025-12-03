@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[47257,["/Milestone-2/_next/static/chunks/ff1a16fafef87110.js","/Milestone-2/_next/static/chunks/64c0a5e3a0354479.js"],"ClientPageRoot"]
-3:I[31713,["/Milestone-2/_next/static/chunks/796e69ae18b2784c.js","/Milestone-2/_next/static/chunks/8a728f887a243f05.js","/Milestone-2/_next/static/chunks/addb6af0720f4c10.js","/Milestone-2/_next/static/chunks/8b0f01009916117d.js"],"default"]
-6:I[97367,["/Milestone-2/_next/static/chunks/ff1a16fafef87110.js","/Milestone-2/_next/static/chunks/64c0a5e3a0354479.js"],"OutletBoundary"]
+2:I[47257,["/App-Review-Insights-Analyser/_next/static/chunks/ff1a16fafef87110.js","/App-Review-Insights-Analyser/_next/static/chunks/64c0a5e3a0354479.js"],"ClientPageRoot"]
+3:I[31713,["/App-Review-Insights-Analyser/_next/static/chunks/796e69ae18b2784c.js","/App-Review-Insights-Analyser/_next/static/chunks/0b03ef1e7bedc122.js","/App-Review-Insights-Analyser/_next/static/chunks/e36942436cbbd163.js","/App-Review-Insights-Analyser/_next/static/chunks/ee2948cbd6c36d9e.js"],"default"]
+6:I[97367,["/App-Review-Insights-Analyser/_next/static/chunks/ff1a16fafef87110.js","/App-Review-Insights-Analyser/_next/static/chunks/64c0a5e3a0354479.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-0:{"buildId":"7yEnTzkxEmV_SQ9-EIoJw","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/Milestone-2/_next/static/chunks/8a728f887a243f05.js","async":true}],["$","script","script-1",{"src":"/Milestone-2/_next/static/chunks/addb6af0720f4c10.js","async":true}],["$","script","script-2",{"src":"/Milestone-2/_next/static/chunks/8b0f01009916117d.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"6SFBJMMmBrY-2wcsQkyT0","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/App-Review-Insights-Analyser/_next/static/chunks/0b03ef1e7bedc122.js","async":true}],["$","script","script-1",{"src":"/App-Review-Insights-Analyser/_next/static/chunks/e36942436cbbd163.js","async":true}],["$","script","script-2",{"src":"/App-Review-Insights-Analyser/_next/static/chunks/ee2948cbd6c36d9e.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
 4:{}
 5:{}
 8:null
