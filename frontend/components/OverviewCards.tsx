@@ -71,35 +71,35 @@ export default function OverviewCards({ aggregation, latestPulse }: OverviewCard
         return (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200"
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-7 hover:shadow-lg hover:border-gray-300 transition-all duration-200"
           >
             <div className="flex items-start justify-between">
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600 mb-2">{card.title}</p>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-gray-600 mb-3 uppercase tracking-wide">{card.title}</p>
                 <div className="flex items-baseline gap-2">
                   {card.subtitle ? (
                     <div>
-                      <p className="text-2xl font-bold text-gray-900">{card.value}</p>
-                      <p className="text-sm text-gray-500 mt-1">{card.subtitle}</p>
+                      <p className="text-3xl font-bold text-gray-900 leading-tight">{card.value}</p>
+                      <p className="text-sm text-gray-500 mt-2 font-medium">{card.subtitle}</p>
                     </div>
                   ) : (
-                    <p className="text-3xl font-bold text-gray-900">{card.value}</p>
+                    <p className="text-4xl font-bold text-gray-900 leading-tight">{card.value}</p>
                   )}
                 </div>
                 {card.trend && (
-                  <div className={`flex items-center gap-1 mt-2 ${card.trendUp ? 'text-green-600' : 'text-red-600'}`}>
+                  <div className={`flex items-center gap-1.5 mt-4 ${card.trendUp ? 'text-green-600' : 'text-red-600'}`}>
                     {card.trendUp ? (
                       <TrendingUp className="w-4 h-4" />
                     ) : (
                       <TrendingDown className="w-4 h-4" />
                     )}
-                    <span className="text-xs font-medium">{card.trend}</span>
+                    <span className="text-sm font-semibold">{card.trend}</span>
                     <span className="text-xs text-gray-500">vs last week</span>
                   </div>
                 )}
               </div>
-              <div className={`${card.bgColor} p-3 rounded-xl`}>
-                <Icon className={`w-6 h-6 ${card.textColor}`} />
+              <div className={`${card.bgColor} p-4 rounded-xl flex-shrink-0`}>
+                <Icon className={`w-7 h-7 ${card.textColor}`} />
               </div>
             </div>
           </div>

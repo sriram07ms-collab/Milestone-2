@@ -16,24 +16,24 @@ export default function WeeklyPulseCard({ pulse, compact = false }: WeeklyPulseC
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-200">
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-lg hover:border-gray-300 transition-all duration-200">
       {/* Header Section */}
-      <div className="border-b border-gray-200 pb-6 mb-6">
-        <div className="flex justify-between items-start mb-4">
+      <div className="border-b border-gray-200 pb-6 mb-8">
+        <div className="flex justify-between items-start mb-5">
           <div className="flex-1">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">{pulse.title}</h2>
-            <div className="flex items-center gap-3 text-gray-600">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight">{pulse.title}</h2>
+            <div className="flex items-center gap-3 text-gray-600 flex-wrap">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span className="text-sm font-medium">{formatDateRange(pulse.week_start, pulse.week_end)}</span>
               </div>
               <span className="text-gray-400">•</span>
-              <span className="text-sm">{pulse.themes.length} theme{pulse.themes.length !== 1 ? 's' : ''}</span>
+              <span className="text-sm font-medium">{pulse.themes.length} theme{pulse.themes.length !== 1 ? 's' : ''}</span>
               <span className="text-gray-400">•</span>
-              <span className="text-sm">{pulse.quotes.length} quote{pulse.quotes.length !== 1 ? 's' : ''}</span>
+              <span className="text-sm font-medium">{pulse.quotes.length} quote{pulse.quotes.length !== 1 ? 's' : ''}</span>
             </div>
           </div>
-          <span className="bg-green-50 text-green-700 text-xs font-semibold px-4 py-2 rounded-full border border-green-200">
+          <span className="bg-green-50 text-green-700 text-xs font-semibold px-4 py-2 rounded-full border border-green-200 flex-shrink-0">
             {pulse.word_count} words
           </span>
         </div>
