@@ -18,8 +18,9 @@ def generate_manifest():
     }
     
     manifest_path = pulse_dir / "manifest.json"
-    with open(manifest_path, "w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=2)
+    # Write without BOM (utf-8-sig would add BOM, we want plain utf-8)
+    with open(manifest_path, "w", encoding="utf-8", newline="") as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
     
     print(f"Generated manifest.json with {len(pulse_files)} files")
 

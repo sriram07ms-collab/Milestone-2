@@ -18,8 +18,11 @@ def load_raw_reviews() -> Dict[str, Dict[str, Any]]:
 
     for path in sorted(RAW_WEEKLY_DIR.glob("week_*.json")):
         try:
-            with path.open("r", encoding="utf-8") as f:
-                items = json.load(f)
+            # Read and strip BOM if present
+            content = path.read_text(encoding="utf-8")
+            if content.startswith("\ufeff"):
+                content = content[1:]
+            items = json.loads(content)
         except Exception as exc:
             print(f"Failed to load {path}: {exc}")
             continue
@@ -39,8 +42,11 @@ def build_theme_review_details() -> List[Dict[str, Any]]:
         print(f"Classification file not found: {CLASSIFICATIONS_PATH}")
         return []
 
-    with CLASSIFICATIONS_PATH.open("r", encoding="utf-8") as f:
-        classifications = json.load(f)
+    # Read and strip BOM if present
+    content = CLASSIFICATIONS_PATH.read_text(encoding="utf-8")
+    if content.startswith("\ufeff"):
+        content = content[1:]
+    classifications = json.loads(content)
 
     reviews_by_id = load_raw_reviews()
     merged: List[Dict[str, Any]] = []
@@ -77,7 +83,8 @@ def build_theme_review_details() -> List[Dict[str, Any]]:
 def main() -> None:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     merged = build_theme_review_details()
-    with OUTPUT_PATH.open("w", encoding="utf-8") as f:
+    # Write without BOM (utf-8-sig would add BOM, we want plain utf-8)
+    with OUTPUT_PATH.open("w", encoding="utf-8", newline="") as f:
         json.dump(merged, f, ensure_ascii=False, indent=2)
     print(f"Wrote {len(merged)} merged theme review records to {OUTPUT_PATH}")
 

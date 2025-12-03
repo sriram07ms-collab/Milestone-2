@@ -10,7 +10,12 @@ export async function generateStaticParams() {
     // Try manifest first
     const manifestPath = join(pulseDir, 'manifest.json');
     if (existsSync(manifestPath)) {
-      const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+      // Strip BOM if present (some editors add BOM to UTF-8 files)
+      let content = readFileSync(manifestPath, 'utf-8');
+      if (content.charCodeAt(0) === 0xFEFF) {
+        content = content.slice(1);
+      }
+      const manifest = JSON.parse(content);
       if (manifest.files && manifest.files.length > 0) {
         return manifest.files.map((file: string) => ({
           week: file.replace('pulse_', '').replace('.json', ''),
