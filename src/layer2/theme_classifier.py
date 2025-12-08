@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import time
 from dataclasses import dataclass
 from typing import Dict, List, Mapping
 import re
@@ -238,7 +239,7 @@ class ThemeClassifierConfig:
     model_name: str = "models/gemini-2.5-flash"  # Latest stable flash model for fast classification
     batch_size: int = 8  # Process 8 reviews per LLM call
     temperature: float = 0.1  # Low temperature for consistent classification
-    max_retries: int = 2
+    max_retries: int = 3  # Increased for better quota error recovery (4 total attempts)
     use_discovery: bool = False  # Disabled by default; rely on fixed themes
     discovery_sample_size: int = 50  # Reviews to sample for discovery
     min_discovery_confidence: float = 0.6  # Minimum mapping confidence
@@ -349,6 +350,9 @@ class GeminiThemeClassifier:
             LOGGER.debug("Classifying batch %s/%s (%s reviews)", batch_idx, len(batches), len(batch))
             batch_classifications = self._classify_batch(batch)
             classifications.extend(batch_classifications)
+            # Small delay between batches to avoid rate limiting (skip delay after last batch)
+            if batch_idx < len(batches):
+                time.sleep(1)
 
         # Build lookup for first-pass results
         first_pass_by_id: Dict[str, ReviewClassification] = {
@@ -412,6 +416,9 @@ class GeminiThemeClassifier:
             )
             batch_results = self._classify_unclassified_batch(batch)
             results.extend(batch_results)
+            # Small delay between batches to avoid rate limiting (skip delay after last batch)
+            if batch_idx < len(batches):
+                time.sleep(1)
 
         return results
 
@@ -444,8 +451,26 @@ class GeminiThemeClassifier:
                     raise ValueError("Empty classification payload")
                 return self._build_classifications(parsed, reviews)
             except Exception as exc:
+                error_message = str(exc).lower()
+                is_quota_error = "429" in str(exc) or "quota" in error_message or "rate limit" in error_message
+                
                 if attempt < self.config.max_retries:
-                    LOGGER.warning("Classification attempt %s failed: %s. Retrying...", attempt + 1, exc)
+                    if is_quota_error:
+                        # Exponential backoff for quota errors: 30s, 60s, 120s, etc.
+                        delay = 30 * (2 ** attempt)
+                        LOGGER.warning(
+                            "Classification attempt %s failed with quota error: %s. Retrying after %ss...",
+                            attempt + 1, exc, delay
+                        )
+                        time.sleep(delay)
+                    else:
+                        # Shorter delay for other errors: 2s, 4s, 8s
+                        delay = 2 * (2 ** attempt)
+                        LOGGER.warning(
+                            "Classification attempt %s failed: %s. Retrying after %ss...",
+                            attempt + 1, exc, delay
+                        )
+                        time.sleep(delay)
                 else:
                     LOGGER.error("Classification failed after %s attempts: %s", self.config.max_retries + 1, exc)
                     return self._fallback_classifications(reviews)
@@ -482,12 +507,26 @@ class GeminiThemeClassifier:
                     raise ValueError("Empty classification payload (second pass)")
                 return self._build_classifications(parsed, reviews)
             except Exception as exc:
+                error_message = str(exc).lower()
+                is_quota_error = "429" in str(exc) or "quota" in error_message or "rate limit" in error_message
+                
                 if attempt < self.config.max_retries:
-                    LOGGER.warning(
-                        "Second-pass classification attempt %s failed: %s. Retrying...",
-                        attempt + 1,
-                        exc,
-                    )
+                    if is_quota_error:
+                        # Exponential backoff for quota errors: 30s, 60s, 120s, etc.
+                        delay = 30 * (2 ** attempt)
+                        LOGGER.warning(
+                            "Second-pass classification attempt %s failed with quota error: %s. Retrying after %ss...",
+                            attempt + 1, exc, delay
+                        )
+                        time.sleep(delay)
+                    else:
+                        # Shorter delay for other errors: 2s, 4s, 8s
+                        delay = 2 * (2 ** attempt)
+                        LOGGER.warning(
+                            "Second-pass classification attempt %s failed: %s. Retrying after %ss...",
+                            attempt + 1, exc, delay
+                        )
+                        time.sleep(delay)
                 else:
                     LOGGER.error(
                         "Second-pass classification failed after %s attempts: %s",
