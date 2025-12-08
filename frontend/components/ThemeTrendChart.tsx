@@ -51,30 +51,32 @@ export default function ThemeTrendChart({ data }: ThemeTrendChartProps) {
   });
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-      <div className="flex items-center justify-between mb-8">
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6 lg:p-8">
+      <div className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">Theme Trends</h2>
-          <p className="text-sm text-gray-500 mt-1.5">Last 3 weeks review distribution across themes</p>
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Theme Trends</h2>
+          <p className="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-1.5">Last 3 weeks review distribution across themes</p>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={450}>
-        <LineChart data={chartData} margin={{ top: 10, right: 30, left: 10, bottom: 10 }}>
+      <ResponsiveContainer width="100%" height={300} className="sm:h-[400px] lg:h-[450px]">
+        <LineChart data={chartData} margin={{ top: 10, right: 10, left: -10, bottom: 5 }} className="sm:!mr-[30px] sm:!ml-[10px] sm:!mb-[10px]">
           <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
           <XAxis 
             dataKey="week" 
             stroke="#94A3B8"
-            style={{ fontSize: '13px', fontWeight: 500 }}
+            style={{ fontSize: '11px', fontWeight: 500 }}
             tick={{ fill: '#64748B' }}
             axisLine={false}
             tickLine={false}
+            className="sm:!text-[13px]"
           />
           <YAxis 
             stroke="#94A3B8"
-            style={{ fontSize: '13px', fontWeight: 500 }}
+            style={{ fontSize: '11px', fontWeight: 500 }}
             tick={{ fill: '#64748B' }}
             axisLine={false}
             tickLine={false}
+            className="sm:!text-[13px]"
           />
           <Tooltip 
             contentStyle={{ 
@@ -88,9 +90,10 @@ export default function ThemeTrendChart({ data }: ThemeTrendChartProps) {
             itemStyle={{ padding: '4px 0', fontSize: '13px' }}
           />
           <Legend 
-            wrapperStyle={{ paddingTop: '24px', fontSize: '13px' }}
+            wrapperStyle={{ paddingTop: '16px', fontSize: '11px' }}
             iconType="line"
-            iconSize={16}
+            iconSize={12}
+            className="sm:!text-[13px] sm:[&_svg]:!w-4 sm:[&_svg]:!h-4"
           />
           {Array.from(allThemes).map((theme) => (
             <Line

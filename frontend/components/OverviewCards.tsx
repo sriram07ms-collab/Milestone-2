@@ -72,29 +72,29 @@ export default function OverviewCards({ aggregation, latestPulse }: OverviewCard
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
       {cards.map((card, index) => {
         const Icon = card.icon;
         return (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 hover:shadow-md transition-all duration-200"
+            className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-5 hover:shadow-md transition-all duration-200"
           >
             <div className="flex items-start justify-between">
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-medium text-gray-600 mb-2">{card.title}</p>
+                <p className="text-xs font-medium text-gray-600 mb-1.5 sm:mb-2">{card.title}</p>
                 <div className="flex items-baseline gap-2">
                   {card.subtitle ? (
                     <div>
-                      <p className="text-2xl font-bold text-gray-900">{card.value}</p>
+                      <p className="text-xl sm:text-2xl font-bold text-gray-900 break-words">{card.value}</p>
                       <p className="text-xs text-gray-500 mt-1">{card.subtitle}</p>
                     </div>
                   ) : (
-                    <p className="text-3xl font-bold text-gray-900">{card.value}</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-gray-900">{card.value}</p>
                   )}
                 </div>
                 {card.trend && (
-                  <div className={`flex items-center gap-1 mt-3 ${card.trendUp ? 'text-green-600' : 'text-red-600'}`}>
+                  <div className={`flex items-center gap-1 mt-2 sm:mt-3 ${card.trendUp ? 'text-green-600' : 'text-red-600'}`}>
                     {card.trendUp ? (
                       <TrendingUp className="w-3 h-3" />
                     ) : (
@@ -104,8 +104,8 @@ export default function OverviewCards({ aggregation, latestPulse }: OverviewCard
                   </div>
                 )}
               </div>
-              <div className={`${card.bgColor} p-3 rounded-lg flex-shrink-0`}>
-                <Icon className={`w-5 h-5 ${card.textColor}`} />
+              <div className={`${card.bgColor} p-2.5 sm:p-3 rounded-lg flex-shrink-0`}>
+                <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${card.textColor}`} />
               </div>
             </div>
           </div>

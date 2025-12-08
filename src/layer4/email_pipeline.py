@@ -49,19 +49,42 @@ class WeeklyEmailPipeline:
             )
 
         drafts: List[EmailDraft] = []
+        successful_sends = 0
         for note in notes:
-            subject, body = self.draft_generator.generate(note)
-            draft = EmailDraft(
-                subject=subject,
-                body=body,
-                recipient=self.config.email_recipient,
-                week_start=note.week_start,
-                week_end=note.week_end,
-                product_name=self.config.product_name,
-            )
-            drafts.append(draft)
-            self.sender.send(draft)
-        LOGGER.info("Layer 4 completed: drafted/sent %s emails.", len(drafts))
+            try:
+                subject, body = self.draft_generator.generate(note)
+                draft = EmailDraft(
+                    subject=subject,
+                    body=body,
+                    recipient=self.config.email_recipient,
+                    week_start=note.week_start,
+                    week_end=note.week_end,
+                    product_name=self.config.product_name,
+                )
+                drafts.append(draft)
+                self.sender.send(draft)
+                successful_sends += 1
+            except Exception as exc:
+                LOGGER.error(
+                    "Failed to generate/send email for week %s-%s: %s",
+                    note.week_start,
+                    note.week_end,
+                    exc,
+                    exc_info=True,
+                )
+                # Re-raise to ensure the pipeline fails if email sending fails
+                raise RuntimeError(
+                    f"Failed to send email for week {note.week_start}-{note.week_end}: {exc}"
+                ) from exc
+        
+        if successful_sends == 0 and drafts:
+            raise RuntimeError("Layer 4 generated drafts but failed to send any emails.")
+        
+        LOGGER.info(
+            "Layer 4 completed: drafted %s email(s), successfully sent %s email(s).",
+            len(drafts),
+            successful_sends,
+        )
         return drafts
 
     def _load_notes(self) -> List[WeeklyPulseNote]:

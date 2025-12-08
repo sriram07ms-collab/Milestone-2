@@ -92,13 +92,13 @@ export default function PulseDetailClient({ week }: { week: string }) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <Link 
         href="/pulses" 
-        className="inline-flex items-center gap-2 text-green-500 hover:text-green-600 font-medium transition-colors"
+        className="inline-flex items-center gap-2 text-green-500 hover:text-green-600 font-medium transition-colors text-sm sm:text-base touch-manipulation"
       >
         <ArrowLeft className="w-4 h-4" />
-        Back to all pulses
+        <span>Back to all pulses</span>
       </Link>
       
       <WeeklyPulseCard pulse={pulse} />

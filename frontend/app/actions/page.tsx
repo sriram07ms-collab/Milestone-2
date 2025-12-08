@@ -108,48 +108,48 @@ export default function ActionsPage() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Action Ideas Board</h1>
-        <p className="text-gray-500 mt-1">Prioritized action items from all weekly pulses</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Action Ideas Board</h1>
+        <p className="text-sm sm:text-base text-gray-500 mt-1">Prioritized action items from all weekly pulses</p>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {prioritySections.map((section) => {
           const Icon = section.icon;
           if (section.actions.length === 0) return null;
           
           return (
             <section key={section.title}>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <div className={section.bgColor + ' p-2 rounded-lg'}>
-                  <Icon className={`w-6 h-6 ${section.iconColor}`} />
+                  <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${section.iconColor}`} />
                 </div>
-                <h2 className="text-2xl font-semibold text-gray-900">{section.title}</h2>
-                <span className={`${section.badgeBg} ${section.badgeText} text-sm font-medium px-3 py-1 rounded-full`}>
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">{section.title}</h2>
+                <span className={`${section.badgeBg} ${section.badgeText} text-xs sm:text-sm font-medium px-2.5 sm:px-3 py-1 rounded-full`}>
                   {section.actions.length} items
                 </span>
               </div>
-              <div className="grid gap-4">
+              <div className="grid gap-3 sm:gap-4">
                 {section.actions.map((item, idx) => (
                   <div 
                     key={idx} 
-                    className={`bg-white p-6 rounded-xl shadow-sm border-l-4 ${section.borderColor} hover:shadow-md transition-shadow`}
+                    className={`bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 ${section.borderColor} hover:shadow-md transition-shadow`}
                   >
-                    <p className="text-gray-900 font-medium mb-4 text-base leading-relaxed">{item.action}</p>
-                    <div className="flex items-center gap-6 text-sm text-gray-500">
+                    <p className="text-gray-900 font-medium mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">{item.action}</p>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-500">
                       <span className="flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span className="font-medium">{item.weekRange}</span>
+                        <span className="font-medium break-words">{item.weekRange}</span>
                       </span>
                       {item.themes.length > 0 && (
-                        <span className="flex items-center gap-2">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <span className="flex items-start gap-2">
+                          <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                           </svg>
-                          <span className="font-medium">{item.themes.join(', ')}</span>
+                          <span className="font-medium break-words">{item.themes.join(', ')}</span>
                         </span>
                       )}
                     </div>

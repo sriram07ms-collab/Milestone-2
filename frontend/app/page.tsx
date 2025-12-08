@@ -65,18 +65,18 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {/* Page Header */}
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        <p className="text-gray-600 mt-1">Overview of app review insights and trends</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Dashboard</h1>
+        <p className="text-sm sm:text-base text-gray-600 mt-1">Overview of app review insights and trends</p>
       </div>
       
       {/* Overview Cards */}
       <OverviewCards aggregation={aggregation} latestPulse={null} />
 
       {/* Charts Section */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {/* Theme Trends Chart */}
         {aggregation && aggregation.weekly_counts.length > 0 && (
           <ThemeTrendChart data={aggregation.weekly_counts} />
@@ -90,25 +90,25 @@ export default function Dashboard() {
 
       {/* Top Themes */}
       {aggregation && aggregation.top_themes.length > 0 && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <div className="mb-6">
-            <h2 className="text-xl font-bold text-gray-900">Top Themes</h2>
-            <p className="text-sm text-gray-500 mt-1">By review count</p>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6">
+          <div className="mb-4 sm:mb-6">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">Top Themes</h2>
+            <p className="text-xs sm:text-sm text-gray-500 mt-1">By review count</p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {aggregation.top_themes.slice(0, 5).map((theme, index) => (
-              <div key={theme.theme_id} className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <span className="text-gray-500 font-medium w-6">{index + 1}.</span>
+              <div key={theme.theme_id} className="flex items-center justify-between py-2 gap-2">
+                <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+                  <span className="text-gray-500 font-medium text-sm sm:text-base w-5 sm:w-6 flex-shrink-0">{index + 1}.</span>
                   <div 
                     className="w-3 h-3 rounded-full flex-shrink-0"
                     style={{ backgroundColor: THEME_COLORS[theme.theme_id] || '#6b7280' }}
                   />
-                  <span className="font-medium text-gray-900 flex-1 truncate">
+                  <span className="font-medium text-gray-900 flex-1 truncate text-sm sm:text-base">
                     {theme.theme_id.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                   </span>
                 </div>
-                <span className="text-gray-900 font-bold text-lg ml-4">{theme.count}</span>
+                <span className="text-gray-900 font-bold text-base sm:text-lg ml-2 sm:ml-4 flex-shrink-0">{theme.count}</span>
               </div>
             ))}
           </div>

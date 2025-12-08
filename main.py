@@ -384,14 +384,19 @@ def _run_layer3(weekly_dir: Path, processed_dir: Path):
 
 def _run_layer4(notes, email_single_latest: bool = False) -> None:
     if not notes:
-        LOGGER.info("Skipping Layer 4 (no weekly notes).")
+        LOGGER.warning("Skipping Layer 4 (no weekly notes). Email will not be sent.")
         return
     try:
         config = Layer4Config()
         pipeline = WeeklyEmailPipeline(config)
-        pipeline.run(notes=notes, single_latest=email_single_latest)
+        drafts = pipeline.run(notes=notes, single_latest=email_single_latest)
+        if not drafts:
+            LOGGER.warning("Layer 4 completed but no email drafts were generated.")
+        else:
+            LOGGER.info("Layer 4 successfully generated %s email draft(s).", len(drafts))
     except Exception as exc:
-        LOGGER.error("Layer 4 failed: %s", exc)
+        LOGGER.error("Layer 4 failed: %s", exc, exc_info=True)
+        raise RuntimeError(f"Email generation/sending failed: {exc}") from exc
 
 
 def _parse_window_slices(raw: Optional[str]) -> List[tuple[datetime, datetime]]:

@@ -15,6 +15,9 @@ body {
   background-color: #F8FAFC;
   color: #1E293B;
   line-height: 1.6;
+  /* Improve touch interactions on mobile */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
 }
 
 /* Smooth scrolling */

@@ -94,22 +94,62 @@ class EmailSender:
         token_path = self.config.gmail_token_path
         credentials_path = self.config.gmail_credentials_path
 
-        if token_path.exists():
-            creds = Credentials.from_authorized_user_file(str(token_path), GMAIL_SCOPES)
+        # Check if credentials file exists
+        if not credentials_path.exists():
+            raise RuntimeError(
+                f"Gmail credentials file not found at {credentials_path}. "
+                f"Please ensure GMAIL_CREDENTIALS_PATH is set or GMAIL_CREDENTIALS_JSON is provided."
+            )
 
+        # Try to load existing token
+        if token_path.exists():
+            try:
+                creds = Credentials.from_authorized_user_file(str(token_path), GMAIL_SCOPES)
+            except Exception as exc:
+                LOGGER.warning("Failed to load existing Gmail token: %s", exc)
+
+        # Refresh or create new credentials
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
+                try:
+                    LOGGER.info("Refreshing expired Gmail token...")
+                    creds.refresh(Request())
+                    LOGGER.info("Gmail token refreshed successfully.")
+                except Exception as exc:
+                    raise RuntimeError(
+                        f"Failed to refresh expired Gmail token: {exc}. "
+                        f"Token may need to be regenerated. In CI/CD, ensure GMAIL_TOKEN_JSON secret is up to date."
+                    ) from exc
             else:
-                flow = InstalledAppFlow.from_client_secrets_file(str(credentials_path), GMAIL_SCOPES)
-                creds = flow.run_local_server(port=0)
-            token_path.parent.mkdir(parents=True, exist_ok=True)
+                # Interactive OAuth flow (not suitable for CI/CD)
+                if not token_path.exists():
+                    raise RuntimeError(
+                        f"Gmail token file not found at {token_path} and cannot perform interactive OAuth flow in CI/CD. "
+                        f"Please provide GMAIL_TOKEN_JSON secret or generate token manually."
+                    )
+                else:
+                    raise RuntimeError(
+                        f"Gmail credentials are invalid and token refresh failed. "
+                        f"Please regenerate GMAIL_TOKEN_JSON secret."
+                    )
+
+        # Save refreshed token
+        if not creds.valid:
+            raise RuntimeError("Gmail credentials are not valid after refresh attempt.")
+        
+        token_path.parent.mkdir(parents=True, exist_ok=True)
+        try:
             with token_path.open("w", encoding="utf-8") as token_file:
                 token_file.write(creds.to_json())
+        except Exception as exc:
+            LOGGER.warning("Failed to save refreshed token: %s", exc)
 
-        service = build("gmail", "v1", credentials=creds, cache_discovery=False)
-        self._gmail_service = service
-        return service
+        try:
+            service = build("gmail", "v1", credentials=creds, cache_discovery=False)
+            self._gmail_service = service
+            return service
+        except Exception as exc:
+            raise RuntimeError(f"Failed to build Gmail service: {exc}") from exc
 
     def _append_log(self, entry: EmailLogEntry) -> None:
         log_path: Path = self.config.log_path
