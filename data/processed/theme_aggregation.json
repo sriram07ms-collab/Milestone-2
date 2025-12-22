@@ -9,10 +9,18 @@
       "total_reviews": 1
     },
     {
+      "week_start_date": "2025-07-21",
+      "week_end_date": "2025-07-27",
+      "theme_counts": {
+        "unclassified": 1
+      },
+      "total_reviews": 1
+    },
+    {
       "week_start_date": "2025-09-08",
       "week_end_date": "2025-09-14",
       "theme_counts": {
-        "payments": 1
+        "glitches": 1
       },
       "total_reviews": 1
     },
@@ -42,47 +50,22 @@
       "total_reviews": 1
     },
     {
-      "week_start_date": "2025-11-17",
-      "week_end_date": "2025-11-23",
-      "theme_counts": {
-        "unclassified": 12,
-        "trading_features": 8,
-        "glitches": 10,
-        "app_features": 4,
-        "employer_feedback": 1,
-        "fees": 8,
-        "user_interface_ux": 1,
-        "customer_support": 4,
-        "account_management": 2,
-        "payments": 3,
-        "slow": 3,
-        "security_concerns": 1,
-        "feature_requests": 1,
-        "document_reporting": 1,
-        "account_verification": 1,
-        "investment_guidance": 1
-      },
-      "total_reviews": 61
-    },
-    {
       "week_start_date": "2025-11-24",
       "week_end_date": "2025-11-30",
       "theme_counts": {
-        "glitches": 7,
-        "trading_features": 5,
-        "general_positive_feedback": 5,
-        "feature_requests": 2,
+        "payments": 6,
+        "trading_features": 4,
+        "unclassified": 13,
+        "investment_features": 3,
         "fees": 11,
+        "feature_requests": 1,
         "security_concerns": 1,
-        "customer_support": 2,
-        "unclassified": 7,
-        "payments": 4,
-        "positive_feedback": 1,
+        "customer_support": 3,
+        "glitches": 4,
+        "account_activation": 2,
         "missing_features": 1,
-        "account_issues": 2,
-        "investment_outcomes": 1,
-        "account_management": 1,
-        "product_expansion": 1
+        "bank_linking_issues": 1,
+        "investment_outcomes": 1
       },
       "total_reviews": 51
     },
@@ -90,15 +73,18 @@
       "week_start_date": "2025-12-01",
       "week_end_date": "2025-12-07",
       "theme_counts": {
-        "glitches": 41,
-        "fees": 6,
-        "trading_features": 2,
+        "glitches": 32,
         "payments": 7,
-        "unclassified": 8,
-        "feature_requests": 2,
+        "usability_experience": 3,
+        "feature_requests": 1,
+        "unclassified": 13,
+        "trading_features": 1,
+        "fees": 5,
+        "app_usability": 1,
         "slow": 2,
-        "security_concerns": 1,
-        "customer_support": 4
+        "fund_safety": 1,
+        "customer_support": 5,
+        "fraudulent_activity": 2
       },
       "total_reviews": 73
     },
@@ -109,116 +95,105 @@
         "payments": 17,
         "unclassified": 35,
         "fees": 4,
-        "customer_support": 8,
+        "customer_support": 7,
         "slow": 2,
         "glitches": 5
       },
-      "total_reviews": 71
+      "total_reviews": 70
+    },
+    {
+      "week_start_date": "2025-12-15",
+      "week_end_date": "2025-12-21",
+      "theme_counts": {
+        "unclassified": 30,
+        "glitches": 5,
+        "slow": 2,
+        "payments": 15,
+        "customer_support": 3,
+        "fees": 4
+      },
+      "total_reviews": 59
     }
   ],
   "overall_counts": {
-    "glitches": 65,
-    "payments": 33,
+    "glitches": 49,
+    "unclassified": 92,
+    "payments": 46,
     "customer_support": 19,
-    "security_concerns": 4,
-    "unclassified": 62,
-    "trading_features": 15,
-    "app_features": 4,
-    "employer_feedback": 1,
-    "fees": 29,
-    "user_interface_ux": 1,
-    "account_management": 3,
-    "slow": 7,
-    "feature_requests": 5,
-    "document_reporting": 1,
-    "account_verification": 1,
-    "investment_guidance": 1,
-    "general_positive_feedback": 5,
-    "positive_feedback": 1,
+    "security_concerns": 2,
+    "trading_features": 5,
+    "investment_features": 3,
+    "fees": 24,
+    "feature_requests": 2,
+    "account_activation": 2,
     "missing_features": 1,
-    "account_issues": 2,
+    "bank_linking_issues": 1,
     "investment_outcomes": 1,
-    "product_expansion": 1
+    "usability_experience": 3,
+    "app_usability": 1,
+    "slow": 6,
+    "fund_safety": 1,
+    "fraudulent_activity": 2
   },
   "top_themes": [
     {
-      "theme_id": "glitches",
-      "count": 65
+      "theme_id": "unclassified",
+      "count": 92
     },
     {
-      "theme_id": "unclassified",
-      "count": 62
+      "theme_id": "glitches",
+      "count": 49
     },
     {
       "theme_id": "payments",
-      "count": 33
+      "count": 46
     },
     {
       "theme_id": "fees",
-      "count": 29
+      "count": 24
     },
     {
       "theme_id": "customer_support",
       "count": 19
     },
     {
-      "theme_id": "trading_features",
-      "count": 15
-    },
-    {
       "theme_id": "slow",
-      "count": 7
+      "count": 6
     },
     {
-      "theme_id": "feature_requests",
+      "theme_id": "trading_features",
       "count": 5
     },
     {
-      "theme_id": "general_positive_feedback",
-      "count": 5
-    },
-    {
-      "theme_id": "security_concerns",
-      "count": 4
-    },
-    {
-      "theme_id": "app_features",
-      "count": 4
-    },
-    {
-      "theme_id": "account_management",
+      "theme_id": "investment_features",
       "count": 3
     },
     {
-      "theme_id": "account_issues",
+      "theme_id": "usability_experience",
+      "count": 3
+    },
+    {
+      "theme_id": "security_concerns",
       "count": 2
     },
     {
-      "theme_id": "employer_feedback",
-      "count": 1
+      "theme_id": "feature_requests",
+      "count": 2
     },
     {
-      "theme_id": "user_interface_ux",
-      "count": 1
+      "theme_id": "account_activation",
+      "count": 2
     },
     {
-      "theme_id": "document_reporting",
-      "count": 1
-    },
-    {
-      "theme_id": "account_verification",
-      "count": 1
-    },
-    {
-      "theme_id": "investment_guidance",
-      "count": 1
-    },
-    {
-      "theme_id": "positive_feedback",
-      "count": 1
+      "theme_id": "fraudulent_activity",
+      "count": 2
     },
     {
       "theme_id": "missing_features",
+      "count": 1
+    },
+    {
+      "theme_id": "bank_linking_issues",
       "count": 1
     },
     {
@@ -226,7 +201,11 @@
       "count": 1
     },
     {
-      "theme_id": "product_expansion",
+      "theme_id": "app_usability",
+      "count": 1
+    },
+    {
+      "theme_id": "fund_safety",
       "count": 1
     }
   ]
